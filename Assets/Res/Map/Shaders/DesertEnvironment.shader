@@ -7,6 +7,11 @@ Shader "MMORPG/Map/DesertEnvironment"
         _NoiseScale ("Noise Scale", Float) = 0.18
         _NoiseStrength ("Noise Strength", Range(0, 1)) = 0.18
         _TopLight ("Top Light", Range(0, 1)) = 0.18
+        _GridColor ("Grid Color", Color) = (0.0, 0.85, 1.0, 1)
+        _GridScale ("Grid Scale", Float) = 0.12
+        _GridStrength ("Grid Strength", Range(0, 1)) = 0.2
+        _EmissionColor ("Emission Color", Color) = (0, 0, 0, 1)
+        _EmissionStrength ("Emission Strength", Range(0, 4)) = 0
     }
 
     SubShader
@@ -39,6 +44,11 @@ Shader "MMORPG/Map/DesertEnvironment"
                 float _NoiseScale;
                 half _NoiseStrength;
                 half _TopLight;
+                half4 _GridColor;
+                float _GridScale;
+                half _GridStrength;
+                half4 _EmissionColor;
+                half _EmissionStrength;
             CBUFFER_END
 
             struct Attributes
@@ -74,6 +84,10 @@ Shader "MMORPG/Map/DesertEnvironment"
                 half3 color = lerp(_BaseColor.rgb, _NoiseColor.rgb, noise * _NoiseStrength);
                 half top = saturate(input.normalWS.y) * _TopLight;
                 color += top;
+                float2 gridUv = abs(frac(input.positionWS.xz * _GridScale) - 0.5);
+                float gridLine = 1.0 - saturate(min(gridUv.x, gridUv.y) * 24.0);
+                color = lerp(color, _GridColor.rgb, gridLine * _GridStrength);
+                color += _EmissionColor.rgb * _EmissionStrength;
                 return half4(color, 1);
             }
             ENDHLSL

@@ -46,8 +46,25 @@
     <Analyzer Include="D:\Unity\Editor\6000.0.23f1c1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Game\Player\States\PlayerMoveState.cs" />
+    <Compile Include="Assets\Scripts\Framework\StateMachine\StateMachine.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\PlayerContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\States\PlayerStateBase.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\PlayerInputSnapshot.cs" />
+    <Compile Include="Assets\Scripts\Framework\StateMachine\StateBase.cs" />
     <Compile Include="Assets\Scripts\Map\DesertMapBuilder.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\Motor\CharacterControllerMotor.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\PlayerAnimationDriver.cs" />
+    <Compile Include="Assets\Scripts\Game\Lighting\RuntimeLightingRig.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\Game\Camera\ThirdPersonCameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\Motor\ICharacterMotor.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\States\PlayerAttackState.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\States\PlayerIdleState.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\States\PlayerJumpState.cs" />
+    <Compile Include="Assets\Scripts\Framework\StateMachine\IState.cs" />
+    <Compile Include="Assets\Scripts\Game\Bootstrap\GameBootstrap.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Unity\Editor\6000.0.23f1c1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
     </Reference>

@@ -25,10 +25,15 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _NoiseScale: 0.55
-    - _NoiseStrength: 0.14
-    - _TopLight: 0.22
+    - _EmissionStrength: 0.16
+    - _GridScale: 0.095
+    - _GridStrength: 0.28
+    - _NoiseScale: 0.64
+    - _NoiseStrength: 0.18
+    - _TopLight: 0.12
     m_Colors:
-    - _BaseColor: {r: 0.31, g: 0.34, b: 0.34, a: 1}
-    - _NoiseColor: {r: 0.62, g: 0.68, b: 0.70, a: 1}
+    - _BaseColor: {r: 0.055, g: 0.065, b: 0.09, a: 1}
+    - _EmissionColor: {r: 0.0, g: 0.14, b: 0.2, a: 1}
+    - _GridColor: {r: 0.0, g: 0.92, b: 1.0, a: 1}
+    - _NoiseColor: {r: 0.16, g: 0.19, b: 0.26, a: 1}
   m_BuildTextureStacks: []

@@ -7,7 +7,7 @@ public sealed class DesertMapBuilder : MonoBehaviour
     [Header("Map")]
     [SerializeField] private int gridSize = 28;
     [SerializeField] private float tileSize = 8f;
-    [SerializeField] private float worldScale = 10f;
+    [SerializeField] private float worldScale = 4f;
     [SerializeField] private float wallHeight = 5f;
     [SerializeField] private float wallThickness = 2.2f;
 
@@ -19,6 +19,8 @@ public sealed class DesertMapBuilder : MonoBehaviour
     [SerializeField] private Material clothMaterial;
     [SerializeField] private Material cityMaterial;
     [SerializeField] private Material cliffMaterial;
+    [SerializeField] private Material neonPrimaryMaterial;
+    [SerializeField] private Material neonAccentMaterial;
 
     [Header("Generation")]
     [SerializeField] private bool rebuildOnEnable = true;
@@ -49,6 +51,7 @@ public sealed class DesertMapBuilder : MonoBehaviour
         BuildRockFields(generated);
         BuildCliffs(generated);
         BuildCityDistrict(generated);
+        BuildNeonInfrastructure(generated);
         BuildCamp(generated);
         BuildRouteMarkers(generated);
     }
@@ -198,28 +201,72 @@ public sealed class DesertMapBuilder : MonoBehaviour
 
     private void BuildCityDistrict(Transform parent)
     {
-        Transform city = CreateGroup(parent, "Ruined_City_District");
-        city.localPosition = new Vector3(58f, 0f, 58f);
+        Transform city = CreateGroup(parent, "Cyber_City_District");
+        city.localPosition = new Vector3(96f, 0f, 86f);
 
         int index = 0;
-        for (int x = 0; x < 4; x++)
+        const int cityBlocks = 5;
+        const float buildingSpacing = 32f;
+        for (int x = 0; x < cityBlocks; x++)
         {
-            for (int z = 0; z < 4; z++)
+            for (int z = 0; z < cityBlocks; z++)
             {
-                float height = 10f + ((x * 3 + z * 5) % 9) * 2.2f;
-                Vector3 pos = new Vector3((x - 1.5f) * 13f, height * 0.5f, (z - 1.5f) * 13f);
-                Vector3 scale = new Vector3(7f + (z % 2) * 2f, height, 7f + (x % 2) * 1.5f);
+                if ((x == 2 && z == 2) || (x == 1 && z == 3))
+                {
+                    continue;
+                }
+
+                float height = 32f + ((x * 5 + z * 7) % 11) * 5.2f;
+                Vector3 pos = new Vector3((x - 2f) * buildingSpacing, height * 0.5f, (z - 2f) * buildingSpacing);
+                Vector3 scale = new Vector3(9f + (z % 2) * 3f, height, 9f + (x % 2) * 2.5f);
                 GameObject tower = CreateBlock(city, $"High_Rise_{++index:00}", pos, scale, cityMaterial);
 
-                for (int floor = 1; floor < height / 3f; floor++)
+                CreateBuildingNeonBands(tower.transform, height, scale);
+
+                if ((x + z) % 3 == 0)
                 {
-                    CreateBlock(tower.transform, $"Window_Band_{floor:00}", new Vector3(0f, -height * 0.5f + floor * 3f, -0.51f), new Vector3(0.92f, 0.05f, 0.04f), stoneMaterial);
+                    CreateBlock(tower.transform, "Roof_Antenna", new Vector3(0f, height * 0.5f + 3.5f, 0f), new Vector3(1.2f, 7f, 1.2f), neonAccentMaterial);
                 }
             }
         }
 
-        CreateBlock(city, "Collapsed_Plaza_Block", new Vector3(-31f, 1.5f, 6f), new Vector3(16f, 3f, 20f), cityMaterial);
-        CreateBlock(city, "Avenue_Rubble_Line", new Vector3(0f, 0.6f, -32f), new Vector3(58f, 1.2f, 5f), cliffMaterial);
+        CreateBlock(city, "Central_Neon_Plaza", new Vector3(0f, 0.25f, 0f), new Vector3(44f, 0.5f, 44f), neonPrimaryMaterial);
+        CreateBlock(city, "East_Wide_Avenue", new Vector3(72f, 0.12f, 0f), new Vector3(12f, 0.24f, 138f), stoneMaterial);
+        CreateBlock(city, "South_Wide_Avenue", new Vector3(0f, 0.12f, -72f), new Vector3(138f, 0.24f, 12f), stoneMaterial);
+        CreateBlock(city, "Collapsed_Plaza_Block", new Vector3(-58f, 2f, 12f), new Vector3(28f, 4f, 24f), cityMaterial);
+        CreateBlock(city, "Avenue_Rubble_Line", new Vector3(0f, 0.7f, -104f), new Vector3(126f, 1.4f, 6f), cliffMaterial);
+    }
+
+    private void BuildNeonInfrastructure(Transform parent)
+    {
+        Transform tech = CreateGroup(parent, "Cyberpunk_Infrastructure");
+
+        Vector3[] pylons =
+        {
+            new(-118f, 0f, 92f),
+            new(132f, 0f, -96f),
+            new(-138f, 0f, -122f),
+            new(116f, 0f, 128f),
+            new(0f, 0f, -142f),
+            new(-34f, 0f, 132f)
+        };
+
+        for (int i = 0; i < pylons.Length; i++)
+        {
+            float height = 18f + (i % 3) * 6f;
+            Transform pylon = CreateGroup(tech, $"Energy_Pylon_{i + 1:00}");
+            pylon.localPosition = pylons[i];
+            CreateBlock(pylon, "Dark_Core", new Vector3(0f, height * 0.5f, 0f), new Vector3(3f, height, 3f), cityMaterial);
+            CreateBlock(pylon, "Neon_Cap", new Vector3(0f, height + 1.2f, 0f), new Vector3(8f, 1.2f, 8f), neonPrimaryMaterial);
+            CreateBlock(pylon, "Vertical_Light", new Vector3(0f, height * 0.5f, -1.65f), new Vector3(0.35f, height * 0.9f, 0.18f), neonAccentMaterial);
+        }
+
+        for (int i = -9; i <= 9; i++)
+        {
+            float x = i * 18f;
+            CreateBlock(tech, $"Neon_Road_Strip_North_{i + 9:00}", new Vector3(x, 0.12f, 42f), new Vector3(9f, 0.16f, 0.8f), neonPrimaryMaterial);
+            CreateBlock(tech, $"Neon_Road_Strip_South_{i + 9:00}", new Vector3(x, 0.12f, -42f), new Vector3(9f, 0.16f, 0.8f), neonAccentMaterial);
+        }
     }
 
     private void BuildCamp(Transform parent)
@@ -266,6 +313,24 @@ public sealed class DesertMapBuilder : MonoBehaviour
 
         CreateBlock(tent, "Tent_Pole_Left", new Vector3(-2.4f, 1.2f, 0f), new Vector3(0.35f, 2.4f, 0.35f), woodMaterial);
         CreateBlock(tent, "Tent_Pole_Right", new Vector3(2.4f, 1.2f, 0f), new Vector3(0.35f, 2.4f, 0.35f), woodMaterial);
+    }
+
+    private void CreateBuildingNeonBands(Transform tower, float height, Vector3 buildingScale)
+    {
+        int floorCount = Mathf.FloorToInt(height / 4f);
+        float frontZ = -0.5f - 0.015f;
+        float rightX = 0.5f + 0.015f;
+        float bandHeight = Mathf.Max(0.006f, 0.18f / height);
+        float bandDepth = Mathf.Max(0.012f, 0.12f / buildingScale.z);
+        float sideDepth = Mathf.Max(0.012f, 0.12f / buildingScale.x);
+
+        for (int floor = 2; floor < floorCount; floor += 2)
+        {
+            float y = -0.5f + floor * 4f / height;
+            Material bandMaterial = floor % 4 == 0 ? neonPrimaryMaterial : neonAccentMaterial;
+            CreateBlock(tower, $"Window_Band_Front_{floor:00}", new Vector3(0f, y, frontZ), new Vector3(0.82f, bandHeight, bandDepth), bandMaterial);
+            CreateBlock(tower, $"Window_Band_Right_{floor:00}", new Vector3(rightX, y + bandHeight * 2f, 0f), new Vector3(sideDepth, bandHeight, 0.72f), bandMaterial);
+        }
     }
 
     private void CreateGateOpening(Transform parent, string name, Vector3 position)
@@ -322,6 +387,6 @@ public sealed class DesertMapBuilder : MonoBehaviour
         tileSize = Mathf.Max(2f, tileSize);
         wallHeight = Mathf.Max(2f, wallHeight);
         wallThickness = Mathf.Max(0.5f, wallThickness);
-        worldScale = Mathf.Clamp(worldScale, 1f, 25f);
+        worldScale = Mathf.Clamp(worldScale, 1f, 40f);
     }
 }
