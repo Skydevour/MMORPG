@@ -46,7 +46,22 @@
     <Analyzer Include="D:\Unity\Editor\6000.0.23f1c1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Game\Player\PlayerController2D.cs" />
+    <Compile Include="Assets\Scripts\Framework\StateMachine\StateMachine.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\PlayerSpriteAnimator.cs" />
+    <Compile Include="Assets\Scripts\Framework\Animation\FrameAnimationClip.cs" />
+    <Compile Include="Assets\Scripts\Framework\Pooling\IPoolable.cs" />
+    <Compile Include="Assets\Scripts\Game\Core\PrototypeAssetLoader.cs" />
+    <Compile Include="Assets\Scripts\Framework\Animation\FrameAnimator.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\PlayerStates.cs" />
+    <Compile Include="Assets\Scripts\Game\Core\GameManager.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\Game\Level\LevelMapLoader.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectiles\PlayerProjectile.cs" />
+    <Compile Include="Assets\Scripts\Framework\Pooling\ComponentObjectPool.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\PlayerSpawner.cs" />
+    <Compile Include="Assets\Scripts\Framework\StateMachine\IState.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\PlayerStateDriver.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Unity\Editor\6000.0.23f1c1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
     </Reference>
