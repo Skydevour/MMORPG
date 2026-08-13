@@ -1,0 +1,23 @@
+{
+    "name": "MMORPG.Tests.PlayMode",
+    "rootNamespace": "MMORPG.Tests.PlayMode",
+    "references": [
+        "MMORPG.Runtime",
+        "UnityEngine.TestRunner"
+    ],
+    "includePlatforms": [],
+
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false,
+    "testAssemblies": true
+}

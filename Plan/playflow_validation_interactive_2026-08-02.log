@@ -1,0 +1,32 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to the License Client on channel: "LicenseClient-admin" at "2026-08-02T15:52:08.4718961Z"
+[Licensing::Client] Error: Code 10 while verifying Licensing Client signature (process Id: 109788, path: "D:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] Error: LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.16.1+e780b2e
+  Session Id:              70723653229c48adaa6c1543bfac55b6
+  Correlation Id:          1575c6cf291ca2c48f12779547c26191
+  External correlation Id: 2662155761996798910
+  Machine Id:              lHjMRQhilFGXGFYO/g8U2v5+XBc=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-admin" (connect: 0.00s, validation: 0.01s, handshake: 0.02s)
+[Licensing::IpcConnector] Successfully connected to the License Notification on channel: "LicenseClient-admin-notifications" at "2026-08-02T15:52:08.5075158Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully updated license
+Built from '6000.0/china_unity/23f1' branch; Version is '6000.0.23f1c1 (d40c2aeae294) revision 13896746'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'zh' Physical Memory: 32581 MB
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Serial number assigned to: "I4-6KQ6-SA25-FZVR-P4YR-XXXX"
+BatchMode: 0, IsHumanControllingUs: 1, StartBugReporterOnCrash: 1, Is64bit: 1, IsPro: 1
+[Licensing::Client] Successfully resolved entitlement details
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\Editor\6000.0.23f1c1\Editor\Unity.exe
+-projectPath
+E:\UnityProject\MMORPG\MMORPG
+-executeMethod
+MMORPG.EditorTools.Validation.PrototypePlayModeValidator.ValidateMainSceneFlow
+-logFile
+E:\UnityProject\MMORPG\MMORPG\Plan\playflow_validation_interactive_2026-08-02.log
+Successfully changed project path to: E:\UnityProject\MMORPG\MMORPG
+E:/UnityProject/MMORPG/MMORPG
+Exiting without the bug reporter. Application will terminate with return code 0

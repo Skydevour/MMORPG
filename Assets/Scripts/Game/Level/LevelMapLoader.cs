@@ -1,27 +1,29 @@
-using System.Collections.Generic;
+using MMORPG.Game.Config;
 using MMORPG.Game.Core;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 namespace MMORPG.Game.Level
 {
     public sealed class LevelMapLoader : MonoBehaviour
     {
-        public const float LevelWidth = 16f;
-        public const float LevelHeight = 9f;
-        public const float TileWorldSize = 1f;
+        public static float LevelWidth => GameConfigService.Current.level.width;
+        public static float LevelHeight => GameConfigService.Current.level.height;
+        public static float StageFloorY => GameConfigService.Current.level.stageFloorY;
 
         private const string BackgroundPath = "Assets/Res/Level01_Garden/Background/garden_background_wide.png";
-        private const string TileFolder = "Assets/Res/Level01_Garden/Tiles";
-        private const float StageFloorY = -2.5f;
-        private const float StageColliderThickness = 0.8f;
 
         private Transform levelRoot;
 
-        public Vector3 PlayerSpawnPosition { get; private set; } = new Vector3(-5.75f, -1.9f, 0f);
+        public Vector3 PlayerSpawnPosition { get; private set; } = new Vector3(GameConfigService.Current.level.playerSpawnX, StageFloorY, 0f);
+
+        public Vector3 BossSpawnPosition { get; private set; } = new Vector3(GameConfigService.Current.boss.spawnX, StageFloorY, 0f);
 
         public void LoadLevel(Transform parent)
         {
+            GameConfig config = GameConfigService.Current;
+            PlayerSpawnPosition = new Vector3(config.level.playerSpawnX, config.level.stageFloorY, 0f);
+            BossSpawnPosition = new Vector3(config.boss.spawnX, config.level.stageFloorY - config.boss.groundEmbedDepth, 0f);
+
             if (levelRoot != null)
             {
                 Destroy(levelRoot.gameObject);
@@ -32,7 +34,6 @@ namespace MMORPG.Game.Level
             levelRoot = rootObject.transform;
 
             CreateBackground(levelRoot);
-            CreateTilemap(levelRoot);
             CreateStageCollision(levelRoot);
             CreateSpawnMarkers(levelRoot);
         }
@@ -42,7 +43,7 @@ namespace MMORPG.Game.Level
             Sprite background = PrototypeAssetLoader.LoadSprite(BackgroundPath);
             if (background == null)
             {
-                Debug.LogWarning($"Missing background sprite: {BackgroundPath}");
+                Debug.LogWarning($"缺少关卡背景资源：{BackgroundPath}");
                 return;
             }
 
@@ -59,108 +60,30 @@ namespace MMORPG.Game.Level
             {
                 backgroundObject.transform.localScale = new Vector3(LevelWidth / spriteSize.x, LevelHeight / spriteSize.y, 1f);
             }
+            CreateForegroundCover(parent, background, backgroundObject.transform.localScale);
         }
 
-        private void CreateTilemap(Transform parent)
+        private static void CreateForegroundCover(Transform parent, Sprite background, Vector3 backgroundScale)
         {
-            Sprite[] tileSprites = PrototypeAssetLoader.LoadSpritesInFolder(TileFolder);
-            if (tileSprites.Length == 0)
+            if (background == null || background.texture == null)
             {
-                Debug.LogWarning($"No tile sprites found in {TileFolder}");
                 return;
             }
 
-            Dictionary<string, Tile> tiles = BuildTiles(tileSprites);
-            GameObject gridObject = new GameObject("Grid");
-            gridObject.transform.SetParent(parent, false);
+            GameConfig config = GameConfigService.Current;
+            Rect sourceRect = background.textureRect;
+            float cropHeight = Mathf.Clamp(sourceRect.height * config.level.foregroundCropHeight, 1f, sourceRect.height);
+            Rect foregroundRect = new Rect(sourceRect.x, sourceRect.y, sourceRect.width, cropHeight);
+            Sprite foregroundSprite = Sprite.Create(background.texture, foregroundRect, new Vector2(0.5f, 0f), background.pixelsPerUnit);
 
-            Grid grid = gridObject.AddComponent<Grid>();
-            grid.cellSize = new Vector3(TileWorldSize, TileWorldSize, 0f);
+            GameObject foregroundObject = new GameObject("GardenForegroundSoil");
+            foregroundObject.transform.SetParent(parent, false);
+            foregroundObject.transform.position = new Vector3(0f, -LevelHeight * 0.5f, 2f);
+            foregroundObject.transform.localScale = backgroundScale;
 
-            Tilemap ground = CreateTilemapObject("ForegroundTilemap", gridObject.transform, false);
-            Tilemap decoration = CreateTilemapObject("DecorationTilemap", gridObject.transform, false);
-
-            PaintForeground(ground, tiles);
-            PaintDecorations(decoration, tiles);
-        }
-
-        private static Tilemap CreateTilemapObject(string name, Transform parent, bool collidable)
-        {
-            GameObject tilemapObject = new GameObject(name);
-            tilemapObject.transform.SetParent(parent, false);
-
-            Tilemap tilemap = tilemapObject.AddComponent<Tilemap>();
-            TilemapRenderer renderer = tilemapObject.AddComponent<TilemapRenderer>();
-            renderer.sortingOrder = collidable ? 0 : 10;
-
-            return tilemap;
-        }
-
-        private static Dictionary<string, Tile> BuildTiles(IEnumerable<Sprite> sprites)
-        {
-            Dictionary<string, Tile> tiles = new Dictionary<string, Tile>();
-            foreach (Sprite sprite in sprites)
-            {
-                Tile tile = ScriptableObject.CreateInstance<Tile>();
-                tile.sprite = sprite;
-                tile.colliderType = Tile.ColliderType.None;
-                tiles[sprite.name] = tile;
-            }
-
-            return tiles;
-        }
-
-        private static void PaintForeground(Tilemap ground, IReadOnlyDictionary<string, Tile> tiles)
-        {
-            Tile grass = FindTile(tiles, "grass_top");
-            Tile mound = FindTile(tiles, "mound");
-            Tile crackedSoil = FindTile(tiles, "cracked_soil");
-
-            SetTileIfNotNull(ground, grass, -7, -3);
-            SetTileIfNotNull(ground, grass, -6, -3);
-            SetTileIfNotNull(ground, mound, -5, -3);
-            SetTileIfNotNull(ground, crackedSoil, -1, -3);
-            SetTileIfNotNull(ground, mound, 4, -3);
-            SetTileIfNotNull(ground, grass, 5, -3);
-        }
-
-        private static void PaintDecorations(Tilemap decoration, IReadOnlyDictionary<string, Tile> tiles)
-        {
-            SetIfFound(decoration, tiles, "sprout", -4, -1);
-            SetIfFound(decoration, tiles, "weeds", -2, -1);
-            SetIfFound(decoration, tiles, "stones", 0, -1);
-            SetIfFound(decoration, tiles, "wood_fence", 4, -1);
-            SetIfFound(decoration, tiles, "flower_patch", 5, -1);
-        }
-
-        private static void SetTileIfNotNull(Tilemap tilemap, Tile tile, int x, int y)
-        {
-            if (tile != null)
-            {
-                tilemap.SetTile(new Vector3Int(x, y, 0), tile);
-            }
-        }
-
-        private static Tile FindTile(IReadOnlyDictionary<string, Tile> tiles, string namePart)
-        {
-            foreach (KeyValuePair<string, Tile> pair in tiles)
-            {
-                if (pair.Key.Contains(namePart))
-                {
-                    return pair.Value;
-                }
-            }
-
-            return null;
-        }
-
-        private static void SetIfFound(Tilemap tilemap, IReadOnlyDictionary<string, Tile> tiles, string namePart, int x, int y)
-        {
-            Tile tile = FindTile(tiles, namePart);
-            if (tile != null)
-            {
-                tilemap.SetTile(new Vector3Int(x, y, 0), tile);
-            }
+            SpriteRenderer renderer = foregroundObject.AddComponent<SpriteRenderer>();
+            renderer.sprite = foregroundSprite;
+            renderer.sortingOrder = config.level.foregroundSortingOrder;
         }
 
         private void CreateSpawnMarkers(Transform parent)
@@ -174,7 +97,7 @@ namespace MMORPG.Game.Level
 
             GameObject bossSpawn = new GameObject("BossSpawnPoint");
             bossSpawn.transform.SetParent(gameplay.transform, false);
-            bossSpawn.transform.position = new Vector3(5.75f, -1.9f, 0f);
+            bossSpawn.transform.position = BossSpawnPosition;
         }
 
         private static void CreateStageCollision(Transform parent)
@@ -185,9 +108,10 @@ namespace MMORPG.Game.Level
             Rigidbody2D body = colliderObject.AddComponent<Rigidbody2D>();
             body.bodyType = RigidbodyType2D.Static;
 
+            float thickness = GameConfigService.Current.level.stageColliderThickness;
             BoxCollider2D groundCollider = colliderObject.AddComponent<BoxCollider2D>();
-            groundCollider.size = new Vector2(LevelWidth, StageColliderThickness);
-            groundCollider.offset = new Vector2(0f, StageFloorY - StageColliderThickness * 0.5f);
+            groundCollider.size = new Vector2(LevelWidth, thickness);
+            groundCollider.offset = new Vector2(0f, StageFloorY - thickness * 0.5f);
         }
     }
 }

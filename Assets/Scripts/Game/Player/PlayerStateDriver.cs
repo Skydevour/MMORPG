@@ -1,49 +1,43 @@
-using System.Collections.Generic;
-using MMORPG.Framework.StateMachine;
-using UnityEngine;
-using StateMachineRunner = MMORPG.Framework.StateMachine.StateMachine;
+using MMORPG.Game.Characters;
 
 namespace MMORPG.Game.Player
 {
-    public sealed class PlayerStateDriver : MonoBehaviour
+    public sealed class PlayerStateDriver : CharacterStateDriverBase
     {
-        private readonly StateMachineRunner stateMachine = new StateMachineRunner();
-        private readonly Dictionary<string, IState> states = new Dictionary<string, IState>();
-
         private PlayerController2D controller;
 
         public void Initialize(PlayerController2D playerController, PlayerSpriteAnimator animator)
         {
             controller = playerController;
-            states["idle"] = new PlayerAnimationState("idle", animator);
-            states["run"] = new PlayerAnimationState("run", animator);
-            states["jump"] = new PlayerAnimationState("jump", animator);
-            states["dash"] = new PlayerAnimationState("dash", animator);
-            states["shoot"] = new PlayerAnimationState("shoot", animator);
-            stateMachine.ChangeState(states["idle"]);
+            RegisterAnimationState("idle", animator.FrameAnimator);
+            RegisterAnimationState("run", animator.FrameAnimator);
+            RegisterAnimationState("jump", animator.FrameAnimator);
+            RegisterAnimationState("dash", animator.FrameAnimator);
+            RegisterAnimationState("shoot", animator.FrameAnimator);
+            RegisterAnimationState("dead", animator.FrameAnimator);
+            SetInitialState("idle");
         }
 
-        private void Update()
+        protected override string ResolveStateName()
         {
             if (controller == null)
             {
-                return;
+                return "idle";
             }
 
-            stateMachine.ChangeState(states[ResolveState()]);
-            stateMachine.Tick(Time.deltaTime);
-        }
+            if (controller.IsDead)
+            {
+                return "dead";
+            }
 
-        private void FixedUpdate()
-        {
-            stateMachine.FixedTick(Time.fixedDeltaTime);
-        }
-
-        private string ResolveState()
-        {
             if (controller.IsDashing)
             {
                 return "dash";
+            }
+
+            if (controller.IsUsingSuper)
+            {
+                return "shoot";
             }
 
             if (controller.IsShooting)

@@ -1,0 +1,755 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to the License Client on channel: "LicenseClient-admin" at "2026-08-02T16:51:10.7251227Z"
+[Licensing::Client] Error: Code 10 while verifying Licensing Client signature (process Id: 109788, path: "D:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] Error: LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.16.1+e780b2e
+  Session Id:              18522b8fd5ad49748c9ad0ff27a665db
+  Correlation Id:          1575c6cf291ca2c48f12779547c26191
+  External correlation Id: 7307180717861003332
+  Machine Id:              lHjMRQhilFGXGFYO/g8U2v5+XBc=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-admin" (connect: 0.00s, validation: 0.01s, handshake: 0.03s)
+[Licensing::IpcConnector] Successfully connected to the License Notification on channel: "LicenseClient-admin-notifications" at "2026-08-02T16:51:10.764082Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully updated license
+Built from '6000.0/china_unity/23f1' branch; Version is '6000.0.23f1c1 (d40c2aeae294) revision 13896746'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'zh' Physical Memory: 32581 MB
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Serial number assigned to: "I4-6KQ6-SA25-FZVR-P4YR-XXXX"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+[Licensing::Client] Successfully resolved entitlement details
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\Editor\6000.0.23f1c1\Editor\Unity.exe
+-batchmode
+-nographics
+-projectPath
+E:\UnityProject\MMORPG\MMORPG
+-executeMethod
+MMORPG.EditorTools.Validation.PrototypePlayModeTestRunner.Run
+-logFile
+E:\UnityProject\MMORPG\MMORPG\Plan\playmode_api_test_2026-08-02.log
+Successfully changed project path to: E:\UnityProject\MMORPG\MMORPG
+E:/UnityProject/MMORPG/MMORPG
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Failed to start primary listening socket at (0.0.0.0:55504-55512).
+Player connection [92528]  Target information:
+
+Player connection [92528]  * "[IP] 192.168.1.4 [Port] 55511 [Flags] 2 [Guid] 2496781857 [EditorId] 2496781857 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-N57VUJT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [92528]  * "[IP] 26.179.140.201 [Port] 55511 [Flags] 2 [Guid] 2496781857 [EditorId] 2496781857 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-N57VUJT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [92528]  * "[IP] 172.23.0.1 [Port] 55511 [Flags] 2 [Guid] 2496781857 [EditorId] 2496781857 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-N57VUJT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [92528] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [92528] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-112776" after 0.0 seconds.
+Library Redirect Path: Library/
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 56 packages:
+  Packages from [https://packages.unity.cn]:
+    com.unity.ai.navigation@2.0.4 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.ai.navigation)
+    com.unity.collab-proxy@2.5.2 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.collab-proxy)
+    com.unity.ide.rider@3.0.31 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.ide.rider)
+    com.unity.ide.visualstudio@2.0.22 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.ide.visualstudio)
+    com.unity.inputsystem@1.11.1 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.inputsystem)
+    com.unity.test-framework@1.4.5 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.test-framework)
+    com.unity.timeline@1.8.7 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.timeline)
+    com.unity.visualscripting@1.9.4 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.visualscripting)
+    com.unity.ext.nunit@2.0.5 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.ext.nunit)
+    com.unity.searcher@4.9.2 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.searcher)
+    com.unity.burst@1.8.18 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.burst)
+    com.unity.mathematics@1.3.2 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.mathematics)
+    com.unity.collections@2.5.1 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.collections)
+    com.unity.nuget.mono-cecil@1.11.4 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.nuget.mono-cecil)
+    com.unity.test-framework.performance@3.0.3 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.test-framework.performance)
+  Built-in packages:
+    com.unity.multiplayer.center@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.multiplayer.center)
+    com.unity.render-pipelines.universal@17.0.3 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.render-pipelines.universal)
+    com.unity.ugui@2.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.ugui)
+    com.unity.modules.accessibility@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.ai@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.screencapture@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vehicles@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.vr@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.vr)
+    com.unity.modules.wind@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.render-pipelines.core@17.0.3 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.render-pipelines.core)
+    com.unity.shadergraph@17.0.3 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.shadergraph)
+    com.unity.render-pipelines.universal-config@17.0.3 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.render-pipelines.universal-config)
+    com.unity.rendering.light-transport@1.0.1 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.rendering.light-transport)
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+[Subsystems] No new subsystems found in resolved package list.
+Package Manager log level set to [2]
+[Package Manager] Done registering packages in 0.08 seconds
+Refreshing native plugins compatible for Editor in 2.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.23f1c1 (d40c2aeae294)
+[Subsystems] Discovering subsystems at path D:/Unity/Editor/6000.0.23f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/UnityProject/MMORPG/MMORPG/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+[Licensing::Client] Successfully resolved entitlement details
+Initialize mono
+Mono path[0] = 'D:/Unity/Editor/6000.0.23f1c1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Editor/6000.0.23f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/Editor/6000.0.23f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56776
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/Editor/6000.0.23f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+Register platform support module: D:/Unity/Editor/6000.0.23f1c1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.016667 seconds.
+- Loaded All Assemblies, in  0.332 seconds
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 310 ms
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.575 seconds
+Domain Reload Profiling: 903ms
+	BeginReloadAssembly (119ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (118ms)
+		LoadAssemblies (115ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (115ms)
+			TypeCache.Refresh (114ms)
+				TypeCache.ScanAssembly (106ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (575ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (552ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (397ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (90ms)
+			ProcessInitializeOnLoadMethodAttributes (49ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+Starting: D:\Unity\Editor\6000.0.23f1c1\Editor\Data\bee_backend.exe --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aEDbg.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: E:/UnityProject/MMORPG/MMORPG
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 1s58ms
+[632/809    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[633/809    0s] Csc Library/Bee/artifacts/1900b0aEDbg.dag/MMORPG.Runtime.dll (+2 others)
+[790/809    0s] Csc Library/Bee/artifacts/1900b0aEDbg.dag/MMORPG.Tests.PlayMode.dll (+2 others)
+[791/809    0s] ILPostProcess Library/Bee/artifacts/1900b0aEDbg.dag/post-processed/MMORPG.Runtime.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aEDbg.dag/MMORPG.Runtime.dll, with 129 defines and 257 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[792/809    0s] Csc Library/Bee/artifacts/1900b0aEDbg.dag/MMORPG.Editor.dll (+2 others)
+[793/809    0s] CopyFiles Library/ScriptAssemblies/MMORPG.Runtime.pdb
+[794/809    0s] CopyFiles Library/ScriptAssemblies/MMORPG.Runtime.dll
+[795/809    0s] ILPostProcess Library/Bee/artifacts/1900b0aEDbg.dag/post-processed/MMORPG.Tests.PlayMode.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aEDbg.dag/MMORPG.Tests.PlayMode.dll, with 129 defines and 245 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[796/809    0s] CopyFiles Library/ScriptAssemblies/MMORPG.Tests.PlayMode.pdb
+[797/809    0s] CopyFiles Library/ScriptAssemblies/MMORPG.Tests.PlayMode.dll
+[798/809    0s] ILPostProcess Library/Bee/artifacts/1900b0aEDbg.dag/post-processed/MMORPG.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aEDbg.dag/MMORPG.Editor.dll, with 127 defines and 265 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[799/809    0s] Csc Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp.dll (+2 others)
+[800/809    0s] CopyFiles Library/ScriptAssemblies/MMORPG.Editor.pdb
+[801/809    0s] CopyFiles Library/ScriptAssemblies/MMORPG.Editor.dll
+[802/809    0s] Csc Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp-Editor.dll (+2 others)
+[803/809    0s] ILPostProcess Library/Bee/artifacts/1900b0aEDbg.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp.dll, with 129 defines and 296 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[804/809    0s] ILPostProcess Library/Bee/artifacts/1900b0aEDbg.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp-Editor.dll, with 127 defines and 315 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[805/809    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[806/809    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[807/809    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[808/809    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (1.03 seconds), 21 items updated, 809 evaluated
+AssetDatabase: script compilation time: 1.452552s
+Begin MonoManager ReloadAssembly
+Total cache size 267959911
+Total cache size after purge 267959911, took 00:00:00.2100288
+- Loaded All Assemblies, in  0.931 seconds
+Refreshing native plugins compatible for Editor in 1.11 ms, found 3 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.619 seconds
+Domain Reload Profiling: 4541ms
+	BeginReloadAssembly (286ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (27ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (556ms)
+		LoadAssemblies (407ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (237ms)
+			TypeCache.Refresh (174ms)
+				TypeCache.ScanAssembly (159ms)
+			BuildScriptInfoCaches (53ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (3619ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (3426ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (28ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (153ms)
+			ProcessInitializeOnLoadAttributes (3167ms)
+			ProcessInitializeOnLoadMethodAttributes (65ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Start importing Assets/Resources/Config/GameConfig.json using Guid(ec86fdcf033aaa04a93d409e9ef32f08) (TextScriptImporter) -> (artifact id: '85f537bfa7b8575fa0fa4a5690e1e52f') in 0.006757 seconds
+Refreshing native plugins compatible for Editor in 1.05 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=d9b0af29605590241afa6f32210b854e): Total: 7.722 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=1 ms, native=4996 ms
+		Asset DB Callback time: managed=156 ms, native=4 ms
+		Scripting: domain reloads=1, domain reload time=1022 ms, compile time=1453 ms, other=86 ms
+		Project Asset Count: scripts=1238, non-scripts=2225
+		Asset File Changes: new=0, changed=7, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.001ms
+	InvokePackagesCallback: 2.376ms
+	ApplyChangesToAssetFolders: 0.346ms
+	Scan: 1070.947ms
+	OnSourceAssetsModified: 0.947ms
+	CategorizeAssetsWithTransientArtifact: 52.896ms
+	ProcessAssetsWithTransientArtifactChanges: 53.816ms
+	CategorizeAssets: 28.433ms
+	ImportOutOfDateAssets: 3635.721ms (2172.468ms without children)
+		ImportManagerImport: 7.652ms (0.688ms without children)
+			ImportInProcess: 6.965ms
+		CompileScripts: 1453.390ms
+		ReloadNativeAssets: 0.027ms
+		UnloadImportedAssets: 1.267ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.537ms
+		InitializingProgressBar: 0.006ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 0.374ms
+	PostProcessAllAssets: 157.481ms
+	Hotreload: 2.315ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
+	UnloadStreamsBegin: 1.548ms
+	PersistCurrentRevisions: 0.136ms
+	UnloadStreamsEnd: 0.001ms
+	GenerateScriptTypeHashes: 1.569ms
+	Untracked: 2715.424ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 3.006ms
+Initializing Unity extensions:
+[Licensing::Client] Successfully resolved entitlement details
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-MMORPG
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5945 unused Assets / (2.5 MB). Loaded Objects now: 6758.
+Memory consumption went from 216.1 MB to 213.6 MB.
+Total: 7.409300 ms (FindLiveObjects: 0.342200 ms CreateObjectMapping: 0.225400 ms MarkObjects: 5.290900 ms  DeleteObjects: 1.549900 ms)
+
+已启动原型 PlayMode 测试程序集，等待测试回调完成。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.EditorTools.Validation.PrototypePlayModeTestRunner:Run () (at Assets/Scripts/Editor/Validation/PrototypePlayModeTestRunner.cs:23)
+
+(Filename: Assets/Scripts/Editor/Validation/PrototypePlayModeTestRunner.cs Line: 23)
+
+Unity is running with Administrator privileges, which is not supported. Unity executes scripts and binary libraries in your project that may originate from third party sources and potentially be harmful to your computer. Unity may also execute scripts and binary libraries that are still under development and not yet fully tested. Running Unity with Administrator privileges may lead to catastrophic consequences, including but not limited to accidental data loss, change of global system settings or even bricking your device.
+Microsoft Media Foundation video decoding to texture disabled: graphics device is Null, only Direct3D 11 and Direct3D 12 (only on desktop) are supported for hardware-accelerated video decoding.
+[Project] Loading completed in 11.959 seconds
+	Project init time: 				10.700 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		0.000 seconds
+		Asset Database init time: 		0.241 seconds
+		Global illumination init time: 	0.003 seconds
+		Assemblies load time: 			0.922 seconds
+		Unity extensions init time: 	0.005 seconds
+		Asset Database refresh time: 	7.722 seconds
+	Scene opening time: 			0.177 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1785689482677,"processId":112776,"projectLoad":11.9592278,"projectInit":10.6996891,"templateInit":0.0,"packageManagerInit":0.0000775,"assetDatabaseInit":0.2410945,"globalIlluminationInit":0.0031059,"assembliesLoad":0.9224978,"unityExtensionsInit":0.0047467,"assetDatabaseRefresh":7.7224571,"sceneOpening":0.1768682}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1785689482677,"processId":112776,"editorVersion":"6000.0.23f1c1 (d40c2aeae294)","branch":"6000.0/china_unity/23f1","buildType":"Release","platform":"Windows"}
+Asset Pipeline Refresh (id=6f66241ac62a7b0468064b343e299b33): Total: 0.030 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+[UnityConnectServicesConfig] config is NOT valid, switching to default
+Created GICache directory at C:/Users/admin/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.007s, timestamps: [11.970 - 11.977]
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4 unused Assets / (2.1 KB). Loaded Objects now: 6794.
+Memory consumption went from 209.2 MB to 209.2 MB.
+Total: 6.722900 ms (FindLiveObjects: 0.197000 ms CreateObjectMapping: 0.082000 ms MarkObjects: 6.400400 ms  DeleteObjects: 0.042600 ms)
+
+Start importing Assets/InitTestScene1909ca0c-3ae0-4276-9922-d9d5b1cbcadd.unity using Guid(964ed2171fa3ae04388f78c7459848ec) (DefaultImporter) -> (artifact id: '56155c1c6b7d86ce9c247e1410ce2902') in 0.0009387 seconds
+Refreshing native plugins compatible for Editor in 2.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=ca60bd93ebfdacd45ba3d58461c9f59e): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UnityEditor.TestTools.TestRunner.TestRun.Tasks.BuildActionTaskBase`1/<ExecuteMethods>d__8<UnityEngine.TestTools.IPrebuildSetup>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEditor.TestRunner/TestRun/Tasks/BuildActionTaskBase.cs:51)
+UnityEditor.TestTools.TestRunner.TestRun.Tasks.BuildActionTaskBase`1/<Execute>d__7<UnityEngine.TestTools.IPrebuildSetup>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEditor.TestRunner/TestRun/Tasks/BuildActionTaskBase.cs:35)
+UnityEditor.TestTools.TestRunner.TestRun.TestJobRunner:ExecuteStep () (at ./Library/PackageCache/com.unity.test-framework/UnityEditor.TestRunner/TestRun/TestJobRunner.cs:173)
+UnityEditor.TestTools.TestRunner.TestRun.TestJobRunner:ExecuteCallback () (at ./Library/PackageCache/com.unity.test-framework/UnityEditor.TestRunner/TestRun/TestJobRunner.cs:108)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: ./Library/PackageCache/com.unity.test-framework/UnityEditor.TestRunner/TestRun/Tasks/BuildActionTaskBase.cs Line: 51)
+
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+00:51:23.837 |V| RiderPlugin                    | :1                             | AppDomain.CurrentDomain.DomainUnload lifetimeDefinition.Terminate
+- Loaded All Assemblies, in  0.544 seconds
+Refreshing native plugins compatible for Editor in 0.96 ms, found 3 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.968 seconds
+Domain Reload Profiling: 1509ms
+	BeginReloadAssembly (317ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (24ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (182ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (23ms)
+	LoadAllAssembliesAndSetupDomain (169ms)
+		LoadAssemblies (115ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (132ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (116ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (968ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (700ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (28ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (122ms)
+			ProcessInitializeOnLoadAttributes (402ms)
+			ProcessInitializeOnLoadMethodAttributes (138ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Asset Pipeline Refresh (id=e8082e39b5828ab489a2f1dd72b7cb90): Total: 1.611 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1028 ms
+		Asset DB Callback time: managed=20 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=560 ms, compile time=1 ms, other=0 ms
+		Project Asset Count: scripts=1238, non-scripts=2226
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.001ms
+	InvokePackagesCallback: 1.681ms
+	ApplyChangesToAssetFolders: 0.195ms
+	Scan: 0.000ms
+	OnSourceAssetsModified: 0.001ms
+	CategorizeAssetsWithTransientArtifact: 0.002ms
+	ProcessAssetsWithTransientArtifactChanges: 2.430ms
+	CategorizeAssets: 29.296ms
+	ImportOutOfDateAssets: 973.118ms (968.605ms without children)
+		CompileScripts: 0.704ms
+		CollectScriptTypesHashes: 2.695ms
+		ReloadNativeAssets: 0.527ms
+		UnloadImportedAssets: 0.051ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.360ms
+		InitializingProgressBar: 0.000ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 0.175ms
+	PostProcessAllAssets: 20.761ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.163ms
+	UnloadStreamsBegin: 0.047ms
+	PersistCurrentRevisions: 0.084ms
+	UnloadStreamsEnd: 0.001ms
+	GenerateScriptTypeHashes: 2.909ms
+	Untracked: 582.909ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.649 ms
+	Integration:            144.902 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.009 ms
+	Total Operation Time:   145.561 ms
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.087200 ms
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Config.GameConfigService:Load () (at Assets/Scripts/Game/Config/GameConfig.cs:181)
+MMORPG.Game.Core.GameManager:Awake () (at Assets/Scripts/Game/Core/GameManager.cs:27)
+
+(Filename: Assets/Scripts/Game/Config/GameConfig.cs Line: 181)
+
+Loaded scene 'Assets/Scenes/MainScene.unity'
+	Deserialize:            2.303 ms
+	Integration:            122.267 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.122 ms
+	Total Operation Time:   124.693 ms
+Unloading 25 unused Assets / (3.7 MB). Loaded Objects now: 6829.
+Memory consumption went from 217.6 MB to 213.9 MB.
+Total: 5.194800 ms (FindLiveObjects: 0.215100 ms CreateObjectMapping: 0.089300 ms MarkObjects: 4.826500 ms  DeleteObjects: 0.063300 ms)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+玩家受到 1 点伤害，剩余生命 2/3。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Player.PlayerController2D:TakeDamage (int) (at Assets/Scripts/Game/Player/PlayerController2D.cs:390)
+MMORPG.Game.Projectiles.BossProjectile:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Game/Projectiles/BossProjectile.cs:114)
+
+(Filename: Assets/Scripts/Game/Player/PlayerController2D.cs Line: 390)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+玩家受到 1 点伤害，剩余生命 1/3。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Player.PlayerController2D:TakeDamage (int) (at Assets/Scripts/Game/Player/PlayerController2D.cs:390)
+MMORPG.Game.Projectiles.BossProjectile:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Game/Projectiles/BossProjectile.cs:114)
+
+(Filename: Assets/Scripts/Game/Player/PlayerController2D.cs Line: 390)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+玩家受到 1 点伤害，剩余生命 0/3。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Player.PlayerController2D:TakeDamage (int) (at Assets/Scripts/Game/Player/PlayerController2D.cs:390)
+MMORPG.Game.Projectiles.BossProjectile:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Game/Projectiles/BossProjectile.cs:114)
+
+(Filename: Assets/Scripts/Game/Player/PlayerController2D.cs Line: 390)
+
+玩家生命归零，当前原型暂不切换失败界面。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Player.PlayerController2D:TakeDamage (int) (at Assets/Scripts/Game/Player/PlayerController2D.cs:393)
+MMORPG.Game.Projectiles.BossProjectile:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Game/Projectiles/BossProjectile.cs:114)
+
+(Filename: Assets/Scripts/Game/Player/PlayerController2D.cs Line: 393)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+玩家攻击命中紫色子弹，获得能量 1 格。当前能量 1/3。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Projectiles.BossProjectile:TryCollectByPlayerAttack () (at Assets/Scripts/Game/Projectiles/BossProjectile.cs:74)
+MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests/<MainSceneCanRunBossEnergyAndSuperFlow>d__0:MoveNext () (at Assets/Tests/PlayMode/PrototypePlayModeFlowTests.cs:49)
+UnityEngine.TestTools.TestEnumerator/<Execute>d__7:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44)
+UnityEngine.TestTools.EnumerableTestMethodCommand/<ExecuteEnumerableAndRecordExceptions>d__4:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/EnumerableTestMethodCommand.cs:78)
+UnityEngine.TestTools.EnumerableTestMethodCommand:AdvanceEnumerator (System.Collections.IEnumerator) (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/EnumerableTestMethodCommand.cs:64)
+UnityEngine.TestTools.EnumerableTestMethodCommand/<ExecuteEnumerable>d__2:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/EnumerableTestMethodCommand.cs:47)
+UnityEngine.TestRunner.NUnitExtensions.Runner.UnityLogCheckDelegatingCommand/<ExecuteEnumerable>d__3:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Runner/UnityLogCheckDelegatingCommand.cs:48)
+UnityEngine.TestTools.BeforeAfterTestCommandBase`1/<ExecuteEnumerable>d__14<NUnit.Framework.ITestAction>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/BeforeAfterTestCommandBase.cs:187)
+UnityEngine.TestTools.BeforeAfterTestCommandBase`1/<ExecuteEnumerable>d__14<System.Reflection.MethodInfo>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/BeforeAfterTestCommandBase.cs:187)
+UnityEngine.TestTools.BeforeAfterTestCommandBase`1/<ExecuteEnumerable>d__14<System.Reflection.MethodInfo>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/BeforeAfterTestCommandBase.cs:187)
+UnityEngine.TestTools.BeforeAfterTestCommandBase`1/<ExecuteEnumerable>d__14<UnityEngine.TestTools.IOuterUnityTestAction>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/BeforeAfterTestCommandBase.cs:187)
+UnityEngine.TestTools.RetryCommand/<ExecuteEnumerable>d__2:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/RetryCommand.cs:37)
+UnityEngine.TestTools.RepeatCommand/<ExecuteEnumerable>d__2:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/RepeatCommand.cs:36)
+UnityEngine.TestTools.TimeoutCommand/<ExecuteEnumerable>d__3:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/TimeoutCommand.cs:33)
+UnityEngine.TestTools.IgnoreTestCommand/<ExecuteEnumerable>d__3:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/IgnoreTestCommand.cs:42)
+UnityEngine.TestTools.StrictCheckCommand/<ExecuteEnumerable>d__2:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/StrictCheckCommand.cs:29)
+UnityEngine.TestTools.Utils.CoroutineRunner/<WrapEnumeratorForChecks>d__8:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/Utils/CoroutineRunner.cs:58)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Game/Projectiles/BossProjectile.cs Line: 74)
+
+土豆 Boss 受到 30 点伤害，剩余生命 70/100。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:TakeDamage (int) (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:63)
+MMORPG.Game.Player.PlayerController2D:TryActivateSuper () (at Assets/Scripts/Game/Player/PlayerController2D.cs:317)
+MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests/<MainSceneCanRunBossEnergyAndSuperFlow>d__0:MoveNext () (at Assets/Tests/PlayMode/PrototypePlayModeFlowTests.cs:52)
+UnityEngine.TestTools.TestEnumerator/<Execute>d__7:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44)
+UnityEngine.TestTools.EnumerableTestMethodCommand/<ExecuteEnumerableAndRecordExceptions>d__4:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/EnumerableTestMethodCommand.cs:78)
+UnityEngine.TestTools.EnumerableTestMethodCommand:AdvanceEnumerator (System.Collections.IEnumerator) (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/EnumerableTestMethodCommand.cs:64)
+UnityEngine.TestTools.EnumerableTestMethodCommand/<ExecuteEnumerable>d__2:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/EnumerableTestMethodCommand.cs:47)
+UnityEngine.TestRunner.NUnitExtensions.Runner.UnityLogCheckDelegatingCommand/<ExecuteEnumerable>d__3:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Runner/UnityLogCheckDelegatingCommand.cs:48)
+UnityEngine.TestTools.BeforeAfterTestCommandBase`1/<ExecuteEnumerable>d__14<NUnit.Framework.ITestAction>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/BeforeAfterTestCommandBase.cs:187)
+UnityEngine.TestTools.BeforeAfterTestCommandBase`1/<ExecuteEnumerable>d__14<System.Reflection.MethodInfo>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/BeforeAfterTestCommandBase.cs:187)
+UnityEngine.TestTools.BeforeAfterTestCommandBase`1/<ExecuteEnumerable>d__14<System.Reflection.MethodInfo>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/BeforeAfterTestCommandBase.cs:187)
+UnityEngine.TestTools.BeforeAfterTestCommandBase`1/<ExecuteEnumerable>d__14<UnityEngine.TestTools.IOuterUnityTestAction>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/BeforeAfterTestCommandBase.cs:187)
+UnityEngine.TestTools.RetryCommand/<ExecuteEnumerable>d__2:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/RetryCommand.cs:37)
+UnityEngine.TestTools.RepeatCommand/<ExecuteEnumerable>d__2:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/RepeatCommand.cs:36)
+UnityEngine.TestTools.TimeoutCommand/<ExecuteEnumerable>d__3:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/TimeoutCommand.cs:33)
+UnityEngine.TestTools.IgnoreTestCommand/<ExecuteEnumerable>d__3:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/IgnoreTestCommand.cs:42)
+UnityEngine.TestTools.StrictCheckCommand/<ExecuteEnumerable>d__2:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/StrictCheckCommand.cs:29)
+UnityEngine.TestTools.Utils.CoroutineRunner/<WrapEnumeratorForChecks>d__8:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/Utils/CoroutineRunner.cs:58)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 63)
+
+玩家释放大招，消耗全部 3 格能量。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Player.PlayerController2D:TryActivateSuper () (at Assets/Scripts/Game/Player/PlayerController2D.cs:321)
+MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests/<MainSceneCanRunBossEnergyAndSuperFlow>d__0:MoveNext () (at Assets/Tests/PlayMode/PrototypePlayModeFlowTests.cs:52)
+UnityEngine.TestTools.TestEnumerator/<Execute>d__7:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:44)
+UnityEngine.TestTools.EnumerableTestMethodCommand/<ExecuteEnumerableAndRecordExceptions>d__4:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/EnumerableTestMethodCommand.cs:78)
+UnityEngine.TestTools.EnumerableTestMethodCommand:AdvanceEnumerator (System.Collections.IEnumerator) (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/EnumerableTestMethodCommand.cs:64)
+UnityEngine.TestTools.EnumerableTestMethodCommand/<ExecuteEnumerable>d__2:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/EnumerableTestMethodCommand.cs:47)
+UnityEngine.TestRunner.NUnitExtensions.Runner.UnityLogCheckDelegatingCommand/<ExecuteEnumerable>d__3:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Runner/UnityLogCheckDelegatingCommand.cs:48)
+UnityEngine.TestTools.BeforeAfterTestCommandBase`1/<ExecuteEnumerable>d__14<NUnit.Framework.ITestAction>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/BeforeAfterTestCommandBase.cs:187)
+UnityEngine.TestTools.BeforeAfterTestCommandBase`1/<ExecuteEnumerable>d__14<System.Reflection.MethodInfo>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/BeforeAfterTestCommandBase.cs:187)
+UnityEngine.TestTools.BeforeAfterTestCommandBase`1/<ExecuteEnumerable>d__14<System.Reflection.MethodInfo>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/BeforeAfterTestCommandBase.cs:187)
+UnityEngine.TestTools.BeforeAfterTestCommandBase`1/<ExecuteEnumerable>d__14<UnityEngine.TestTools.IOuterUnityTestAction>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/BeforeAfterTestCommandBase.cs:187)
+UnityEngine.TestTools.RetryCommand/<ExecuteEnumerable>d__2:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/RetryCommand.cs:37)
+UnityEngine.TestTools.RepeatCommand/<ExecuteEnumerable>d__2:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/RepeatCommand.cs:36)
+UnityEngine.TestTools.TimeoutCommand/<ExecuteEnumerable>d__3:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/TimeoutCommand.cs:33)
+UnityEngine.TestTools.IgnoreTestCommand/<ExecuteEnumerable>d__3:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/IgnoreTestCommand.cs:42)
+UnityEngine.TestTools.StrictCheckCommand/<ExecuteEnumerable>d__2:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/NUnitExtensions/Commands/StrictCheckCommand.cs:29)
+UnityEngine.TestTools.Utils.CoroutineRunner/<WrapEnumeratorForChecks>d__8:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEngine.TestRunner/Utils/CoroutineRunner.cs:58)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Game/Player/PlayerController2D.cs Line: 321)
+
+Saving results to: C:/Users/admin/AppData/LocalLow/DefaultCompany/MMORPG\TestResults.xml
+Unloading 105 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.423 ms
+	Integration:            114.435 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.014 ms
+	Total Operation Time:   114.873 ms
+Unloading 309 unused Assets / (3.2 MB). Loaded Objects now: 6807.
+Memory consumption went from 256.7 MB to 253.5 MB.
+Total: 6.172400 ms (FindLiveObjects: 0.220800 ms CreateObjectMapping: 0.084800 ms MarkObjects: 5.064600 ms  DeleteObjects: 0.801600 ms)
+
+Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UnityEditor.TestTools.TestRunner.TestRun.Tasks.BuildActionTaskBase`1/<ExecuteMethods>d__8<UnityEngine.TestTools.IPostBuildCleanup>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEditor.TestRunner/TestRun/Tasks/BuildActionTaskBase.cs:51)
+UnityEditor.TestTools.TestRunner.TestRun.Tasks.BuildActionTaskBase`1/<Execute>d__7<UnityEngine.TestTools.IPostBuildCleanup>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework/UnityEditor.TestRunner/TestRun/Tasks/BuildActionTaskBase.cs:35)
+UnityEditor.TestTools.TestRunner.TestRun.TestJobRunner:ExecuteStep () (at ./Library/PackageCache/com.unity.test-framework/UnityEditor.TestRunner/TestRun/TestJobRunner.cs:173)
+UnityEditor.TestTools.TestRunner.TestRun.TestJobRunner:ExecuteCallback () (at ./Library/PackageCache/com.unity.test-framework/UnityEditor.TestRunner/TestRun/TestJobRunner.cs:108)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: ./Library/PackageCache/com.unity.test-framework/UnityEditor.TestRunner/TestRun/Tasks/BuildActionTaskBase.cs Line: 51)
+
+Asset Pipeline Refresh (id=19b9d974322868645b11797df2a65a23): Total: 0.017 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 0 unused Assets / (0 B). Loaded Objects now: 6812.
+Memory consumption went from 212.0 MB to 212.0 MB.
+Total: 5.260800 ms (FindLiveObjects: 0.163700 ms CreateObjectMapping: 0.061500 ms MarkObjects: 5.027900 ms  DeleteObjects: 0.007200 ms)
+
+Refreshing native plugins compatible for Editor in 0.94 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=599ba6762e33d9e43b98f0c253c98966): Total: 0.053 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+DisplayProgressbar: Undo

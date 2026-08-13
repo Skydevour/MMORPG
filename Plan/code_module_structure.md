@@ -27,6 +27,9 @@
 - `Game/Core`
   - 游戏启动、全局运行时根节点、资源加载辅助。
   - 例如：`GameManager`、`PrototypeAssetLoader`。
+- `Game/Characters`
+  - 玩家和 Boss 共用的角色状态机驱动、角色动画状态等。
+  - 例如：`CharacterStateDriverBase`、`CharacterAnimationState`。
 - `Game/Level`
   - 关卡加载、地图、地形碰撞、出生点。
   - 例如：`LevelMapLoader`。
@@ -36,9 +39,13 @@
 - `Game/Projectiles`
   - 子弹、飞行物、弹幕基础逻辑。
   - 例如：`PlayerProjectile`。
+- `Game/VFX`
+  - 运行时视觉特效逻辑。
+  - 例如：`DodgeSmokeEffect`。
 - `Game/Bosses`
   - Boss 生成、Boss 状态机、Boss 攻击逻辑。
-  - 后续土豆 Boss 建议放到 `Game/Bosses/Potato`。
+  - 具体 Boss 继续按 Boss 名称建立子目录。
+  - 例如：`Game/Bosses/Potato`。
 
 约定：具体玩法模块可以引用 `Framework`，但同级模块之间要尽量通过清晰接口协作，避免互相硬耦合。
 
@@ -61,9 +68,12 @@
 - `MMORPG.Framework.StateMachine`
 - `MMORPG.Framework.Pooling`
 - `MMORPG.Game.Core`
+- `MMORPG.Game.Characters`
 - `MMORPG.Game.Level`
 - `MMORPG.Game.Player`
 - `MMORPG.Game.Projectiles`
+- `MMORPG.Game.VFX`
+- `MMORPG.Game.Bosses.Potato`
 - `MMORPG.EditorTools.SceneSetup`
 - `MMORPG.EditorTools.Import`
 

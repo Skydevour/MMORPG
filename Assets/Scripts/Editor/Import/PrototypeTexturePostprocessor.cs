@@ -6,7 +6,7 @@ namespace MMORPG.EditorTools.Import
     public sealed class PrototypeTexturePostprocessor : AssetPostprocessor
     {
         private static readonly UnityEngine.Vector2 HeroFramePivot = new UnityEngine.Vector2(99f / 307f, 1f / 167f);
-        private static readonly UnityEngine.Vector2 PotatoBossFramePivot = new UnityEngine.Vector2(0.5f, 1f / 255f);
+        private static readonly UnityEngine.Vector2 PotatoBossFramePivot = new UnityEngine.Vector2(0.5f, 0f);
 
         private void OnPreprocessTexture()
         {

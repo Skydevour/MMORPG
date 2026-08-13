@@ -46,22 +46,7 @@
     <Analyzer Include="D:\Unity\Editor\6000.0.23f1c1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Game\Player\PlayerController2D.cs" />
-    <Compile Include="Assets\Scripts\Framework\StateMachine\StateMachine.cs" />
-    <Compile Include="Assets\Scripts\Game\Player\PlayerSpriteAnimator.cs" />
-    <Compile Include="Assets\Scripts\Framework\Animation\FrameAnimationClip.cs" />
-    <Compile Include="Assets\Scripts\Framework\Pooling\IPoolable.cs" />
-    <Compile Include="Assets\Scripts\Game\Core\PrototypeAssetLoader.cs" />
-    <Compile Include="Assets\Scripts\Framework\Animation\FrameAnimator.cs" />
-    <Compile Include="Assets\Scripts\Game\Player\PlayerStates.cs" />
-    <Compile Include="Assets\Scripts\Game\Core\GameManager.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Scripts\Game\Level\LevelMapLoader.cs" />
-    <Compile Include="Assets\Scripts\Game\Projectiles\PlayerProjectile.cs" />
-    <Compile Include="Assets\Scripts\Framework\Pooling\ComponentObjectPool.cs" />
-    <Compile Include="Assets\Scripts\Game\Player\PlayerSpawner.cs" />
-    <Compile Include="Assets\Scripts\Framework\StateMachine\IState.cs" />
-    <Compile Include="Assets\Scripts\Game\Player\PlayerStateDriver.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Unity\Editor\6000.0.23f1c1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
     </Reference>
@@ -655,14 +640,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.2D.Runtime.Player.csproj">
-      <Project>{47d570b8-c820-0e74-f559-9b057a16479e}</Project>
-      <Name>Unity.RenderPipelines.Universal.2D.Runtime.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Config.Runtime.Player.csproj">
-      <Project>{d3f5e9d7-dd1c-272d-1846-56ab0f06f998}</Project>
-      <Name>Unity.RenderPipelines.Universal.Config.Runtime.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.ForUI.Player.csproj">
       <Project>{535cc872-f64a-3163-44cf-d9e0943585e8}</Project>
       <Name>Unity.InputSystem.ForUI.Player</Name>
@@ -670,14 +647,6 @@
     <ProjectReference Include="Unity.AI.Navigation.Player.csproj">
       <Project>{59cbd59a-62bd-e3b3-03bf-92ddda6b92ed}</Project>
       <Name>Unity.AI.Navigation.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Multiplayer.Center.Common.Player.csproj">
-      <Project>{635ac363-86ff-02df-67ef-865a57607098}</Project>
-      <Name>Unity.Multiplayer.Center.Common.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
-      <Project>{84438b0e-dfc0-1b2f-48c6-cadd7d43896d}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj">
       <Project>{64572493-bdf3-0869-6db3-39546d29b80e}</Project>
@@ -687,21 +656,17 @@
       <Project>{612c75dd-10b3-499d-315d-1f79c9b73a7a}</Project>
       <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
-      <Project>{aea0e570-2058-006b-407f-1f2cce45e713}</Project>
-      <Name>Unity.TextMeshPro.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Shared.Player.csproj">
       <Project>{81585deb-da71-abbe-6c15-802615c4fe3d}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime.Shared.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="MMORPG.Runtime.Player.csproj">
+      <Project>{7189afa4-7ac6-49ea-16fc-aef601efdbf8}</Project>
+      <Name>MMORPG.Runtime.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Player.csproj">
       <Project>{4160ece0-babd-4b73-7da0-aed5f4d227cb}</Project>
       <Name>Unity.Timeline.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.Player.csproj">
-      <Project>{8a314ea9-efa0-c858-56fa-7600d34bb8da}</Project>
-      <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
       <Project>{89a05cb2-6dc9-4d8c-6f59-04d3afacdef5}</Project>
@@ -711,14 +676,6 @@
       <Project>{cf15b87a-d2ac-2332-7447-9280db58f4b3}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
-      <Project>{8ed922dd-3964-669a-82cd-e5cc5cb88fa4}</Project>
-      <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
-      <Project>{36c87973-2348-8063-1eb1-aea80e601bed}</Project>
-      <Name>Unity.VisualScripting.State.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.GPUDriven.Runtime.Player.csproj">
       <Project>{d90486d9-1b39-9cf9-c995-cb892a087868}</Project>
       <Name>Unity.RenderPipelines.GPUDriven.Runtime.Player</Name>
@@ -726,6 +683,42 @@
     <ProjectReference Include="Unity.Collections.Player.csproj">
       <Project>{be9b5b86-fda1-63b3-ca9e-e4942af2eeb4}</Project>
       <Name>Unity.Collections.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
+      <Project>{06977410-9193-7c40-acd2-681182a4ed6d}</Project>
+      <Name>Unity.VisualScripting.Core.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Config.Runtime.Player.csproj">
+      <Project>{d3f5e9d7-dd1c-272d-1846-56ab0f06f998}</Project>
+      <Name>Unity.RenderPipelines.Universal.Config.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
+      <Project>{84438b0e-dfc0-1b2f-48c6-cadd7d43896d}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Multiplayer.Center.Common.Player.csproj">
+      <Project>{635ac363-86ff-02df-67ef-865a57607098}</Project>
+      <Name>Unity.Multiplayer.Center.Common.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
+      <Project>{aea0e570-2058-006b-407f-1f2cce45e713}</Project>
+      <Name>Unity.TextMeshPro.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Player.csproj">
+      <Project>{8a314ea9-efa0-c858-56fa-7600d34bb8da}</Project>
+      <Name>Unity.Mathematics.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="MMORPG.Tests.PlayMode.Player.csproj">
+      <Project>{b9ca1975-fe93-646f-7896-a7d7320b6e30}</Project>
+      <Name>MMORPG.Tests.PlayMode.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
+      <Project>{8ed922dd-3964-669a-82cd-e5cc5cb88fa4}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
+      <Project>{36c87973-2348-8063-1eb1-aea80e601bed}</Project>
+      <Name>Unity.VisualScripting.State.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.Player.csproj">
       <Project>{7d55be24-0801-781a-a9d2-d70383e0cc34}</Project>
@@ -743,13 +736,13 @@
       <Project>{22df9852-ce9e-6cb6-ec07-68f61c8d4a1f}</Project>
       <Name>Unity.Rendering.LightTransport.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
-      <Project>{06977410-9193-7c40-acd2-681182a4ed6d}</Project>
-      <Name>Unity.VisualScripting.Core.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.Player.csproj">
       <Project>{2465c6ff-3b98-2940-0a38-565f980f8483}</Project>
       <Name>Unity.InputSystem.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.2D.Runtime.Player.csproj">
+      <Project>{47d570b8-c820-0e74-f559-9b057a16479e}</Project>
+      <Name>Unity.RenderPipelines.Universal.2D.Runtime.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

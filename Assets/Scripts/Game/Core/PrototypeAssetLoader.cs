@@ -13,7 +13,7 @@ namespace MMORPG.Game.Core
     {
         private const float DefaultPixelsPerUnit = 128f;
         private static readonly Vector2 HeroFramePivot = new Vector2(99f / 307f, 1f / 167f);
-        private static readonly Vector2 PotatoBossFramePivot = new Vector2(0.5f, 1f / 255f);
+        private static readonly Vector2 PotatoBossFramePivot = new Vector2(0.5f, 0f);
 
         public static Sprite LoadSprite(string assetPath, float pixelsPerUnit = DefaultPixelsPerUnit)
         {
@@ -32,7 +32,7 @@ namespace MMORPG.Game.Core
             string normalizedFolder = NormalizePath(assetFolder);
             if (!Directory.Exists(normalizedFolder))
             {
-                Debug.LogWarning($"Sprite folder does not exist: {normalizedFolder}");
+                Debug.LogWarning($"序列帧目录不存在：{normalizedFolder}");
                 return new Sprite[0];
             }
 

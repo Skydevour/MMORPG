@@ -41,7 +41,7 @@ namespace MMORPG.EditorTools.SceneSetup
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
 
-            Debug.Log("Prototype MainScene is ready. Press Play to load the garden map and player.");
+            Debug.Log("原型主场景已准备完成，点击运行即可加载花园地图、玩家和土豆 Boss。");
         }
     }
 }

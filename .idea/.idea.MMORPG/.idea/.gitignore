@@ -1,0 +1,8 @@
+# 默认忽略的文件
+/shelf/
+/workspace.xml
+# Rider 忽略的文件
+/projectSettingsUpdater.xml
+/.idea.MMORPG.iml
+/modules.xml
+/contentModel.xml

@@ -1,20 +1,21 @@
 using MMORPG.Framework.Pooling;
+using MMORPG.Game.Bosses.Potato;
+using MMORPG.Game.Config;
 using UnityEngine;
 
 namespace MMORPG.Game.Projectiles
 {
     [RequireComponent(typeof(SpriteRenderer))]
+    [RequireComponent(typeof(CircleCollider2D))]
     public sealed class PlayerProjectile : MonoBehaviour, IPoolable
     {
-        [SerializeField] private float speed = 11f;
-        [SerializeField] private float lifetime = 1.4f;
-
         private static Sprite cachedSprite;
         private static ComponentObjectPool<PlayerProjectile> pool;
         private static Transform poolRoot;
 
         private int direction = 1;
         private float lifeTimer;
+        private Rigidbody2D body;
 
         public static PlayerProjectile Spawn(Vector3 position, int facingDirection)
         {
@@ -28,7 +29,7 @@ namespace MMORPG.Game.Projectiles
 
         private static void EnsurePool()
         {
-            if (pool != null)
+            if (pool != null && poolRoot != null)
             {
                 return;
             }
@@ -45,19 +46,57 @@ namespace MMORPG.Game.Projectiles
             renderer.sprite = GetBulletSprite();
             renderer.sortingOrder = 80;
 
-            PlayerProjectile projectile = projectileObject.AddComponent<PlayerProjectile>();
+            Rigidbody2D body = projectileObject.AddComponent<Rigidbody2D>();
+            body.bodyType = RigidbodyType2D.Kinematic;
+            body.gravityScale = 0f;
+            body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+
             CircleCollider2D collider = projectileObject.AddComponent<CircleCollider2D>();
             collider.isTrigger = true;
             collider.radius = 0.08f;
-            return projectile;
+            return projectileObject.AddComponent<PlayerProjectile>();
+        }
+
+        private void Awake()
+        {
+            body = GetComponent<Rigidbody2D>();
+            body.interpolation = RigidbodyInterpolation2D.Interpolate;
+            body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         }
 
         private void Update()
         {
-            transform.position += Vector3.right * (direction * speed * Time.deltaTime);
             lifeTimer += Time.deltaTime;
-            if (lifeTimer >= lifetime)
+            if (lifeTimer >= GameConfigService.Current.projectile.playerBulletLifetime)
             {
+                Despawn();
+            }
+        }
+
+        private void FixedUpdate()
+        {
+            if (body == null || !gameObject.activeSelf)
+            {
+                return;
+            }
+
+            float speed = GameConfigService.Current.projectile.playerBulletSpeed;
+            body.MovePosition(body.position + Vector2.right * (direction * speed * Time.fixedDeltaTime));
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            BossProjectile bossProjectile = other.GetComponent<BossProjectile>();
+            if (bossProjectile != null && bossProjectile.TryCollectByPlayerAttack())
+            {
+                Despawn();
+                return;
+            }
+
+            PotatoBossController boss = other.GetComponentInParent<PotatoBossController>();
+            if (boss != null && !boss.IsDead)
+            {
+                boss.TakeDamage(1);
                 Despawn();
             }
         }
@@ -65,6 +104,10 @@ namespace MMORPG.Game.Projectiles
         public void OnSpawnedFromPool()
         {
             lifeTimer = 0f;
+            if (body != null)
+            {
+                body.linearVelocity = Vector2.zero;
+            }
         }
 
         public void OnDespawnedToPool()
@@ -74,13 +117,9 @@ namespace MMORPG.Game.Projectiles
 
         private void Despawn()
         {
-            if (pool != null)
+            if (pool != null && gameObject.activeSelf)
             {
                 pool.Release(this);
-            }
-            else
-            {
-                Destroy(gameObject);
             }
         }
 
@@ -105,19 +144,12 @@ namespace MMORPG.Game.Projectiles
                 {
                     Vector2 normalized = new Vector2((x - center.x) / 14f, (y - center.y) / 6f);
                     float radius = normalized.sqrMagnitude;
-                    if (radius <= 1f)
-                    {
-                        texture.SetPixel(x, y, radius > 0.74f ? outline : core);
-                    }
-                    else
-                    {
-                        texture.SetPixel(x, y, clear);
-                    }
+                    texture.SetPixel(x, y, radius <= 1f ? (radius > 0.74f ? outline : core) : clear);
                 }
             }
 
             texture.Apply();
-            cachedSprite = Sprite.Create(texture, new Rect(0, 0, width, height), new Vector2(0.5f, 0.5f), 100f);
+            cachedSprite = Sprite.Create(texture, new Rect(0f, 0f, width, height), new Vector2(0.5f, 0.5f), 100f);
             cachedSprite.name = "RuntimePlayerBullet";
             return cachedSprite;
         }

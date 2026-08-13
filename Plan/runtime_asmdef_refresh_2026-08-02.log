@@ -1,0 +1,335 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to the License Client on channel: "LicenseClient-admin" at "2026-08-02T16:05:14.0030221Z"
+[Licensing::Client] Error: Code 10 while verifying Licensing Client signature (process Id: 109788, path: "D:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] Error: LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.16.1+e780b2e
+  Session Id:              1f2154c3735a4e01832f943cd94a7b6e
+  Correlation Id:          1575c6cf291ca2c48f12779547c26191
+  External correlation Id: 1035426564136799304
+  Machine Id:              lHjMRQhilFGXGFYO/g8U2v5+XBc=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-admin" (connect: 0.00s, validation: 0.01s, handshake: 0.02s)
+[Licensing::IpcConnector] Successfully connected to the License Notification on channel: "LicenseClient-admin-notifications" at "2026-08-02T16:05:14.0359781Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully updated license
+Built from '6000.0/china_unity/23f1' branch; Version is '6000.0.23f1c1 (d40c2aeae294) revision 13896746'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'zh' Physical Memory: 32581 MB
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Serial number assigned to: "I4-6KQ6-SA25-FZVR-P4YR-XXXX"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+[Licensing::Client] Successfully resolved entitlement details
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\Editor\6000.0.23f1c1\Editor\Unity.exe
+-batchmode
+-nographics
+-projectPath
+E:\UnityProject\MMORPG\MMORPG
+-quit
+-logFile
+Plan/runtime_asmdef_refresh_2026-08-02.log
+Successfully changed project path to: E:\UnityProject\MMORPG\MMORPG
+E:/UnityProject/MMORPG/MMORPG
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Failed to start primary listening socket at (0.0.0.0:55504-55512).
+Player connection [80504]  Target information:
+
+Player connection [80504]  * "[IP] 192.168.1.4 [Port] 55511 [Flags] 2 [Guid] 2422312600 [EditorId] 2422312600 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-N57VUJT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [80504]  * "[IP] 26.179.140.201 [Port] 55511 [Flags] 2 [Guid] 2422312600 [EditorId] 2422312600 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-N57VUJT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [80504]  * "[IP] 172.23.0.1 [Port] 55511 [Flags] 2 [Guid] 2422312600 [EditorId] 2422312600 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-N57VUJT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [80504] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [80504] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-63204" after 0.2 seconds.
+Library Redirect Path: Library/
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 56 packages:
+  Packages from [https://packages.unity.cn]:
+    com.unity.ai.navigation@2.0.4 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.ai.navigation)
+    com.unity.collab-proxy@2.5.2 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.collab-proxy)
+    com.unity.ide.rider@3.0.31 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.ide.rider)
+    com.unity.ide.visualstudio@2.0.22 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.ide.visualstudio)
+    com.unity.inputsystem@1.11.1 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.inputsystem)
+    com.unity.test-framework@1.4.5 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.test-framework)
+    com.unity.timeline@1.8.7 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.timeline)
+    com.unity.visualscripting@1.9.4 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.visualscripting)
+    com.unity.ext.nunit@2.0.5 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.ext.nunit)
+    com.unity.searcher@4.9.2 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.searcher)
+    com.unity.burst@1.8.18 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.burst)
+    com.unity.mathematics@1.3.2 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.mathematics)
+    com.unity.collections@2.5.1 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.collections)
+    com.unity.nuget.mono-cecil@1.11.4 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.nuget.mono-cecil)
+    com.unity.test-framework.performance@3.0.3 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.test-framework.performance)
+  Built-in packages:
+    com.unity.multiplayer.center@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.multiplayer.center)
+    com.unity.render-pipelines.universal@17.0.3 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.render-pipelines.universal)
+    com.unity.ugui@2.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.ugui)
+    com.unity.modules.accessibility@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.ai@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.screencapture@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vehicles@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.vr@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.vr)
+    com.unity.modules.wind@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.render-pipelines.core@17.0.3 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.render-pipelines.core)
+    com.unity.shadergraph@17.0.3 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.shadergraph)
+    com.unity.render-pipelines.universal-config@17.0.3 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.render-pipelines.universal-config)
+    com.unity.rendering.light-transport@1.0.1 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.rendering.light-transport)
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+[Subsystems] No new subsystems found in resolved package list.
+Package Manager log level set to [2]
+[Package Manager] Done registering packages in 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.23f1c1 (d40c2aeae294)
+[Subsystems] Discovering subsystems at path D:/Unity/Editor/6000.0.23f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/UnityProject/MMORPG/MMORPG/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+[Licensing::Client] Successfully resolved entitlement details
+Initialize mono
+Mono path[0] = 'D:/Unity/Editor/6000.0.23f1c1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Editor/6000.0.23f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/Editor/6000.0.23f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56204
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/Editor/6000.0.23f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+Register platform support module: D:/Unity/Editor/6000.0.23f1c1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.016288 seconds.
+- Loaded All Assemblies, in  0.313 seconds
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 2260 ms
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.516 seconds
+Domain Reload Profiling: 2826ms
+	BeginReloadAssembly (116ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (0ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (107ms)
+		LoadAssemblies (111ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (105ms)
+			TypeCache.Refresh (103ms)
+				TypeCache.ScanAssembly (94ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (2516ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2493ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2341ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (89ms)
+			ProcessInitializeOnLoadMethodAttributes (51ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[ScriptCompilation] Requested script compilation because: Assembly Definition File(s) changed
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+Starting: D:\Unity\Editor\6000.0.23f1c1\Editor\Data\bee_backend.exe --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aEDbg.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: E:/UnityProject/MMORPG/MMORPG
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s282ms
+[630/799    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra build success (0.26 seconds), 1 items updated, 799 evaluated
+AssetDatabase: script compilation time: 0.637953s
+Begin MonoManager ReloadAssembly
+Total cache size 267959911
+Total cache size after purge 267959911, took 00:00:00.1990215
+- Loaded All Assemblies, in  0.817 seconds
+Start importing Assets/Scripts/MMORPG.Runtime.asmdef using Guid(57336b753febc33459aebda28b2c9443) (AssemblyDefinitionImporter) -> (artifact id: '7ec837043ec240438e249988a891a386') in 0.0119815 seconds
+Refreshing native plugins compatible for Editor in 1.01 ms, found 3 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.501 seconds
+Domain Reload Profiling: 4311ms
+	BeginReloadAssembly (256ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (492ms)
+		LoadAssemblies (367ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (209ms)
+			TypeCache.Refresh (153ms)
+				TypeCache.ScanAssembly (141ms)
+			BuildScriptInfoCaches (47ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (3501ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (3329ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (26ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (127ms)
+			ProcessInitializeOnLoadAttributes (3098ms)
+			ProcessInitializeOnLoadMethodAttributes (65ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 1.37 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=86a93cd002550914f948d190cb38d466): Total: 7.256 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=2 ms, native=4970 ms
+		Asset DB Callback time: managed=643 ms, native=6 ms
+		Scripting: domain reloads=1, domain reload time=910 ms, compile time=639 ms, other=83 ms
+		Project Asset Count: scripts=1237, non-scripts=2225
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.001ms
+	InvokePackagesCallback: 1.863ms
+	ApplyChangesToAssetFolders: 0.280ms
+	Scan: 1185.649ms
+	OnSourceAssetsModified: 0.578ms
+	CategorizeAssetsWithTransientArtifact: 39.939ms
+	ProcessAssetsWithTransientArtifactChanges: 50.428ms
+	CategorizeAssets: 26.697ms
+	ImportOutOfDateAssets: 3523.570ms (2867.589ms without children)
+		ImportManagerImport: 15.231ms (3.009ms without children)
+			ImportInProcess: 12.208ms
+			UpdateCategorizedAssets: 0.014ms
+		CompileScripts: 638.777ms
+		ReloadNativeAssets: 0.016ms
+		UnloadImportedAssets: 1.220ms
+		ReloadImportedAssets: 0.000ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.386ms
+		InitializingProgressBar: 0.000ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.351ms
+	PostProcessAllAssets: 646.038ms
+	Hotreload: 2.662ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
+	UnloadStreamsBegin: 1.660ms
+	PersistCurrentRevisions: 0.130ms
+	UnloadStreamsEnd: 0.001ms
+	GenerateScriptTypeHashes: 1.524ms
+	Untracked: 1776.760ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 5.401ms
+Initializing Unity extensions:
+[Licensing::Client] Successfully resolved entitlement details
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-MMORPG
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5943 unused Assets / (2.2 MB). Loaded Objects now: 6756.
+Memory consumption went from 219.7 MB to 217.5 MB.
+Total: 7.159600 ms (FindLiveObjects: 0.327000 ms CreateObjectMapping: 0.208400 ms MarkObjects: 5.467000 ms  DeleteObjects: 1.156200 ms)
+
+Batchmode quit successfully invoked - shutting down!
+Curl error 42: Callback aborted
+Killing ADB server in 0.1166637 seconds.
+[Physics::Module] Cleanup current backned.
+[Physics::Module] Id: 0xf2b8ea05
+[Licensing::IpcConnector] License Notification channel disconnected successfully.
+[Licensing::IpcConnector] License Client channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+00:05:27.322 |V| RiderPlugin                    | :1                             | AppDomain.CurrentDomain.DomainUnload lifetimeDefinition.Terminate
+Exiting batchmode successfully now!
+Exiting without the bug reporter. Application will terminate with return code 0

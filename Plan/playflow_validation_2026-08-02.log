@@ -1,0 +1,1768 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to the License Client on channel: "LicenseClient-admin" at "2026-08-02T15:50:27.2669829Z"
+[Licensing::Client] Error: Code 10 while verifying Licensing Client signature (process Id: 109788, path: "D:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] Error: LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.16.1+e780b2e
+  Session Id:              9de7b6f070ba43f9bb55b285de0dc2bb
+  Correlation Id:          1575c6cf291ca2c48f12779547c26191
+  External correlation Id: 3173465808202579915
+  Machine Id:              lHjMRQhilFGXGFYO/g8U2v5+XBc=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-admin" (connect: 0.00s, validation: 0.01s, handshake: 0.03s)
+[Licensing::IpcConnector] Successfully connected to the License Notification on channel: "LicenseClient-admin-notifications" at "2026-08-02T15:50:27.3089828Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully updated license
+Built from '6000.0/china_unity/23f1' branch; Version is '6000.0.23f1c1 (d40c2aeae294) revision 13896746'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'zh' Physical Memory: 32581 MB
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Serial number assigned to: "I4-6KQ6-SA25-FZVR-P4YR-XXXX"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+[Licensing::Client] Successfully resolved entitlement details
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\Editor\6000.0.23f1c1\Editor\Unity.exe
+-batchmode
+-nographics
+-projectPath
+E:\UnityProject\MMORPG\MMORPG
+-executeMethod
+MMORPG.EditorTools.Validation.PrototypePlayModeValidator.ValidateMainSceneFlow
+-logFile
+Plan/playflow_validation_2026-08-02.log
+Successfully changed project path to: E:\UnityProject\MMORPG\MMORPG
+E:/UnityProject/MMORPG/MMORPG
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Failed to start primary listening socket at (0.0.0.0:55504-55512).
+Player connection [78540]  Target information:
+
+Player connection [78540]  * "[IP] 192.168.1.4 [Port] 55511 [Flags] 2 [Guid] 1765023988 [EditorId] 1765023988 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-N57VUJT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [78540]  * "[IP] 26.179.140.201 [Port] 55511 [Flags] 2 [Guid] 1765023988 [EditorId] 1765023988 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-N57VUJT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [78540]  * "[IP] 172.23.0.1 [Port] 55511 [Flags] 2 [Guid] 1765023988 [EditorId] 1765023988 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-N57VUJT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [78540] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [78540] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-95920" after 0.3 seconds.
+Library Redirect Path: Library/
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 56 packages:
+  Packages from [https://packages.unity.cn]:
+    com.unity.ai.navigation@2.0.4 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.ai.navigation)
+    com.unity.collab-proxy@2.5.2 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.collab-proxy)
+    com.unity.ide.rider@3.0.31 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.ide.rider)
+    com.unity.ide.visualstudio@2.0.22 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.ide.visualstudio)
+    com.unity.inputsystem@1.11.1 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.inputsystem)
+    com.unity.test-framework@1.4.5 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.test-framework)
+    com.unity.timeline@1.8.7 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.timeline)
+    com.unity.visualscripting@1.9.4 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.visualscripting)
+    com.unity.ext.nunit@2.0.5 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.ext.nunit)
+    com.unity.searcher@4.9.2 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.searcher)
+    com.unity.burst@1.8.18 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.burst)
+    com.unity.mathematics@1.3.2 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.mathematics)
+    com.unity.collections@2.5.1 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.collections)
+    com.unity.nuget.mono-cecil@1.11.4 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.nuget.mono-cecil)
+    com.unity.test-framework.performance@3.0.3 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.test-framework.performance)
+  Built-in packages:
+    com.unity.multiplayer.center@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.multiplayer.center)
+    com.unity.render-pipelines.universal@17.0.3 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.render-pipelines.universal)
+    com.unity.ugui@2.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.ugui)
+    com.unity.modules.accessibility@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.ai@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.screencapture@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vehicles@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.vr@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.vr)
+    com.unity.modules.wind@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.render-pipelines.core@17.0.3 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.render-pipelines.core)
+    com.unity.shadergraph@17.0.3 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.shadergraph)
+    com.unity.render-pipelines.universal-config@17.0.3 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.render-pipelines.universal-config)
+    com.unity.rendering.light-transport@1.0.1 (location: E:\UnityProject\MMORPG\MMORPG\Library\PackageCache\com.unity.rendering.light-transport)
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+[Subsystems] No new subsystems found in resolved package list.
+Package Manager log level set to [2]
+[Package Manager] Done registering packages in 0.09 seconds
+Refreshing native plugins compatible for Editor in 1.42 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.23f1c1 (d40c2aeae294)
+[Subsystems] Discovering subsystems at path D:/Unity/Editor/6000.0.23f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/UnityProject/MMORPG/MMORPG/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+[Licensing::Client] Successfully resolved entitlement details
+Initialize mono
+Mono path[0] = 'D:/Unity/Editor/6000.0.23f1c1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Editor/6000.0.23f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/Editor/6000.0.23f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56920
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/Editor/6000.0.23f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+Register platform support module: D:/Unity/Editor/6000.0.23f1c1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.017802 seconds.
+- Loaded All Assemblies, in  0.332 seconds
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 2313 ms
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.629 seconds
+Domain Reload Profiling: 2958ms
+	BeginReloadAssembly (113ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (126ms)
+		LoadAssemblies (110ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (123ms)
+			TypeCache.Refresh (122ms)
+				TypeCache.ScanAssembly (112ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (2629ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2602ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2409ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (108ms)
+			ProcessInitializeOnLoadMethodAttributes (58ms)
+			AfterProcessingInitializeOnLoad (19ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+Starting: D:\Unity\Editor\6000.0.23f1c1\Editor\Data\bee_backend.exe --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aEDbg.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: E:/UnityProject/MMORPG/MMORPG
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s352ms
+[616/779    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra build success (0.32 seconds), 1 items updated, 779 evaluated
+AssetDatabase: script compilation time: 0.771368s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.106 seconds
+Refreshing native plugins compatible for Editor in 1.28 ms, found 3 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  4.208 seconds
+Domain Reload Profiling: 5305ms
+	BeginReloadAssembly (420ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (141ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (607ms)
+		LoadAssemblies (451ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (250ms)
+			TypeCache.Refresh (183ms)
+				TypeCache.ScanAssembly (167ms)
+			BuildScriptInfoCaches (55ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (4208ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (3981ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (33ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (147ms)
+			ProcessInitializeOnLoadAttributes (3711ms)
+			ProcessInitializeOnLoadMethodAttributes (76ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Asset Pipeline Refresh (id=ce41077d926e51f40b6790afeed37081): Total: 7.308 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=5179 ms
+		Asset DB Callback time: managed=46 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=1216 ms, compile time=772 ms, other=92 ms
+		Project Asset Count: scripts=1233, non-scripts=2225
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.001ms
+	InvokePackagesCallback: 2.457ms
+	ApplyChangesToAssetFolders: 0.331ms
+	Scan: 642.670ms
+	OnSourceAssetsModified: 0.001ms
+	CategorizeAssetsWithTransientArtifact: 45.162ms
+	ProcessAssetsWithTransientArtifactChanges: 74.295ms
+	CategorizeAssets: 32.692ms
+	ImportOutOfDateAssets: 4218.237ms (3442.947ms without children)
+		CompileScripts: 772.289ms
+		ReloadNativeAssets: 0.030ms
+		UnloadImportedAssets: 1.865ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.484ms
+		InitializingProgressBar: 0.000ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 0.621ms
+	PostProcessAllAssets: 46.274ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
+	UnloadStreamsBegin: 1.634ms
+	PersistCurrentRevisions: 0.106ms
+	UnloadStreamsEnd: 0.040ms
+	GenerateScriptTypeHashes: 1.963ms
+	Untracked: 2244.152ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 3.397ms
+Initializing Unity extensions:
+[Licensing::Client] Successfully resolved entitlement details
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-MMORPG
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5942 unused Assets / (2.2 MB). Loaded Objects now: 6753.
+Memory consumption went from 208.0 MB to 205.8 MB.
+Total: 8.490200 ms (FindLiveObjects: 0.631800 ms CreateObjectMapping: 0.401200 ms MarkObjects: 6.268700 ms  DeleteObjects: 1.187200 ms)
+
+Opening scene 'Assets/Scenes/MainScene.unity'
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/MainScene.unity'
+	Deserialize:            3.006 ms
+	Integration:            158.667 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       0.014 ms
+	Total Operation Time:   161.690 ms
+Unloading 2 unused Assets / (1.0 KB). Loaded Objects now: 6777.
+Memory consumption went from 198.8 MB to 198.8 MB.
+Total: 6.275900 ms (FindLiveObjects: 0.218100 ms CreateObjectMapping: 0.094500 ms MarkObjects: 5.932800 ms  DeleteObjects: 0.029700 ms)
+
+开始验证原型关卡流程：地图、玩家、Boss、两种子弹、三格能量和大招。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.EditorTools.Validation.PrototypePlayModeValidator:ValidateMainSceneFlow () (at Assets/Scripts/Editor/Validation/PrototypePlayModeValidator.cs:37)
+
+(Filename: Assets/Scripts/Editor/Validation/PrototypePlayModeValidator.cs Line: 37)
+
+Unity is running with Administrator privileges, which is not supported. Unity executes scripts and binary libraries in your project that may originate from third party sources and potentially be harmful to your computer. Unity may also execute scripts and binary libraries that are still under development and not yet fully tested. Running Unity with Administrator privileges may lead to catastrophic consequences, including but not limited to accidental data loss, change of global system settings or even bricking your device.
+Microsoft Media Foundation video decoding to texture disabled: graphics device is Null, only Direct3D 11 and Direct3D 12 (only on desktop) are supported for hardware-accelerated video decoding.
+[Project] Loading completed in 13.428 seconds
+	Project init time: 				12.028 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		0.260 seconds
+		Asset Database init time: 		0.220 seconds
+		Global illumination init time: 	0.002 seconds
+		Assemblies load time: 			2.977 seconds
+		Unity extensions init time: 	0.025 seconds
+		Asset Database refresh time: 	7.308 seconds
+	Scene opening time: 			0.441 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1785685840683,"processId":95920,"projectLoad":13.4277197,"projectInit":12.0275115,"templateInit":0.0,"packageManagerInit":0.260126,"assetDatabaseInit":0.2201437,"globalIlluminationInit":0.0021236,"assembliesLoad":2.9771903,"unityExtensionsInit":0.0245636,"assetDatabaseRefresh":7.3083292,"sceneOpening":0.4408195}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1785685840683,"processId":95920,"editorVersion":"6000.0.23f1c1 (d40c2aeae294)","branch":"6000.0/china_unity/23f1","buildType":"Release","platform":"Windows"}
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+23:50:40.782 |V| RiderPlugin                    | :1                             | AppDomain.CurrentDomain.DomainUnload lifetimeDefinition.Terminate
+- Loaded All Assemblies, in  0.668 seconds
+Refreshing native plugins compatible for Editor in 1.41 ms, found 3 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.033 seconds
+Domain Reload Profiling: 1697ms
+	BeginReloadAssembly (371ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (36ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (202ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (223ms)
+		LoadAssemblies (146ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (181ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (164ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1034ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (692ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (35ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (152ms)
+			ProcessInitializeOnLoadAttributes (442ms)
+			ProcessInitializeOnLoadMethodAttributes (50ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (20ms)
+Asset Pipeline Refresh (id=4914745604c552941829435e224e9fae): Total: 1.833 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1122 ms
+		Asset DB Callback time: managed=23 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=684 ms, compile time=1 ms, other=0 ms
+		Project Asset Count: scripts=1233, non-scripts=2225
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.001ms
+	InvokePackagesCallback: 2.232ms
+	ApplyChangesToAssetFolders: 0.241ms
+	Scan: 0.001ms
+	OnSourceAssetsModified: 0.001ms
+	CategorizeAssetsWithTransientArtifact: 0.003ms
+	ProcessAssetsWithTransientArtifactChanges: 2.507ms
+	CategorizeAssets: 36.036ms
+	ImportOutOfDateAssets: 1041.112ms (1036.685ms without children)
+		CompileScripts: 0.770ms
+		CollectScriptTypesHashes: 2.290ms
+		ReloadNativeAssets: 0.562ms
+		UnloadImportedAssets: 0.086ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.516ms
+		InitializingProgressBar: 0.000ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.202ms
+	PostProcessAllAssets: 23.699ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.183ms
+	UnloadStreamsBegin: 0.069ms
+	PersistCurrentRevisions: 0.105ms
+	UnloadStreamsEnd: 0.001ms
+	GenerateScriptTypeHashes: 3.354ms
+	Untracked: 726.338ms
+
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Config.GameConfigService:Load () (at Assets/Scripts/Game/Config/GameConfig.cs:179)
+MMORPG.Game.Core.GameManager:Awake () (at Assets/Scripts/Game/Core/GameManager.cs:27)
+
+(Filename: Assets/Scripts/Game/Config/GameConfig.cs Line: 179)
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.757 ms
+	Integration:            167.415 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.009 ms
+	Total Operation Time:   168.183 ms
+Asset Pipeline Refresh (id=c942945d71d48ca44a12eb203e9c91df): Total: 0.028 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Created GICache directory at C:/Users/admin/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.028s, timestamps: [15.633 - 15.661]
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+玩家受到 1 点伤害，剩余生命 2/3。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Player.PlayerController2D:TakeDamage (int) (at Assets/Scripts/Game/Player/PlayerController2D.cs:390)
+MMORPG.Game.Projectiles.BossProjectile:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Game/Projectiles/BossProjectile.cs:114)
+
+(Filename: Assets/Scripts/Game/Player/PlayerController2D.cs Line: 390)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+玩家受到 1 点伤害，剩余生命 1/3。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Player.PlayerController2D:TakeDamage (int) (at Assets/Scripts/Game/Player/PlayerController2D.cs:390)
+MMORPG.Game.Projectiles.BossProjectile:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Game/Projectiles/BossProjectile.cs:114)
+
+(Filename: Assets/Scripts/Game/Player/PlayerController2D.cs Line: 390)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+玩家受到 1 点伤害，剩余生命 0/3。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Player.PlayerController2D:TakeDamage (int) (at Assets/Scripts/Game/Player/PlayerController2D.cs:390)
+MMORPG.Game.Projectiles.BossProjectile:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Game/Projectiles/BossProjectile.cs:114)
+
+(Filename: Assets/Scripts/Game/Player/PlayerController2D.cs Line: 390)
+
+玩家生命归零，当前原型暂不切换失败界面。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Player.PlayerController2D:TakeDamage (int) (at Assets/Scripts/Game/Player/PlayerController2D.cs:393)
+MMORPG.Game.Projectiles.BossProjectile:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Game/Projectiles/BossProjectile.cs:114)
+
+(Filename: Assets/Scripts/Game/Player/PlayerController2D.cs Line: 393)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成普通土块子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+
+土豆 Boss 发动吐射攻击，生成紫色可采集子弹。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:BeginAttack () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:114)
+MMORPG.Game.Bosses.Potato.PotatoBossController:Update () (at Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:51)
+
+(Filename: Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 114)
+

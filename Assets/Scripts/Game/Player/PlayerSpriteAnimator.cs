@@ -9,6 +9,8 @@ namespace MMORPG.Game.Player
     {
         private FrameAnimator frameAnimator;
 
+        public FrameAnimator FrameAnimator => frameAnimator;
+
         private void Awake()
         {
             frameAnimator = GetComponent<FrameAnimator>();
