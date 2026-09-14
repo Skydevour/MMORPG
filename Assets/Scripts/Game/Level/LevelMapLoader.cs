@@ -58,7 +58,8 @@ namespace MMORPG.Game.Level
             Vector2 spriteSize = renderer.sprite.bounds.size;
             if (spriteSize.x > 0f && spriteSize.y > 0f)
             {
-                backgroundObject.transform.localScale = new Vector3(LevelWidth / spriteSize.x, LevelHeight / spriteSize.y, 1f);
+                float overscan = 1f + GameConfigService.Current.level.backgroundOverscan;
+                backgroundObject.transform.localScale = new Vector3(LevelWidth / spriteSize.x * overscan, LevelHeight / spriteSize.y * overscan, 1f);
             }
             CreateForegroundCover(parent, background, backgroundObject.transform.localScale);
         }
@@ -78,7 +79,7 @@ namespace MMORPG.Game.Level
 
             GameObject foregroundObject = new GameObject("GardenForegroundSoil");
             foregroundObject.transform.SetParent(parent, false);
-            foregroundObject.transform.position = new Vector3(0f, -LevelHeight * 0.5f, 2f);
+            foregroundObject.transform.position = new Vector3(0f, -LevelHeight * 0.5f * (1f + config.level.backgroundOverscan), 2f);
             foregroundObject.transform.localScale = backgroundScale;
 
             SpriteRenderer renderer = foregroundObject.AddComponent<SpriteRenderer>();

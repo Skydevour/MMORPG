@@ -3,6 +3,8 @@ using MMORPG.Game.Combat;
 using MMORPG.Game.Config;
 using MMORPG.Game.Projectiles;
 using MMORPG.Game.VFX;
+using MMORPG.Game.Audio;
+using MMORPG.Framework.Timing;
 using UnityEngine;
 
 #if ENABLE_INPUT_SYSTEM
@@ -13,6 +15,7 @@ namespace MMORPG.Game.Player
 {
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(Collider2D))]
+    [DefaultExecutionOrder(-100)]
     public sealed class PlayerController2D : MonoBehaviour, IDamageable
     {
         [Header("Movement")]
@@ -22,8 +25,6 @@ namespace MMORPG.Game.Player
         [SerializeField] private int maxAirJumps = 1;
         [SerializeField] private float coyoteTime = 0.1f;
         [SerializeField] private float jumpBufferTime = 0.12f;
-        [SerializeField] private float groundAcceleration = 45f;
-        [SerializeField] private float groundDeceleration = 55f;
         [SerializeField] private float airControl = 0.85f;
         [SerializeField] private float jumpCutMultiplier = 0.45f;
         [SerializeField] private LayerMask groundMask = ~0;
@@ -57,7 +58,6 @@ namespace MMORPG.Game.Player
         private Rigidbody2D body;
         private Collider2D bodyCollider;
         private PlayerEnergyController energy;
-        private IDamageable superTarget;
         private float moveInput;
         private float dashTimer;
         private float dashCooldownTimer;
@@ -67,9 +67,27 @@ namespace MMORPG.Game.Player
         private float deathSequenceTimer;
         private float damageInvincibilityTimer;
         private float hurtTimer;
+        private float parryTimer;
+        private float parryProtection;
+        private float jumpLaunchVelocity;
+        private float jumpCutAcceleration;
+        private float jumpCutBlendDuration;
+        private bool canCutJump;
+        private bool cuttingJump;
+        private bool bufferedJump, bufferedDash, bufferedSpecial;
+        private bool suppressActions;
+        public void SuppressActionInput()
+        {
+            suppressActions = true;
+            bufferedJump = bufferedDash = bufferedSpecial = false;
+            jumpBufferTimer = 0f;
+        }
+        public bool IsParrying => parryTimer > 0f;
         private float coyoteTimer;
         private float jumpBufferTimer;
         private int facingDirection = 1;
+        private int dashDirection = 1;
+        private int flipDirection = 1;
         private int currentHealth;
         private bool isDead;
         private bool battleLocked;
@@ -82,11 +100,13 @@ namespace MMORPG.Game.Player
         private bool spawnDodgeBurstOnDashEnd;
         private int airJumpsRemaining;
         private bool airFlipping;
-        private bool superEffectApplied;
         private float airFlipTimer;
         private readonly RaycastHit2D[] groundHits = new RaycastHit2D[4];
         private ContactFilter2D groundFilter;
         private Transform visualRoot;
+        private Transform visualMirror;
+        private float uprightRemaining;
+        private Quaternion uprightStart;
         private Quaternion visualBaseRotation = Quaternion.identity;
         private SpriteRenderer[] visualRenderers;
         private Color[] visualBaseColors;
@@ -101,7 +121,9 @@ namespace MMORPG.Game.Player
 
         public bool IsMoving => Mathf.Abs(moveInput) > 0.05f;
 
-        public bool IsInvincible => battleLocked || isDead || IsDashing || IsUsingSuper || damageInvincibilityTimer > 0f;
+        public bool IsInvincible => battleLocked || isDead || IsDashing || IsUsingSuper || damageInvincibilityTimer > 0f || parryProtection > 0f;
+
+        public bool CanBreakPinkProjectile => !battleLocked && !isDead && !IsGrounded && !IsDashing && !IsUsingSuper;
 
         public bool IsDead => isDead;
 
@@ -116,6 +138,12 @@ namespace MMORPG.Game.Player
         public PlayerEnergyController Energy => energy;
 
         public Vector2 FootPosition => body == null ? (Vector2)transform.position : body.position;
+        public Vector3 MuzzlePosition => (Vector3)FootPosition + new Vector3(facingDirection * muzzleOffsetX, muzzleOffsetY, 0f);
+        public float InvincibilityRemaining => Mathf.Max(0f, damageInvincibilityTimer);
+        public bool IsGhost => isDead && deathSequenceTimer > deathActionDuration;
+        public int JumpSequence { get; private set; }
+        public bool IsAirFlipping => airFlipping;
+        public float VerticalVelocity => body != null ? body.linearVelocity.y : 0f;
 
         public event Action<int, int> HealthChanged;
 
@@ -133,10 +161,9 @@ namespace MMORPG.Game.Player
             deathActionDuration = config.player.deathActionDuration;
             ghostRiseDuration = config.player.ghostRiseDuration;
             ghostRiseSpeed = config.player.ghostRiseSpeed;
-            groundAcceleration = config.player.groundAcceleration;
-            groundDeceleration = config.player.groundDeceleration;
             airControl = config.player.airControl;
             jumpCutMultiplier = config.player.jumpCutMultiplier;
+            jumpCutBlendDuration = config.player.jumpCutBlendDuration;
             dashSpeed = config.player.dashSpeed;
             dashDuration = config.player.dashDuration;
             dashCooldown = config.player.dashCooldown;
@@ -166,6 +193,14 @@ namespace MMORPG.Game.Player
 
         private void Update()
         {
+            if (Time.timeScale <= 0f)
+            {
+                if (BattleClock.HitStopped && !BattleClock.Paused && !battleLocked && !isDead)
+                {
+                    ReadInput(); bufferedJump |= jumpPressed; bufferedDash |= dashPressed || dodgePressed; bufferedSpecial |= specialPressed;
+                }
+                return;
+            }
             TickDamageTimers();
 
             if (isDead)
@@ -178,28 +213,30 @@ namespace MMORPG.Game.Player
             {
                 moveInput = 0f;
                 IsShooting = false;
+                UpdateAirFlip();
                 return;
             }
 
             ReadInput();
+            jumpPressed |= bufferedJump; dashPressed |= bufferedDash; specialPressed |= bufferedSpecial;
+            bufferedJump = bufferedDash = bufferedSpecial = false;
             RefreshGrounded();
             TickJumpTiming();
             TickDashTimers();
             TickSuper();
+            FaceMoveDirection();
 
             if (IsUsingSuper)
             {
-                FaceMoveDirection();
                 UpdateAirFlip();
                 return;
             }
 
             HandleJump();
-            ApplyJumpCut();
+            RequestJumpCut();
             HandleDashStart();
             HandleSpecial();
             HandleShooting();
-            FaceMoveDirection();
             UpdateAirFlip();
         }
 
@@ -211,9 +248,12 @@ namespace MMORPG.Game.Player
                 return;
             }
 
+            if (IsDashing && dashTimer <= 0f) FinishDash();
             if (IsDashing)
             {
-                body.linearVelocity = new Vector2(facingDirection * dashSpeed, 0f);
+                float step = Mathf.Min(dashTimer, Time.fixedDeltaTime);
+                body.linearVelocity = new Vector2(dashDirection * dashSpeed * step / Time.fixedDeltaTime, 0f);
+                dashTimer = Mathf.Max(0f, dashTimer - step);
                 ClampHorizontalPosition();
                 return;
             }
@@ -225,18 +265,17 @@ namespace MMORPG.Game.Player
             }
 
             body.gravityScale = originalGravity;
+            ApplyJumpCut();
             float targetVelocityX = moveInput * moveSpeed * (IsGrounded ? 1f : airControl);
 
 
-            float nextVelocityX = Mathf.Abs(moveInput) > 0.05f
-                ? targetVelocityX
-                : Mathf.MoveTowards(body.linearVelocity.x, 0f, groundDeceleration * Time.fixedDeltaTime);
-            body.linearVelocity = new Vector2(nextVelocityX, body.linearVelocity.y);
+            body.linearVelocity = new Vector2(targetVelocityX, body.linearVelocity.y);
             ClampHorizontalPosition();
         }
 
         private void ReadInput()
         {
+            bool actionHeld = false;
             moveInput = 0f;
             jumpPressed = false;
             jumpHeld = false;
@@ -265,6 +304,7 @@ namespace MMORPG.Game.Player
                 dodgePressed = keyboard.lKey.wasPressedThisFrame;
                 specialPressed = keyboard.kKey.wasPressedThisFrame;
                 attackHeld = keyboard.jKey.isPressed || keyboard.zKey.isPressed;
+                actionHeld = jumpHeld || attackHeld || keyboard.lKey.isPressed || keyboard.kKey.isPressed || keyboard.leftShiftKey.isPressed || keyboard.rightShiftKey.isPressed;
             }
 #else
             moveInput = Input.GetAxisRaw("Horizontal");
@@ -274,7 +314,14 @@ namespace MMORPG.Game.Player
             dodgePressed = Input.GetKeyDown(KeyCode.L);
             specialPressed = Input.GetKeyDown(KeyCode.K);
             attackHeld = Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.Z);
+            actionHeld = jumpHeld || attackHeld || Input.GetKey(KeyCode.L) || Input.GetKey(KeyCode.K) || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
 #endif
+
+            if (suppressActions)
+            {
+                jumpPressed = dashPressed = dodgePressed = specialPressed = attackHeld = false;
+                if (!actionHeld) suppressActions = false;
+            }
 
             moveInput = Mathf.Clamp(moveInput, -1f, 1f);
         }
@@ -283,9 +330,14 @@ namespace MMORPG.Game.Player
         {
             groundFilter.layerMask = groundMask;
             int hitCount = bodyCollider.Cast(Vector2.down, groundFilter, groundHits, groundCastDistance);
-            IsGrounded = hitCount > 0;
+            IsGrounded = false;
+            for (int index = 0; index < hitCount && body.linearVelocity.y <= 0.05f; index++)
+            {
+                if (groundHits[index].normal.y > 0.65f) IsGrounded = true;
+            }
             if (IsGrounded && body.linearVelocity.y <= 0.05f)
             {
+                ClearJumpCut();
                 airJumpsRemaining = maxAirJumps;
                 StopAirFlip();
             }
@@ -304,6 +356,8 @@ namespace MMORPG.Game.Player
 
         private void TickDamageTimers()
         {
+            parryTimer = Mathf.Max(0f, parryTimer - Time.deltaTime);
+            parryProtection = Mathf.Max(0f, parryProtection - Time.deltaTime);
             if (damageInvincibilityTimer > 0f)
             {
                 damageInvincibilityTimer -= Time.deltaTime;
@@ -327,12 +381,17 @@ namespace MMORPG.Game.Player
                 return;
             }
 
-            dashTimer -= Time.deltaTime;
             if (dashTimer > 0f)
             {
                 return;
             }
 
+            FinishDash();
+        }
+
+        private void FinishDash()
+        {
+            if (!IsDashing) return;
             IsDashing = false;
             body.gravityScale = originalGravity;
             if (spawnDodgeBurstOnDashEnd)
@@ -354,7 +413,6 @@ namespace MMORPG.Game.Player
             {
                 IsUsingSuper = false;
                 body.gravityScale = originalGravity;
-                superEffectApplied = false;
                 Debug.Log("玩家大招演出结束。");
             }
         }
@@ -366,14 +424,16 @@ namespace MMORPG.Game.Player
                 return;
             }
 
-            jumpBufferTimer = 0f;
-
             if (IsGrounded || coyoteTimer > 0f)
             {
+                jumpBufferTimer = 0f;
+                JumpSequence++;
                 body.linearVelocity = new Vector2(body.linearVelocity.x, jumpVelocity);
+                BeginJumpCut(jumpVelocity);
                 IsGrounded = false;
                 coyoteTimer = 0f;
                 airJumpsRemaining = maxAirJumps;
+                BattleAudio.Play("jump", transform.position);
                 return;
             }
 
@@ -383,22 +443,44 @@ namespace MMORPG.Game.Player
             }
 
             airJumpsRemaining--;
+            jumpBufferTimer = 0f;
+            JumpSequence++;
             body.linearVelocity = new Vector2(body.linearVelocity.x, secondJumpVelocity);
+            BeginJumpCut(secondJumpVelocity);
             StartAirFlip();
+            BattleAudio.Play("double_jump", transform.position);
+        }
+
+        private void BeginJumpCut(float launchVelocity)
+        {
+            jumpLaunchVelocity = launchVelocity;
+            canCutJump = true;
+            cuttingJump = false;
+        }
+
+        private void ClearJumpCut()
+        {
+            canCutJump = cuttingJump = false;
+            jumpCutAcceleration = 0f;
+        }
+
+        private void RequestJumpCut()
+        {
+            if (!canCutJump || cuttingJump || jumpHeld || IsParrying || IsDashing || IsUsingSuper) return;
+            float target = jumpLaunchVelocity * jumpCutMultiplier;
+            jumpCutAcceleration = Mathf.Max(0f, body.linearVelocity.y - target) / jumpCutBlendDuration;
+            cuttingJump = jumpCutAcceleration > 0f;
+            canCutJump = false;
         }
 
         private void ApplyJumpCut()
         {
-            if (jumpHeld || IsDashing || IsUsingSuper || body.linearVelocity.y <= 0f)
-            {
-                return;
-            }
-
-            float minimumJumpVelocity = jumpVelocity * jumpCutMultiplier;
-            if (body.linearVelocity.y > minimumJumpVelocity)
-            {
-                body.linearVelocity = new Vector2(body.linearVelocity.x, minimumJumpVelocity);
-            }
+            if (!cuttingJump) return;
+            float target = jumpLaunchVelocity * jumpCutMultiplier;
+            if (body.linearVelocity.y <= target) { cuttingJump = false; return; }
+            // 在固定物理步内收束，额外减速只降低速度，不抵消自然重力。
+            body.linearVelocity = new Vector2(body.linearVelocity.x,
+                Mathf.MoveTowards(body.linearVelocity.y, target, jumpCutAcceleration * Time.fixedDeltaTime));
         }
         private void HandleDashStart()
         {
@@ -409,6 +491,9 @@ namespace MMORPG.Game.Player
             }
 
             IsDashing = true;
+            ClearJumpCut();
+            dashDirection = facingDirection;
+            StopAirFlip();
             dashTimer = dashDuration;
             dashCooldownTimer = dashCooldown;
             body.gravityScale = 0f;
@@ -426,22 +511,19 @@ namespace MMORPG.Game.Player
 
         public bool TryActivateSuper()
         {
-            if (battleLocked || isDead || IsDashing || IsUsingSuper || energy == null || !energy.TryConsumeAll())
+            if (Time.timeScale <= 0f || battleLocked || isDead || IsDashing || IsUsingSuper || energy == null || !energy.TryConsumeAll())
             {
                 return false;
             }
 
             IsUsingSuper = true;
+            ClearJumpCut();
+            StopAirFlip();
             superTimer = GameConfigService.Current.special.duration;
             body.gravityScale = 0f;
             body.linearVelocity = Vector2.zero;
             SpawnSuperEffect();
-
-            if (!superEffectApplied && superTarget != null && !superTarget.IsDead)
-            {
-                superTarget.TakeDamage(GameConfigService.Current.special.damage);
-                superEffectApplied = true;
-            }
+            BattleStats.Active?.RecordSuperUse();
 
             Debug.Log($"玩家释放大招，消耗全部 {energy.MaxEnergy} 格能量。");
             return true;
@@ -449,22 +531,21 @@ namespace MMORPG.Game.Player
 
         private void HandleShooting()
         {
-            IsShooting = attackHeld && !IsUsingSuper;
-            if (!attackHeld || IsUsingSuper || Time.time < nextShotTime)
+            IsShooting = attackHeld && !IsUsingSuper && !IsDashing;
+            if (!IsShooting || Time.time < nextShotTime)
             {
                 return;
             }
 
-            nextShotTime = Time.time + GameConfigService.Current.player.shotCooldown;
-            Vector3 muzzlePosition = (Vector3)FootPosition + new Vector3(
-                facingDirection * GameConfigService.Current.player.muzzleOffsetX,
-                GameConfigService.Current.player.muzzleOffsetY,
-                0f);
-            PlayerProjectile.Spawn(muzzlePosition, facingDirection);
+            nextShotTime = Time.time + shotCooldown;
+            PlayerProjectile.Spawn(MuzzlePosition, facingDirection);
+            BattleAudio.Play("shot", MuzzlePosition);
+            PooledBattleEffect.Spawn(MuzzlePosition, new Color(1f, 0.95f, 0.6f), 0.12f, 2, 0.04f);
         }
 
         private void FaceMoveDirection()
         {
+            if (IsDashing || IsUsingSuper) return;
             if (moveInput > 0.05f)
             {
                 facingDirection = 1;
@@ -474,7 +555,8 @@ namespace MMORPG.Game.Player
                 facingDirection = -1;
             }
 
-            Transform flipTarget = visualRoot != null ? visualRoot : transform;
+            Transform flipTarget = visualMirror != null ? visualMirror : visualRoot;
+            if (flipTarget == null || airFlipping || uprightRemaining > 0f) return;
             Vector3 scale = flipTarget.localScale;
             scale.x = Mathf.Abs(scale.x) * facingDirection;
             flipTarget.localScale = scale;
@@ -483,50 +565,101 @@ namespace MMORPG.Game.Player
         private void ClampHorizontalPosition()
         {
             Vector2 position = body.position;
-            float clampedX = Mathf.Clamp(position.x, minStageX, maxStageX);
-            if (Mathf.Approximately(position.x, clampedX))
+            float halfWidth = bodyCollider.bounds.extents.x;
+            float centerOffset = bodyCollider.bounds.center.x - transform.position.x;
+            float left = minStageX + halfWidth - centerOffset;
+            float right = maxStageX - halfWidth - centerOffset;
+            float clampedX = Mathf.Clamp(position.x, left, right);
+            if (!Mathf.Approximately(position.x, clampedX))
+            {
+                position.x = clampedX;
+                body.position = position;
+            }
+            // 限制本物理步的位移，避免持续顶住边界时越界、回拉交替造成抖动。
+            float nextX = position.x + body.linearVelocity.x * Time.fixedDeltaTime;
+            float allowedX = Mathf.Clamp(nextX, left, right);
+            if (!Mathf.Approximately(nextX, allowedX))
+                body.linearVelocity = new Vector2((allowedX - position.x) / Time.fixedDeltaTime, body.linearVelocity.y);
+        }
+
+        public void SetCombatRightEdge(float edge)
+        {
+            maxStageX = Mathf.Min(GameConfigService.Current.level.maxStageX, edge);
+            ClampHorizontalPosition();
+        }
+
+        public float CombatRightEdge => maxStageX;
+
+        public void SetVisualRoot(Transform target, Transform mirror = null)
+        {
+            visualRoot = target;
+            visualMirror = mirror;
+            visualBaseRotation = visualRoot != null ? visualRoot.localRotation : Quaternion.identity;
+        }
+
+        public bool TryBreakPinkProjectile(BossProjectile projectile)
+        {
+            if (projectile == null || !CanBreakPinkProjectile || !projectile.TryCollectByJump()) return false;
+            var feedback = GameConfigService.Current.feedback;
+            StopAirFlip();
+            parryTimer = feedback.parryPose;
+            ClearJumpCut();
+            parryProtection = Mathf.Max(parryProtection, feedback.parryProtection);
+            body.linearVelocity = new Vector2(body.linearVelocity.x, feedback.parryBounce);
+            BattleClock.Stop(feedback.parryStop);
+            BattleAudio.Play("parry_success", transform.position);
+            return true;
+        }
+
+        public void GrantInvincibility(float seconds)
+        {
+            if (seconds <= 0f)
             {
                 return;
             }
 
-            body.position = new Vector2(clampedX, position.y);
-            body.linearVelocity = new Vector2(0f, body.linearVelocity.y);
-        }
-
-        public void SetVisualRoot(Transform target)
-        {
-            visualRoot = target;
-            visualBaseRotation = visualRoot != null ? visualRoot.localRotation : Quaternion.identity;
-        }
-
-        public void SetSuperTarget(IDamageable target)
-        {
-            superTarget = target;
+            damageInvincibilityTimer = Mathf.Max(damageInvincibilityTimer, seconds);
         }
 
         public void TakeDamage(int damage)
         {
+            ReceiveHit(new HitContext(damage, (Vector3)FootPosition + Vector3.up * 0.5f));
+        }
+
+        public HitResult ReceiveHit(HitContext hit)
+        {
+            int damage = hit.Damage;
             if (battleLocked || damage <= 0 || IsInvincible || currentHealth <= 0)
             {
-                return;
+                return IsInvincible ? HitResult.Invulnerable : HitResult.Ignored;
             }
 
             GameConfig config = GameConfigService.Current;
             currentHealth = Mathf.Max(0, currentHealth - damage);
             damageInvincibilityTimer = config.player.damageInvincibilityDuration;
             hurtTimer = config.player.hurtFlashDuration;
+            StopAirFlip();
+            BattleStats.Active?.RecordHitTaken();
             HealthChanged?.Invoke(currentHealth, MaxHealth);
-            HitFlashEffect.Play(gameObject, config.player.hurtFlashDuration, 3, Color.white);
-            CombatImpactEffect.SpawnHit((Vector3)FootPosition + Vector3.up * 0.5f, new Color(1f, 0.38f, 0.28f));
-            ScreenShakeEffect.Shake(0.08f, 0.06f);
+            HitFlashEffect.Play(gameObject, config.player.hurtFlashDuration, config.player.hurtFlashCount, Color.white);
+            CombatImpactEffect.SpawnHit(hit.Point, new Color(1f, 0.38f, 0.28f), direction: hit.Direction);
+            ScreenShakeEffect.Shake(config.player.hitShakeDuration, config.player.hitShakeStrength);
+            BattleClock.Stop(config.feedback.hurtStop);
+            BattleAudio.Play("hurt", hit.Point);
             Debug.Log($"玩家受到 {damage} 点伤害，剩余生命 {currentHealth}/{MaxHealth}。");
 
             if (currentHealth > 0)
             {
-                return;
+                return HitResult.Applied;
             }
 
             isDead = true;
+            ClearJumpCut();
+            airFlipping = false;
+            uprightRemaining = 0f;
+            BattleAudio.Play("death", transform.position);
+            HitFlashEffect flash = GetComponent<HitFlashEffect>();
+            if (flash != null) flash.enabled = false;
             deathSequenceTimer = 0f;
             IsDashing = false;
             IsUsingSuper = false;
@@ -536,15 +669,25 @@ namespace MMORPG.Game.Player
             CombatImpactEffect.SpawnDeath((Vector3)FootPosition + Vector3.up * 0.55f, new Color(0.9f, 0.9f, 1f));
             Died?.Invoke();
             Debug.Log("玩家生命归零，战斗失败流程已触发。");
+            return HitResult.Killed;
         }
 
         public void SetBattleLocked(bool locked)
         {
             battleLocked = locked;
+            bufferedJump = bufferedDash = bufferedSpecial = false;
             if (!locked)
             {
                 return;
             }
+
+            SuppressActionInput();
+            ClearJumpCut();
+            spawnDodgeBurstOnDashEnd = false;
+            coyoteTimer = 0f;
+            moveInput = 0f;
+            IsShooting = false;
+            StopAirFlip();
 
             IsDashing = false;
             IsUsingSuper = false;
@@ -562,8 +705,7 @@ namespace MMORPG.Game.Player
 
             if (deathSequenceTimer <= deathActionDuration)
             {
-                float actionProgress = Mathf.Clamp01(deathSequenceTimer / deathActionDuration);
-                visualRoot.localRotation = visualBaseRotation * Quaternion.Euler(0f, 0f, -180f * actionProgress * facingDirection);
+                visualRoot.localRotation = visualBaseRotation;
                 SetVisualAlpha(1f);
                 return;
             }
@@ -625,22 +767,33 @@ namespace MMORPG.Game.Player
 
         private void StartAirFlip()
         {
+            if (IsHurt || IsParrying) return;
+            uprightRemaining = 0f;
             airFlipping = true;
+            flipDirection = facingDirection;
             airFlipTimer = 0f;
         }
 
         private void StopAirFlip()
         {
+            if (!airFlipping) return;
             airFlipping = false;
             airFlipTimer = 0f;
             if (visualRoot != null)
             {
-                visualRoot.localRotation = visualBaseRotation;
+                uprightStart = visualRoot.localRotation;
+                uprightRemaining = GameConfigService.Current.animation.hero.uprightDuration;
             }
         }
 
         private void UpdateAirFlip()
         {
+            if (visualRoot != null && uprightRemaining > 0f)
+            {
+                float duration = Mathf.Max(0.001f, GameConfigService.Current.animation.hero.uprightDuration);
+                uprightRemaining = Mathf.Max(0f, uprightRemaining - Time.deltaTime);
+                visualRoot.localRotation = Quaternion.Slerp(uprightStart, visualBaseRotation, 1f - uprightRemaining / duration);
+            }
             if (!airFlipping || visualRoot == null)
             {
                 return;
@@ -648,7 +801,7 @@ namespace MMORPG.Game.Player
 
             airFlipTimer += Time.deltaTime;
             float progress = Mathf.Clamp01(airFlipTimer / Mathf.Max(0.01f, airFlipDuration));
-            float angle = -360f * progress * facingDirection;
+            float angle = -360f * progress * flipDirection;
             visualRoot.localRotation = visualBaseRotation * Quaternion.Euler(0f, 0f, angle);
             if (progress >= 1f)
             {
@@ -660,6 +813,7 @@ namespace MMORPG.Game.Player
         {
             Vector3 smokePosition = (Vector3)FootPosition + new Vector3(0f, GameConfigService.Current.player.dodgeBurstYOffset, 0f);
             DodgeSmokeEffect.Spawn(smokePosition, facingDirection);
+            BattleAudio.Play(IsDashing ? "dash_start" : "dash_end", smokePosition);
         }
 
         private void SpawnSuperEffect()
@@ -669,6 +823,14 @@ namespace MMORPG.Game.Player
                 GameConfigService.Current.special.effectYOffset,
                 0f);
             SuperAttackEffect.Spawn(effectPosition, facingDirection);
+        }
+
+        private void LateUpdate()
+        {
+            if (isDead) return;
+            float alpha = IsDashing ? 0f : damageInvincibilityTimer > 0f
+                ? (Mathf.FloorToInt(damageInvincibilityTimer * 12f) % 2 == 0 ? 0.35f : 1f) : 1f;
+            SetVisualAlpha(alpha);
         }
     }
 }

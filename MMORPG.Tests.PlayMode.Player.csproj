@@ -46,6 +46,11 @@
     <Analyzer Include="D:\Unity\Editor\6000.0.23f1c1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Tests\PlayMode\PresentationLayoutTests.cs" />
+    <Compile Include="Assets\Tests\PlayMode\PotatoAttackTimelineTests.cs" />
+    <Compile Include="Assets\Tests\PlayMode\BattleFoundationTests.cs" />
+    <Compile Include="Assets\Tests\PlayMode\BossEntranceTests.cs" />
+    <Compile Include="Assets\Tests\PlayMode\GardenEncounterTests.cs" />
     <Compile Include="Assets\Tests\PlayMode\PrototypePlayModeFlowTests.cs" />
     <Compile Include="Assets\Tests\PlayMode\PrototypePlayModeTestRunner.cs" />
     <Reference Include="UnityEngine">
@@ -642,6 +647,10 @@
     <ProjectReference Include="UnityEngine.TestRunner.Player.csproj">
       <Project>{9e584e9b-3af4-affb-567f-b6f5221c91cb}</Project>
       <Name>UnityEngine.TestRunner.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InputSystem.Player.csproj">
+      <Project>{2465c6ff-3b98-2940-0a38-565f980f8483}</Project>
+      <Name>Unity.InputSystem.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
       <Project>{89a05cb2-6dc9-4d8c-6f59-04d3afacdef5}</Project>

@@ -5,6 +5,7 @@ using UnityEngine;
 namespace MMORPG.Framework.Animation
 {
     [RequireComponent(typeof(SpriteRenderer))]
+    [DefaultExecutionOrder(100)]
     public sealed class FrameAnimator : MonoBehaviour
     {
         private readonly Dictionary<string, FrameAnimationClip> clips = new Dictionary<string, FrameAnimationClip>();
@@ -23,6 +24,12 @@ namespace MMORPG.Framework.Animation
         public int CurrentFrameIndex => frameIndex;
 
         public bool IsPlaying => playing;
+        public bool ExternalClock { get; set; }
+
+        public void SetClipDuration(string clipName, Sprite[] frames, float duration, bool loop = true)
+        {
+            SetClip(clipName, frames, Mathf.Max(1, frames == null ? 0 : frames.Length) / Mathf.Max(0.01f, duration), loop);
+        }
 
         private void Awake()
         {
@@ -31,7 +38,14 @@ namespace MMORPG.Framework.Animation
 
         private void Update()
         {
-            Tick(Time.deltaTime);
+            if (!ExternalClock) Tick(Time.deltaTime);
+        }
+
+        public void SampleNormalized(float progress)
+        {
+            if (currentClip == null || currentClip.Frames.Length == 0) return;
+            frameIndex = Mathf.Clamp(Mathf.FloorToInt(Mathf.Clamp01(progress) * currentClip.Frames.Length), 0, currentClip.Frames.Length - 1);
+            ApplyFrame();
         }
 
         public void SetClip(string clipName, Sprite[] frames, float framesPerSecond = 12f, bool loop = true)
@@ -54,7 +68,6 @@ namespace MMORPG.Framework.Animation
 
             if (!restart && currentClip != null && currentClip.ClipName == clipName)
             {
-                playing = true;
                 return true;
             }
 

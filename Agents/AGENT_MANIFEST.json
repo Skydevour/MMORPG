@@ -1,0 +1,37 @@
+{
+  "project": "MMORPG",
+  "description": "Original 2D Boss Rush Unity project agent routing manifest",
+  "workspace": "shared",
+  "branchPolicy": "single-shared-branch",
+  "remotePushOwner": "product-manager",
+  "operatingModel": "Agents/AGENT_OPERATING_MODEL.md",
+  "roles": [
+    {
+      "id": "product-manager",
+      "name": "Product Manager",
+      "entry": "Agents/PRODUCT_MANAGER.md",
+      "scope": ["product-direction", "prioritization", "market-difference", "acceptance", "release"]
+    },
+    {
+      "id": "game-designer",
+      "name": "Game Designer",
+      "entry": "Agents/GAME_DESIGNER.md",
+      "scope": ["gameplay", "level-design", "map-design", "ui-resource", "character-resource", "rules", "numerical-config"]
+    },
+    {
+      "id": "unity-developer",
+      "name": "Unity Developer",
+      "entry": "Agents/UNITY_DEVELOPER.md",
+      "scope": ["unity-code", "scene", "prefab", "state-machine", "pooling", "vfx", "testing", "performance"]
+    }
+  ],
+  "sharedRecords": {
+    "taskBoard": "Plan/AGENT_TASK_BOARD.md",
+    "dailyLog": "Plan/AGENT_DAILY_LOG.md",
+    "handoffTemplate": "Plan/AGENT_HANDOFF_TEMPLATE.md",
+    "productRoadmap": "Plan/PRODUCT_ROADMAP.md",
+    "phasedDeliveryPlan": "Plan/PHASED_DELIVERY_PLAN.md",
+    "genreBenchmark": "Plan/GENRE_BENCHMARK_AND_EXPANSION.md",
+    "skillRouting": "Agents/SKILL_ROUTING.md"
+  }
+}

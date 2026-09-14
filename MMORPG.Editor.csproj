@@ -46,10 +46,18 @@
     <Analyzer Include="D:\Unity\Editor\6000.0.23f1c1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Editor\Import\GardenAssetPreparation.cs" />
     <Compile Include="Assets\Scripts\Editor\Validation\PrototypePlayModeTestRunner.cs" />
+    <Compile Include="Assets\Scripts\Editor\Import\PrototypeSpriteCatalogBuilder.cs" />
     <Compile Include="Assets\Scripts\Editor\Validation\PrototypePlayModeValidator.cs" />
     <Compile Include="Assets\Scripts\Editor\Import\PrototypeTexturePostprocessor.cs" />
     <Compile Include="Assets\Scripts\Editor\Scene\MainSceneBuilder.cs" />
+    <Compile Include="Assets\Scripts\Editor\Import\BossGeometryPreparation.cs" />
+    <Compile Include="Assets\Scripts\Editor\Import\BattleAssetPreparation.cs" />
+    <Compile Include="Assets\Scripts\Editor\Validation\GardenResourceValidator.cs" />
+    <Compile Include="Assets\Scripts\Editor\Validation\PresentationAssetValidator.cs" />
+    <Compile Include="Assets\Scripts\Editor\Validation\BattleBuildValidator.cs" />
+    <Compile Include="Assets\Scripts\Editor\Import\GardenUiPreparation.cs" />
     <None Include="Assets\Scripts\Editor\MMORPG.Editor.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Unity\Editor\6000.0.23f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

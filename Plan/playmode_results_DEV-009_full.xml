@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="39" result="Failed(Child)" total="39" passed="38" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-14 06:58:55Z" end-time="2026-09-14 07:02:17Z" duration="202.6464408">
+  <test-suite type="TestSuite" id="1050" name="MMORPG" fullname="MMORPG" runstate="Runnable" testcasecount="39" result="Failed" site="Child" start-time="2026-09-14 06:58:55Z" end-time="2026-09-14 07:02:17Z" duration="202.646441" total="39" passed="38" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1043" name="MMORPG.Tests.PlayMode.dll" fullname="E:/UnityProject/MMORPG/MMORPG/Library/ScriptAssemblies/MMORPG.Tests.PlayMode.dll" runstate="Runnable" testcasecount="39" result="Failed" site="Child" start-time="2026-09-14 06:58:55Z" end-time="2026-09-14 07:02:17Z" duration="202.641482" total="39" passed="38" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="90508" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1044" name="MMORPG" fullname="MMORPG" runstate="Runnable" testcasecount="39" result="Failed" site="Child" start-time="2026-09-14 06:58:55Z" end-time="2026-09-14 07:02:17Z" duration="202.640918" total="39" passed="38" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1045" name="Tests" fullname="MMORPG.Tests" runstate="Runnable" testcasecount="39" result="Failed" site="Child" start-time="2026-09-14 06:58:55Z" end-time="2026-09-14 07:02:17Z" duration="202.640600" total="39" passed="38" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1046" name="PlayMode" fullname="MMORPG.Tests.PlayMode" runstate="Runnable" testcasecount="39" result="Failed" site="Child" start-time="2026-09-14 06:58:55Z" end-time="2026-09-14 07:02:17Z" duration="202.640292" total="39" passed="38" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1001" name="BattleFoundationTests" fullname="MMORPG.Tests.PlayMode.BattleFoundationTests" classname="MMORPG.Tests.PlayMode.BattleFoundationTests" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2026-09-14 06:58:55Z" end-time="2026-09-14 06:59:07Z" duration="12.145787" total="6" passed="5" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1006" name="ActualProjectileContactsDealDamageAndCollectPink" fullname="MMORPG.Tests.PlayMode.BattleFoundationTests.ActualProjectileContactsDealDamageAndCollectPink" methodname="ActualProjectileContactsDealDamageAndCollectPink" classname="MMORPG.Tests.PlayMode.BattleFoundationTests" runstate="Runnable" seed="41409762" result="Passed" start-time="2026-09-14 06:58:55Z" end-time="2026-09-14 06:58:55Z" duration="0.750681" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+玩家跳跃击碎粉色子弹，获得能量 1 格，当前能量 1/3。
+土豆 Boss 受到 1 点伤害，剩余生命 99/100。
+]]></output>
+              </test-case>
+              <test-case id="1007" name="EffectsAndTenRetriesDoNotAccumulate" fullname="MMORPG.Tests.PlayMode.BattleFoundationTests.EffectsAndTenRetriesDoNotAccumulate" methodname="EffectsAndTenRetriesDoNotAccumulate" classname="MMORPG.Tests.PlayMode.BattleFoundationTests" runstate="Runnable" seed="838934484" result="Passed" start-time="2026-09-14 06:58:55Z" end-time="2026-09-14 06:59:03Z" duration="7.963971" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+玩家受到 99 点伤害，剩余生命 0/3。
+玩家已死亡，Boss 攻击流程已停止，2.0 秒后显示失败结算。
+玩家生命归零，战斗失败流程已触发。
+花园剧场失败票券已显示。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+]]></output>
+              </test-case>
+              <test-case id="1002" name="KeyboardMovementJumpAndDashRemainResponsive" fullname="MMORPG.Tests.PlayMode.BattleFoundationTests.KeyboardMovementJumpAndDashRemainResponsive" methodname="KeyboardMovementJumpAndDashRemainResponsive" classname="MMORPG.Tests.PlayMode.BattleFoundationTests" runstate="Runnable" seed="783589300" result="Passed" start-time="2026-09-14 06:59:03Z" end-time="2026-09-14 06:59:04Z" duration="0.540697" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+]]></output>
+              </test-case>
+              <test-case id="1003" name="PauseButtonResumesAndBlocksSuperConsumption" fullname="MMORPG.Tests.PlayMode.BattleFoundationTests.PauseButtonResumesAndBlocksSuperConsumption" methodname="PauseButtonResumesAndBlocksSuperConsumption" classname="MMORPG.Tests.PlayMode.BattleFoundationTests" runstate="Runnable" seed="1892656965" result="Passed" start-time="2026-09-14 06:59:04Z" end-time="2026-09-14 06:59:04Z" duration="0.318294" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+Boss 关卡已暂停。
+Boss 关卡已继续。
+Boss 关卡已暂停。
+Boss 关卡已继续。
+]]></output>
+              </test-case>
+              <test-case id="1004" name="PinkCollectionAndDirectionalSuperAreSingleUse" fullname="MMORPG.Tests.PlayMode.BattleFoundationTests.PinkCollectionAndDirectionalSuperAreSingleUse" methodname="PinkCollectionAndDirectionalSuperAreSingleUse" classname="MMORPG.Tests.PlayMode.BattleFoundationTests" runstate="Runnable" seed="860565410" result="Passed" start-time="2026-09-14 06:59:04Z" end-time="2026-09-14 06:59:06Z" duration="2.247188" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+玩家攻击命中紫色子弹，获得能量 1 格。当前能量 1/3。
+玩家释放大招，消耗全部 3 格能量。
+玩家大招演出结束。
+玩家释放大招，消耗全部 3 格能量。
+土豆 Boss 受到 30 点伤害，剩余生命 70/100。
+土豆 Boss 进入阶段 2，切换期间清空所有 Boss 投射物并暂停攻击 0.6 秒。
+玩家大招演出结束。
+]]></output>
+              </test-case>
+              <test-case id="1005" name="ResourcesDamageAndShakeMatchVisibleState" fullname="MMORPG.Tests.PlayMode.BattleFoundationTests.ResourcesDamageAndShakeMatchVisibleState" methodname="ResourcesDamageAndShakeMatchVisibleState" classname="MMORPG.Tests.PlayMode.BattleFoundationTests" runstate="Runnable" seed="423428753" result="Failed" start-time="2026-09-14 06:59:06Z" end-time="2026-09-14 06:59:07Z" duration="0.314875" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: greater than 4.0f
+  But was:  3.47890615f
+]]></message>
+                  <stack-trace><![CDATA[at MMORPG.Tests.PlayMode.BattleFoundationTests+<ResourcesDamageAndShakeMatchVisibleState>d__10.MoveNext () [0x000cb] in E:\UnityProject\MMORPG\MMORPG\Assets\Tests\PlayMode\BattleFoundationTests.cs:143
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in .\Library\PackageCache\com.unity.test-framework\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1008" name="GardenEncounterTests" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" testcasecount="25" result="Passed" start-time="2026-09-14 06:59:07Z" end-time="2026-09-14 07:01:50Z" duration="163.131990" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1009" name="AirbornePresentationUsesVelocityAndKeepsFlipMirrorStable" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.AirbornePresentationUsesVelocityAndKeepsFlipMirrorStable" methodname="AirbornePresentationUsesVelocityAndKeepsFlipMirrorStable" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="77819293" result="Passed" start-time="2026-09-14 06:59:07Z" end-time="2026-09-14 06:59:09Z" duration="2.118954" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+]]></output>
+              </test-case>
+              <test-case id="1018" name="AudioBudgetAndBeamLifetimeRemainBounded" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.AudioBudgetAndBeamLifetimeRemainBounded" methodname="AudioBudgetAndBeamLifetimeRemainBounded" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="1194355103" result="Passed" start-time="2026-09-14 06:59:09Z" end-time="2026-09-14 06:59:11Z" duration="2.352048" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+]]></output>
+              </test-case>
+              <test-case id="1025" name="BeamLocksDirectionAndSeekerObeysTurnAndLifetimeLimits" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.BeamLocksDirectionAndSeekerObeysTurnAndLifetimeLimits" methodname="BeamLocksDirectionAndSeekerObeysTurnAndLifetimeLimits" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="1737468942" result="Passed" start-time="2026-09-14 06:59:11Z" end-time="2026-09-14 06:59:18Z" duration="6.896571" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+]]></output>
+              </test-case>
+              <test-case id="1031" name="BossBoundaryStopsRunningAndDashingPastTheOpponent" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.BossBoundaryStopsRunningAndDashingPastTheOpponent" methodname="BossBoundaryStopsRunningAndDashingPastTheOpponent" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="298507487" result="Passed" start-time="2026-09-14 06:59:18Z" end-time="2026-09-14 06:59:23Z" duration="4.435891" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+]]></output>
+              </test-case>
+              <test-case id="1013" name="DashContactKeepsBothProjectileKindsAndTheirLease" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.DashContactKeepsBothProjectileKindsAndTheirLease" methodname="DashContactKeepsBothProjectileKindsAndTheirLease" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="354576561" result="Passed" start-time="2026-09-14 06:59:23Z" end-time="2026-09-14 06:59:24Z" duration="1.526703" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+]]></output>
+              </test-case>
+              <test-case id="1027" name="EarlyBeamDodgeExpiresBeforeDamage" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.EarlyBeamDodgeExpiresBeforeDamage" methodname="EarlyBeamDodgeExpiresBeforeDamage" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="557052568" result="Passed" start-time="2026-09-14 06:59:24Z" end-time="2026-09-14 06:59:24Z" duration="0.370345" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+玩家受到 1 点伤害，剩余生命 2/3。
+]]></output>
+              </test-case>
+              <test-case id="1021" name="EnergyTrailUsesBoundCameraDuringOffscreenRendering" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.EnergyTrailUsesBoundCameraDuringOffscreenRendering" methodname="EnergyTrailUsesBoundCameraDuringOffscreenRendering" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="531704338" result="Passed" start-time="2026-09-14 06:59:24Z" end-time="2026-09-14 06:59:26Z" duration="1.893826" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+]]></output>
+              </test-case>
+              <test-case id="1023" name="HitStopBuffersDashAndMultipleCollidersCollectOnlyOnce" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.HitStopBuffersDashAndMultipleCollidersCollectOnlyOnce" methodname="HitStopBuffersDashAndMultipleCollidersCollectOnlyOnce" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="1229754228" result="Passed" start-time="2026-09-14 06:59:26Z" end-time="2026-09-14 06:59:28Z" duration="1.681091" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+玩家跳跃击碎粉色子弹，获得能量 1 格，当前能量 1/3。
+]]></output>
+              </test-case>
+              <test-case id="1014" name="ImmunityRejectsDamageWithoutConsumingProjectile" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.ImmunityRejectsDamageWithoutConsumingProjectile" methodname="ImmunityRejectsDamageWithoutConsumingProjectile" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="1920526245" result="Passed" start-time="2026-09-14 06:59:28Z" end-time="2026-09-14 06:59:30Z" duration="1.531810" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+]]></output>
+              </test-case>
+              <test-case id="1010" name="JumpDuringHurtKeepsPriorityAndTransitionSettlesRotation" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.JumpDuringHurtKeepsPriorityAndTransitionSettlesRotation" methodname="JumpDuringHurtKeepsPriorityAndTransitionSettlesRotation" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="1038084571" result="Passed" start-time="2026-09-14 06:59:30Z" end-time="2026-09-14 06:59:32Z" duration="2.588252" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+玩家受到 1 点伤害，剩余生命 2/3。
+土豆 Boss 受到 999 点伤害，剩余生命 0/100。
+土豆 Boss 已被击败，胜利流程已触发。
+]]></output>
+              </test-case>
+              <test-case id="1022" name="KeyboardMenusUseOneInputSystemAndDoNotLeakActions" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.KeyboardMenusUseOneInputSystemAndDoNotLeakActions" methodname="KeyboardMenusUseOneInputSystemAndDoNotLeakActions" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="2044181943" result="Passed" start-time="2026-09-14 06:59:32Z" end-time="2026-09-14 06:59:34Z" duration="2.334935" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+Boss 关卡已暂停。
+Boss 关卡已继续。
+]]></output>
+              </test-case>
+              <test-case id="1033" name="KeyboardPracticeCompletesThreeFormsWithNormalDamage" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.KeyboardPracticeCompletesThreeFormsWithNormalDamage" methodname="KeyboardPracticeCompletesThreeFormsWithNormalDamage" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="233790069" result="Passed" start-time="2026-09-14 06:59:34Z" end-time="2026-09-14 07:00:34Z" duration="59.951068" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+土豆 Boss 受到 1 点伤害，剩余生命 99/100。
+土豆 Boss 受到 1 点伤害，剩余生命 98/100。
+土豆 Boss 受到 1 点伤害，剩余生命 97/100。
+土豆 Boss 受到 1 点伤害，剩余生命 96/100。
+土豆 Boss 受到 1 点伤害，剩余生命 95/100。
+土豆 Boss 受到 1 点伤害，剩余生命 94/100。
+土豆 Boss 受到 1 点伤害，剩余生命 93/100。
+土豆 Boss 受到 1 点伤害，剩余生命 92/100。
+土豆 Boss 受到 1 点伤害，剩余生命 91/100。
+土豆 Boss 受到 1 点伤害，剩余生命 90/100。
+土豆 Boss 受到 1 点伤害，剩余生命 89/100。
+玩家攻击命中紫色子弹，获得能量 1 格。当前能量 1/3。
+土豆 Boss 受到 1 点伤害，剩余生命 88/100。
+土豆 Boss 受到 1 点伤害，剩余生命 87/100。
+土豆 Boss 受到 1 点伤害，剩余生命 86/100。
+土豆 Boss 受到 1 点伤害，剩余生命 85/100。
+土豆 Boss 受到 1 点伤害，剩余生命 84/100。
+土豆 Boss 受到 1 点伤害，剩余生命 83/100。
+土豆 Boss 受到 1 点伤害，剩余生命 82/100。
+土豆 Boss 受到 1 点伤害，剩余生命 81/100。
+土豆 Boss 受到 1 点伤害，剩余生命 80/100。
+土豆 Boss 受到 1 点伤害，剩余生命 79/100。
+土豆 Boss 受到 1 点伤害，剩余生命 78/100。
+土豆 Boss 受到 1 点伤害，剩余生命 77/100。
+土豆 Boss 受到 1 点伤害，剩余生命 76/100。
+土豆 Boss 受到 1 点伤害，剩余生命 75/100。
+土豆 Boss 受到 1 点伤害，剩余生命 74/100。
+玩家攻击命中紫色子弹，获得能量 1 格。当前能量 2/3。
+土豆 Boss 受到 1 点伤害，剩余生命 73/100。
+土豆 Boss 受到 1 点伤害，剩余生命 72/100。
+土豆 Boss 受到 1 点伤害，剩余生命 71/100。
+土豆 Boss 受到 1 点伤害，剩余生命 70/100。
+土豆 Boss 受到 1 点伤害，剩余生命 69/100。
+土豆 Boss 受到 1 点伤害，剩余生命 68/100。
+土豆 Boss 受到 1 点伤害，剩余生命 67/100。
+土豆 Boss 受到 1 点伤害，剩余生命 66/100。
+土豆 Boss 受到 1 点伤害，剩余生命 65/100。
+土豆 Boss 受到 1 点伤害，剩余生命 64/100。
+土豆 Boss 受到 1 点伤害，剩余生命 63/100。
+土豆 Boss 受到 1 点伤害，剩余生命 62/100。
+土豆 Boss 受到 1 点伤害，剩余生命 61/100。
+土豆 Boss 受到 1 点伤害，剩余生命 60/100。
+土豆 Boss 受到 1 点伤害，剩余生命 59/100。
+土豆 Boss 受到 1 点伤害，剩余生命 58/100。
+土豆 Boss 受到 1 点伤害，剩余生命 57/100。
+玩家攻击命中紫色子弹，获得能量 1 格。当前能量 3/3。
+玩家释放大招，消耗全部 3 格能量。
+土豆 Boss 受到 30 点伤害，剩余生命 27/100。
+土豆 Boss 受到 1 点伤害，剩余生命 26/100。
+土豆 Boss 受到 1 点伤害，剩余生命 25/100。
+土豆 Boss 受到 1 点伤害，剩余生命 24/100。
+玩家大招演出结束。
+玩家受到 1 点伤害，剩余生命 2/3。
+土豆 Boss 受到 1 点伤害，剩余生命 23/100。
+土豆 Boss 受到 1 点伤害，剩余生命 22/100。
+土豆 Boss 受到 1 点伤害，剩余生命 21/100。
+土豆 Boss 受到 1 点伤害，剩余生命 20/100。
+土豆 Boss 受到 1 点伤害，剩余生命 19/100。
+土豆 Boss 受到 1 点伤害，剩余生命 18/100。
+土豆 Boss 受到 1 点伤害，剩余生命 17/100。
+土豆 Boss 受到 1 点伤害，剩余生命 16/100。
+土豆 Boss 受到 1 点伤害，剩余生命 15/100。
+土豆 Boss 受到 1 点伤害，剩余生命 14/100。
+土豆 Boss 受到 1 点伤害，剩余生命 13/100。
+土豆 Boss 受到 1 点伤害，剩余生命 12/100。
+土豆 Boss 受到 1 点伤害，剩余生命 11/100。
+玩家攻击命中紫色子弹，获得能量 1 格。当前能量 1/3。
+土豆 Boss 受到 1 点伤害，剩余生命 10/100。
+土豆 Boss 受到 1 点伤害，剩余生命 9/100。
+土豆 Boss 受到 1 点伤害，剩余生命 8/100。
+土豆 Boss 受到 1 点伤害，剩余生命 7/100。
+土豆 Boss 受到 1 点伤害，剩余生命 6/100。
+土豆 Boss 受到 1 点伤害，剩余生命 5/100。
+土豆 Boss 受到 1 点伤害，剩余生命 4/100。
+土豆 Boss 受到 1 点伤害，剩余生命 3/100。
+土豆 Boss 受到 1 点伤害，剩余生命 2/100。
+土豆 Boss 受到 1 点伤害，剩余生命 1/100。
+土豆 Boss 受到 1 点伤害，剩余生命 0/100。
+土豆 Boss 已被击败，胜利流程已触发。
+遭遇第 2 形态 洋葱 开始。
+玩家攻击命中紫色子弹，获得能量 1 格。当前能量 2/3。
+玩家攻击命中紫色子弹，获得能量 1 格。当前能量 3/3。
+玩家释放大招，消耗全部 3 格能量。
+遭遇第 3 形态 胡萝卜 开始。
+玩家攻击命中紫色子弹，获得能量 1 格。当前能量 1/3。
+玩家攻击命中紫色子弹，获得能量 1 格。当前能量 2/3。
+玩家攻击命中紫色子弹，获得能量 1 格。当前能量 3/3。
+玩家释放大招，消耗全部 3 格能量。
+玩家大招演出结束。
+花园剧场胜利界面已显示。
+]]></output>
+              </test-case>
+              <test-case id="1029" name="LateBeamDodgeCannotUndoDamage" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.LateBeamDodgeCannotUndoDamage" methodname="LateBeamDodgeCannotUndoDamage" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="1416711918" result="Passed" start-time="2026-09-14 07:00:34Z" end-time="2026-09-14 07:00:37Z" duration="2.175718" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+玩家受到 1 点伤害，剩余生命 2/3。
+]]></output>
+              </test-case>
+              <test-case id="1024" name="NewEncounterRetriesTenTimesWithoutOldHazardsOrListeners" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.NewEncounterRetriesTenTimesWithoutOldHazardsOrListeners" methodname="NewEncounterRetriesTenTimesWithoutOldHazardsOrListeners" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="1306416584" result="Passed" start-time="2026-09-14 07:00:37Z" end-time="2026-09-14 07:01:01Z" duration="24.488312" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+土豆 Boss 受到 999 点伤害，剩余生命 0/100。
+土豆 Boss 已被击败，胜利流程已触发。
+遭遇第 2 形态 洋葱 开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+土豆 Boss 受到 999 点伤害，剩余生命 0/100。
+土豆 Boss 已被击败，胜利流程已触发。
+遭遇第 2 形态 洋葱 开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+土豆 Boss 受到 999 点伤害，剩余生命 0/100。
+土豆 Boss 已被击败，胜利流程已触发。
+遭遇第 2 形态 洋葱 开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+土豆 Boss 受到 999 点伤害，剩余生命 0/100。
+土豆 Boss 已被击败，胜利流程已触发。
+遭遇第 2 形态 洋葱 开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+土豆 Boss 受到 999 点伤害，剩余生命 0/100。
+土豆 Boss 已被击败，胜利流程已触发。
+遭遇第 2 形态 洋葱 开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+]]></output>
+              </test-case>
+              <test-case id="1020" name="OnionAndCarrotExecuteTheirOwnAttacks" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.OnionAndCarrotExecuteTheirOwnAttacks" methodname="OnionAndCarrotExecuteTheirOwnAttacks" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="215420525" result="Passed" start-time="2026-09-14 07:01:01Z" end-time="2026-09-14 07:01:16Z" duration="15.299983" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+土豆 Boss 受到 999 点伤害，剩余生命 0/100。
+土豆 Boss 已被击败，胜利流程已触发。
+遭遇第 2 形态 洋葱 开始。
+遭遇第 3 形态 胡萝卜 开始。
+]]></output>
+              </test-case>
+              <test-case id="1026" name="OnionCorridorsAreReachableAndPinkFallsOutsideBoss" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.OnionCorridorsAreReachableAndPinkFallsOutsideBoss" methodname="OnionCorridorsAreReachableAndPinkFallsOutsideBoss" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="292575545" result="Passed" start-time="2026-09-14 07:01:16Z" end-time="2026-09-14 07:01:22Z" duration="5.598932" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+土豆 Boss 受到 999 点伤害，剩余生命 0/100。
+土豆 Boss 已被击败，胜利流程已触发。
+遭遇第 2 形态 洋葱 开始。
+]]></output>
+              </test-case>
+              <test-case id="1016" name="PauseCannotBeReleasedByHitStop" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.PauseCannotBeReleasedByHitStop" methodname="PauseCannotBeReleasedByHitStop" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="1813231057" result="Passed" start-time="2026-09-14 07:01:22Z" end-time="2026-09-14 07:01:24Z" duration="1.738326" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+Boss 关卡已暂停。
+Boss 关卡已继续。
+]]></output>
+              </test-case>
+              <test-case id="1019" name="PersistentHazardCanDamageAfterImmunityExpires" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.PersistentHazardCanDamageAfterImmunityExpires" methodname="PersistentHazardCanDamageAfterImmunityExpires" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="705518851" result="Passed" start-time="2026-09-14 07:01:24Z" end-time="2026-09-14 07:01:26Z" duration="1.848343" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+玩家受到 1 点伤害，剩余生命 2/3。
+]]></output>
+              </test-case>
+              <test-case id="1015" name="PinkParryBouncesOnceAndCapsEnergy" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.PinkParryBouncesOnceAndCapsEnergy" methodname="PinkParryBouncesOnceAndCapsEnergy" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="45854493" result="Passed" start-time="2026-09-14 07:01:26Z" end-time="2026-09-14 07:01:27Z" duration="1.495163" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+玩家跳跃击碎粉色子弹，获得能量 1 格，当前能量 3/3。
+]]></output>
+              </test-case>
+              <test-case id="1030" name="SettingsKeepKeyboardFocusInsideModalAndPauseCanReturnToTitle" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.SettingsKeepKeyboardFocusInsideModalAndPauseCanReturnToTitle" methodname="SettingsKeepKeyboardFocusInsideModalAndPauseCanReturnToTitle" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="1662788747" result="Passed" start-time="2026-09-14 07:01:27Z" end-time="2026-09-14 07:01:29Z" duration="2.253707" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+土豆 Boss 受到 999 点伤害，剩余生命 0/100。
+土豆 Boss 已被击败，胜利流程已触发。
+Boss 关卡已暂停。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+]]></output>
+              </test-case>
+              <test-case id="1017" name="SimultaneousDeathsPreferDefeat" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.SimultaneousDeathsPreferDefeat" methodname="SimultaneousDeathsPreferDefeat" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="1930748183" result="Passed" start-time="2026-09-14 07:01:29Z" end-time="2026-09-14 07:01:33Z" duration="4.095412" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+土豆 Boss 受到 999 点伤害，剩余生命 0/100。
+土豆 Boss 已被击败，胜利流程已触发。
+玩家受到 999 点伤害，剩余生命 0/3。
+玩家生命归零，战斗失败流程已触发。
+花园剧场失败票券已显示。
+]]></output>
+              </test-case>
+              <test-case id="1028" name="TimelyBeamDodgeAvoidsDamage" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.TimelyBeamDodgeAvoidsDamage" methodname="TimelyBeamDodgeAvoidsDamage" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="466097014" result="Passed" start-time="2026-09-14 07:01:33Z" end-time="2026-09-14 07:01:34Z" duration="0.311939" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+]]></output>
+              </test-case>
+              <test-case id="1012" name="TitlePreventsAttacksAndThreeFormsOnlyWinAtEnd" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.TitlePreventsAttacksAndThreeFormsOnlyWinAtEnd" methodname="TitlePreventsAttacksAndThreeFormsOnlyWinAtEnd" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="42899997" result="Passed" start-time="2026-09-14 07:01:34Z" end-time="2026-09-14 07:01:39Z" duration="5.100366" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+土豆 Boss 受到 999 点伤害，剩余生命 0/100。
+土豆 Boss 已被击败，胜利流程已触发。
+遭遇第 2 形态 洋葱 开始。
+遭遇第 3 形态 胡萝卜 开始。
+花园剧场胜利界面已显示。
+]]></output>
+              </test-case>
+              <test-case id="1032" name="TransitionClearsOldJumpBufferAndHeldActions" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.TransitionClearsOldJumpBufferAndHeldActions" methodname="TransitionClearsOldJumpBufferAndHeldActions" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="1867303581" result="Passed" start-time="2026-09-14 07:01:39Z" end-time="2026-09-14 07:01:42Z" duration="2.956466" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+土豆 Boss 受到 999 点伤害，剩余生命 0/100。
+土豆 Boss 已被击败，胜利流程已触发。
+遭遇第 2 形态 洋葱 开始。
+]]></output>
+              </test-case>
+              <test-case id="1011" name="UiHealthEnergyAndDefeatBindingsSurviveRetry" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.UiHealthEnergyAndDefeatBindingsSurviveRetry" methodname="UiHealthEnergyAndDefeatBindingsSurviveRetry" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="798406697" result="Passed" start-time="2026-09-14 07:01:42Z" end-time="2026-09-14 07:01:50Z" duration="8.082263" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+玩家受到 1 点伤害，剩余生命 2/3。
+Boss 关卡已暂停。
+Boss 关卡已继续。
+玩家受到 999 点伤害，剩余生命 0/3。
+玩家生命归零，战斗失败流程已触发。
+花园剧场失败票券已显示。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1034" name="PrototypePlayModeFlowTests" fullname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests" classname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-09-14 07:01:50Z" end-time="2026-09-14 07:02:17Z" duration="27.360099" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1040" name="AirbornePlayerCanBreakPinkProjectileAndGainEnergy" fullname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests.AirbornePlayerCanBreakPinkProjectileAndGainEnergy" methodname="AirbornePlayerCanBreakPinkProjectileAndGainEnergy" classname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests" runstate="Runnable" seed="1464148954" result="Passed" start-time="2026-09-14 07:01:50Z" end-time="2026-09-14 07:01:51Z" duration="1.179256" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+玩家跳跃击碎粉色子弹，获得能量 1 格，当前能量 1/3。
+]]></output>
+              </test-case>
+              <test-case id="1038" name="BossAdvancesThroughThreePhasesOnDamageThresholds" fullname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests.BossAdvancesThroughThreePhasesOnDamageThresholds" methodname="BossAdvancesThroughThreePhasesOnDamageThresholds" classname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests" runstate="Runnable" seed="1154765004" result="Passed" start-time="2026-09-14 07:01:51Z" end-time="2026-09-14 07:01:53Z" duration="1.830892" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+土豆 Boss 受到 30 点伤害，剩余生命 70/100。
+土豆 Boss 进入阶段 2，切换期间清空所有 Boss 投射物并暂停攻击 0.6 秒。
+Boss 阶段切换安全窗口结束，恢复攻击。
+土豆 Boss 受到 35 点伤害，剩余生命 35/100。
+土豆 Boss 进入阶段 3，切换期间清空所有 Boss 投射物并暂停攻击 0.6 秒。
+]]></output>
+              </test-case>
+              <test-case id="1036" name="BossBattleHudShowsHealthAndResultState" fullname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests.BossBattleHudShowsHealthAndResultState" methodname="BossBattleHudShowsHealthAndResultState" classname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests" runstate="Runnable" seed="609492327" result="Passed" start-time="2026-09-14 07:01:53Z" end-time="2026-09-14 07:01:58Z" duration="4.766987" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+阶段 1 土豆 Boss 发动三段散射，第 1 发从上方位置生成紫色可采集子弹，水平速度 7.2。
+土豆 Boss 受到 5 点伤害，剩余生命 95/100。
+玩家受到 1 点伤害，剩余生命 2/3。
+玩家受到 1 点伤害，剩余生命 1/3。
+]]></output>
+              </test-case>
+              <test-case id="1037" name="BossDeathAndPlayerDeathShowCorrectResult" fullname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests.BossDeathAndPlayerDeathShowCorrectResult" methodname="BossDeathAndPlayerDeathShowCorrectResult" classname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests" runstate="Runnable" seed="1483221218" result="Passed" start-time="2026-09-14 07:01:58Z" end-time="2026-09-14 07:02:02Z" duration="4.596281" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+土豆 Boss 受到 100 点伤害，剩余生命 0/100。
+土豆 Boss 已死亡，玩家战斗输入已锁定。
+花园剧场胜利界面已显示。
+土豆 Boss 已被击败，胜利流程已触发。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+玩家受到 3 点伤害，剩余生命 0/3。
+玩家已死亡，Boss 攻击流程已停止，2.0 秒后显示失败结算。
+玩家生命归零，战斗失败流程已触发。
+花园剧场失败票券已显示。
+]]></output>
+              </test-case>
+              <test-case id="1041" name="GameConfigNormalizeRestoresNullSections" fullname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests.GameConfigNormalizeRestoresNullSections" methodname="GameConfigNormalizeRestoresNullSections" classname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests" runstate="Runnable" seed="992868565" result="Passed" start-time="2026-09-14 07:02:02Z" end-time="2026-09-14 07:02:02Z" duration="0.001511" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1035" name="MainSceneCanRunBossEnergyAndSuperFlow" fullname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests.MainSceneCanRunBossEnergyAndSuperFlow" methodname="MainSceneCanRunBossEnergyAndSuperFlow" classname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests" runstate="Runnable" seed="2047051422" result="Passed" start-time="2026-09-14 07:02:02Z" end-time="2026-09-14 07:02:14Z" duration="11.429652" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+阶段 1 土豆 Boss 发动抛物线种子攻击，目标 X=-4.70。
+抛物线种子落地成为竖直障碍，位置 X=0.25，持续 3.5 秒。
+阶段 1 土豆 Boss 发动三段散射，第 1 发从上方位置生成普通土块子弹，水平速度 8.0。
+阶段 1 土豆 Boss 发动三段散射，第 2 发从中间位置生成紫色可采集子弹，水平速度 7.2。
+阶段 1 土豆 Boss 发动三段散射，第 3 发从下方位置生成普通土块子弹，水平速度 8.0。
+阶段 1 土豆 Boss 发动三段散射，第 1 发从上方位置生成普通土块子弹，水平速度 8.0。
+阶段 1 土豆 Boss 发动三段散射，第 2 发从中间位置生成紫色可采集子弹，水平速度 7.2。
+阶段 1 土豆 Boss 发动三段散射，第 3 发从下方位置生成普通土块子弹，水平速度 8.0。
+阶段 1 土豆 Boss 发动抛物线种子攻击，目标 X=-5.74。
+抛物线种子落地成为竖直障碍，位置 X=0.25，持续 3.5 秒。
+阶段 1 土豆 Boss 发动三段散射，第 1 发从上方位置生成紫色可采集子弹，水平速度 7.2。
+阶段 1 土豆 Boss 发动三段散射，第 2 发从中间位置生成紫色可采集子弹，水平速度 7.2。
+阶段 1 土豆 Boss 发动三段散射，第 3 发从下方位置生成普通土块子弹，水平速度 8.0。
+玩家攻击命中紫色子弹，获得能量 1 格。当前能量 1/3。
+玩家释放大招，消耗全部 3 格能量。
+土豆 Boss 受到 30 点伤害，剩余生命 70/100。
+土豆 Boss 进入阶段 2，切换期间清空所有 Boss 投射物并暂停攻击 0.6 秒。
+]]></output>
+              </test-case>
+              <test-case id="1039" name="PhaseTransitionClearsBossProjectilesAndBlocksAttacks" fullname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests.PhaseTransitionClearsBossProjectilesAndBlocksAttacks" methodname="PhaseTransitionClearsBossProjectilesAndBlocksAttacks" classname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests" runstate="Runnable" seed="442771194" result="Passed" start-time="2026-09-14 07:02:14Z" end-time="2026-09-14 07:02:16Z" duration="2.386156" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+土豆 Boss 受到 30 点伤害，剩余生命 70/100。
+土豆 Boss 进入阶段 2，切换期间清空所有 Boss 投射物并暂停攻击 0.6 秒。
+Boss 阶段切换安全窗口结束，恢复攻击。
+]]></output>
+              </test-case>
+              <test-case id="1042" name="PooledBossHazardsCanBeCleared" fullname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests.PooledBossHazardsCanBeCleared" methodname="PooledBossHazardsCanBeCleared" classname="MMORPG.Tests.PlayMode.PrototypePlayModeFlowTests" runstate="Runnable" seed="1888262902" result="Passed" start-time="2026-09-14 07:02:16Z" end-time="2026-09-14 07:02:17Z" duration="1.166989" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.48，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+阶段 1 土豆 Boss 发动三段散射，第 1 发从上方位置生成普通土块子弹，水平速度 8.0。
+昆虫从土豆 Boss 身旁飞出，目标玩家，位置 X=0.00。
+阶段 1 土豆 Boss 发动三段散射，第 2 发从中间位置生成普通土块子弹，水平速度 8.0。
+Saving results to: C:/Users/admin/AppData/LocalLow/DefaultCompany/MMORPG\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

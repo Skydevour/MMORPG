@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using MMORPG.Framework.Pooling;
+using MMORPG.Game.Combat;
 using MMORPG.Game.Config;
 using MMORPG.Game.Player;
 using MMORPG.Game.VFX;
@@ -28,6 +30,7 @@ namespace MMORPG.Game.Projectiles
         private static Transform poolRoot;
         private static Sprite normalSprite;
         private static Sprite pinkSprite;
+        private static readonly HashSet<BossProjectile> ActiveProjectiles = new HashSet<BossProjectile>();
 
         private SpriteRenderer spriteRenderer;
         private Rigidbody2D body;
@@ -37,6 +40,10 @@ namespace MMORPG.Game.Projectiles
         private BossProjectileType projectileType;
         private BossProjectileLane projectileLane;
         private bool collected;
+        private Transform seekerTarget;
+        private bool seeker, rain;
+        public bool IsSeeker => seeker;
+        public static float RainDiameter => Mathf.Max(GameConfigService.Current.projectile.normalRadius, GameConfigService.Current.projectile.pinkRadius) * GameConfigService.Current.projectile.rainScaleX * 2f;
 
         public static int TotalSpawned { get; private set; }
         public static int TotalNormalSpawned { get; private set; }
@@ -48,6 +55,46 @@ namespace MMORPG.Game.Projectiles
 
         public BossProjectileType ProjectileType => projectileType;
         public BossProjectileLane ProjectileLane => projectileLane;
+        public int Generation { get; private set; }
+        public Vector2 Velocity => velocity;
+        public float Age => lifeTimer;
+
+        public static int ActiveCount => ActiveProjectiles.Count;
+
+        public static void ResetCounters()
+        {
+            TotalSpawned = 0;
+            TotalNormalSpawned = 0;
+            TotalPinkSpawned = 0;
+            TotalTopSpawned = 0;
+            TotalMiddleSpawned = 0;
+            TotalBottomSpawned = 0;
+            LastSpawnedVelocity = Vector2.zero;
+        }
+
+        public static void ResetAll()
+        {
+            DespawnAllActive();
+            ResetCounters();
+            if (pool != null && poolRoot != null)
+            {
+                pool.Clear();
+            }
+        }
+
+        public static void DespawnAllActive()
+        {
+            ActiveProjectiles.RemoveWhere(projectile => projectile == null || projectile.gameObject == null);
+            BossProjectile[] active = new BossProjectile[ActiveProjectiles.Count];
+            ActiveProjectiles.CopyTo(active);
+            foreach (BossProjectile projectile in active)
+            {
+                if (projectile != null && projectile.gameObject != null)
+                {
+                    projectile.Despawn();
+                }
+            }
+        }
 
         public static BossProjectile Spawn(Vector3 position, Vector2 velocity, BossProjectileType type, BossProjectileLane lane = BossProjectileLane.Middle)
         {
@@ -82,13 +129,40 @@ namespace MMORPG.Game.Projectiles
 
             projectile.lifeTimer = 0f;
             projectile.collected = false;
+            ActiveProjectiles.Add(projectile);
             projectile.ApplyVisuals();
             return projectile;
         }
 
+        public void SetRain()
+        {
+            rain = true;
+            spriteRenderer.color = projectileType == BossProjectileType.Pink ? Color.white : new Color(0.3f, 0.9f, 1f);
+            var config = GameConfigService.Current.projectile;
+            transform.localScale = new Vector3(config.rainScaleX, config.rainScaleY, 1f);
+        }
+
+        public static BossProjectile SpawnSeeker(Vector3 position, Transform target, bool pink)
+        {
+            var settings = GameConfigService.Current.encounter;
+            var p = Spawn(position, ((Vector2)(target.position + Vector3.up * 0.5f - position)).normalized * settings.seekerSpeed,
+                pink ? BossProjectileType.Pink : BossProjectileType.Normal);
+            p.seeker = true; p.seekerTarget = target;
+            p.spriteRenderer.color = pink ? Color.white : new Color(1f, 0.85f, 0.3f);
+            return p;
+        }
+
+        public bool TryDestroySeeker()
+        {
+            if (!seeker || !gameObject.activeInHierarchy || collected) return false;
+            collected = true;
+            CombatImpactEffect.SpawnHit(transform.position, Color.yellow);
+            Despawn(); return true;
+        }
+
         public bool TryCollectByPlayerAttack()
         {
-            if (projectileType != BossProjectileType.Pink || collected)
+            if (!gameObject.activeInHierarchy || projectileType != BossProjectileType.Pink || collected)
             {
                 return false;
             }
@@ -99,12 +173,43 @@ namespace MMORPG.Game.Projectiles
             {
                 int amount = GameConfigService.Current.projectile.pinkEnergyValue;
                 energy.AddEnergy(amount);
+                BattleStats.Active?.RecordPinkCollected();
                 EnergyPickupEffect.Spawn(transform.position);
+                MMORPG.Game.Audio.BattleAudio.Play("pickup", transform.position);
                 Debug.Log($"玩家攻击命中紫色子弹，获得能量 {amount} 格。当前能量 {energy.CurrentEnergy}/{energy.MaxEnergy}。");
             }
             else
             {
                 Debug.LogWarning("紫色子弹被命中，但没有找到玩家能量组件。");
+            }
+
+            Despawn();
+            return true;
+        }
+
+        public bool TryCollectByJump()
+        {
+            if (!gameObject.activeInHierarchy || projectileType != BossProjectileType.Pink || collected)
+            {
+                return false;
+            }
+
+            collected = true;
+            PlayerEnergyController energy = PlayerEnergyController.Active;
+            if (energy != null)
+            {
+                int amount = GameConfigService.Current.projectile.pinkEnergyValue;
+                energy.AddEnergy(amount);
+                BattleStats.Active?.RecordPinkCollected();
+                EnergyPickupEffect.Spawn(transform.position);
+                CombatImpactEffect.SpawnHit(transform.position, new Color(1f, 0.2f, 0.85f), true);
+                ParryFeedback.Spawn(transform.position);
+                ScreenShakeEffect.Shake(0.04f, 0.025f);
+                Debug.Log($"玩家跳跃击碎粉色子弹，获得能量 {amount} 格，当前能量 {energy.CurrentEnergy}/{energy.MaxEnergy}。");
+            }
+            else
+            {
+                Debug.LogWarning("粉色子弹被玩家跳跃击碎，但没有找到玩家能量组件。");
             }
 
             Despawn();
@@ -126,8 +231,16 @@ namespace MMORPG.Game.Projectiles
         private void Update()
         {
             lifeTimer += Time.deltaTime;
-            if (lifeTimer >= GameConfigService.Current.projectile.lifetime)
+            if (lifeTimer >= (seeker ? GameConfigService.Current.encounter.seekerLifetime : GameConfigService.Current.projectile.lifetime)
+                || (!seeker && GameConfigService.Current.camera.Outside(transform.position, 1f)))
             {
+                Despawn();
+                return;
+            }
+            if (rain && transform.position.y <= GameConfigService.Current.level.stageFloorY)
+            {
+                CombatImpactEffect.SpawnHit(transform.position, new Color(0.3f, 0.9f, 1f));
+                MMORPG.Game.Audio.BattleAudio.Play("tear_splash", transform.position);
                 Despawn();
             }
         }
@@ -139,6 +252,13 @@ namespace MMORPG.Game.Projectiles
                 return;
             }
 
+            if (seeker && seekerTarget != null && lifeTimer >= GameConfigService.Current.encounter.seekerStraightTime)
+            {
+                Vector2 aim = (Vector2)(seekerTarget.position + Vector3.up * 0.5f) - body.position;
+                float angle = Mathf.MoveTowardsAngle(Mathf.Atan2(velocity.y, velocity.x) * Mathf.Rad2Deg,
+                    Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg, GameConfigService.Current.encounter.seekerTurnRate * Time.fixedDeltaTime) * Mathf.Deg2Rad;
+                velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * GameConfigService.Current.encounter.seekerSpeed;
+            }
             body.MovePosition(body.position + velocity * Time.fixedDeltaTime);
         }
 
@@ -150,12 +270,19 @@ namespace MMORPG.Game.Projectiles
                 return;
             }
 
-            player.TakeDamage(GameConfigService.Current.projectile.normalDamage);
-            Despawn();
+            if (projectileType == BossProjectileType.Pink && player.TryBreakPinkProjectile(this))
+            {
+                return;
+            }
+
+            if (player.ReceiveHit(new HitContext(GameConfigService.Current.projectile.normalDamage,
+                other.ClosestPoint(transform.position), velocity.normalized, Generation)).Accepted()) Despawn();
         }
 
         public void OnSpawnedFromPool()
         {
+            Generation++;
+            seeker = rain = false; seekerTarget = null;
             lifeTimer = 0f;
             collected = false;
             if (body != null)
@@ -178,14 +305,15 @@ namespace MMORPG.Game.Projectiles
         private void ApplyVisuals()
         {
             spriteRenderer.sprite = projectileType == BossProjectileType.Pink ? GetPinkSprite() : GetNormalSprite();
-            triggerCollider.radius = projectileType == BossProjectileType.Pink ? 0.18f : 0.2f;
-            transform.localScale = projectileType == BossProjectileType.Pink ? Vector3.one * 0.9f : Vector3.one;
+            triggerCollider.radius = projectileType == BossProjectileType.Pink ? GameConfigService.Current.projectile.pinkRadius : GameConfigService.Current.projectile.normalRadius;
+            transform.localScale = projectileType == BossProjectileType.Pink ? Vector3.one * 1.1f : Vector3.one;
             spriteRenderer.color = Color.white;
         }
 
         private void Despawn()
         {
-            if (pool != null && gameObject.activeSelf)
+            ActiveProjectiles.Remove(this);
+            if (pool != null && gameObject != null && gameObject.activeSelf)
             {
                 pool.Release(this);
             }

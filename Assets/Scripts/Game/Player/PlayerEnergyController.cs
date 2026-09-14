@@ -43,6 +43,7 @@ namespace MMORPG.Game.Player
             if (previous != CurrentEnergy)
             {
                 EnergyChanged?.Invoke(CurrentEnergy, MaxEnergy);
+                if (IsFull) MMORPG.Game.Audio.BattleAudio.Play("energy_full", transform.position);
             }
         }
 

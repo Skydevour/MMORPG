@@ -7,6 +7,7 @@ namespace MMORPG.Framework.Pooling
     public sealed class ComponentObjectPool<T> where T : Component
     {
         private readonly Stack<T> inactiveItems = new Stack<T>();
+        private readonly HashSet<T> inactiveSet = new HashSet<T>();
         private readonly Func<T> createFunc;
         private readonly Transform inactiveRoot;
 
@@ -27,6 +28,13 @@ namespace MMORPG.Framework.Pooling
         public T Get(Vector3 position, Quaternion rotation, Transform parent = null)
         {
             T item = inactiveItems.Count > 0 ? inactiveItems.Pop() : CreateItem();
+            inactiveSet.Remove(item);
+            while (item == null && inactiveItems.Count > 0)
+            {
+                item = inactiveItems.Pop();
+                inactiveSet.Remove(item);
+            }
+            if (item == null) item = CreateItem();
             Transform itemTransform = item.transform;
             itemTransform.SetParent(parent, true);
             itemTransform.SetPositionAndRotation(position, rotation);
@@ -42,7 +50,7 @@ namespace MMORPG.Framework.Pooling
 
         public void Release(T item)
         {
-            if (item == null)
+            if (item == null || !inactiveSet.Add(item))
             {
                 return;
             }
@@ -63,6 +71,7 @@ namespace MMORPG.Framework.Pooling
 
         public void Clear()
         {
+            inactiveSet.Clear();
             while (inactiveItems.Count > 0)
             {
                 T item = inactiveItems.Pop();

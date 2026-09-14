@@ -1,6 +1,8 @@
 using MMORPG.Framework.Pooling;
 using MMORPG.Game.Bosses.Potato;
 using MMORPG.Game.Config;
+using MMORPG.Game.Combat;
+using MMORPG.Game.Player;
 using UnityEngine;
 
 namespace MMORPG.Game.Projectiles
@@ -16,6 +18,12 @@ namespace MMORPG.Game.Projectiles
         private int direction = 1;
         private float lifeTimer;
         private Rigidbody2D body;
+        private static readonly System.Collections.Generic.HashSet<PlayerProjectile> active = new System.Collections.Generic.HashSet<PlayerProjectile>();
+        public static void ClearAll()
+        {
+            foreach (var p in new System.Collections.Generic.List<PlayerProjectile>(active)) if (p != null) p.Despawn();
+            active.Clear();
+        }
 
         public static PlayerProjectile Spawn(Vector3 position, int facingDirection)
         {
@@ -23,6 +31,7 @@ namespace MMORPG.Game.Projectiles
             PlayerProjectile projectile = pool.Get(position, Quaternion.identity);
             projectile.direction = facingDirection >= 0 ? 1 : -1;
             projectile.lifeTimer = 0f;
+            active.Add(projectile);
             projectile.transform.localScale = new Vector3(projectile.direction, 1f, 1f);
             return projectile;
         }
@@ -67,7 +76,7 @@ namespace MMORPG.Game.Projectiles
         private void Update()
         {
             lifeTimer += Time.deltaTime;
-            if (lifeTimer >= GameConfigService.Current.projectile.playerBulletLifetime)
+            if (lifeTimer >= GameConfigService.Current.projectile.playerBulletLifetime || GameConfigService.Current.camera.Outside(transform.position, 1f))
             {
                 Despawn();
             }
@@ -86,18 +95,33 @@ namespace MMORPG.Game.Projectiles
 
         private void OnTriggerEnter2D(Collider2D other)
         {
+            if (!gameObject.activeInHierarchy) return;
             BossProjectile bossProjectile = other.GetComponent<BossProjectile>();
             if (bossProjectile != null && bossProjectile.TryCollectByPlayerAttack())
             {
                 Despawn();
                 return;
             }
+            if (bossProjectile != null && bossProjectile.TryDestroySeeker()) { Despawn(); return; }
 
-            PotatoBossController boss = other.GetComponentInParent<PotatoBossController>();
-            if (boss != null && !boss.IsDead)
+            BossInsect insect = other.GetComponent<BossInsect>();
+            if (insect != null && insect.TryDestroyByPlayerAttack())
             {
-                boss.TakeDamage(1);
                 Despawn();
+                return;
+            }
+
+            BossLobbedSeed seed = other.GetComponent<BossLobbedSeed>();
+            if (seed != null && seed.TryCollectByPlayerAttack())
+            {
+                Despawn();
+                return;
+            }
+
+            IDamageable boss = other.GetComponentInParent<IDamageable>();
+            if (boss != null && !(boss is PlayerController2D) && !boss.IsDead)
+            {
+                if (boss.ReceiveHit(new HitContext(1, other.ClosestPoint(transform.position), Vector2.right * direction)).Accepted()) Despawn();
             }
         }
 
@@ -117,6 +141,7 @@ namespace MMORPG.Game.Projectiles
 
         private void Despawn()
         {
+            active.Remove(this);
             if (pool != null && gameObject.activeSelf)
             {
                 pool.Release(this);

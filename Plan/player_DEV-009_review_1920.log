@@ -1,0 +1,306 @@
+Mono path[0] = 'E:/UnityProject/MMORPG/MMORPG/Builds/DEV-009/BossBattle_Data/Managed'
+Mono config path = 'E:/UnityProject/MMORPG/MMORPG/Builds/DEV-009/MonoBleedingEdge/etc'
+Found 3 interfaces on host : 0) 192.168.1.5 1) 26.179.140.201 2) 172.22.112.1
+Player connection [92516]  Target information:
+
+Player connection [92516]  * "[IP] 192.168.1.5 [Port] 55000 [Flags] 2 [Guid] 2300174687 [EditorId] 3699450096 [Version] 1048832 [Id] WindowsPlayer(2,DESKTOP-N57VUJT) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] MMORPG" 
+
+Player connection [92516]  * "[IP] 26.179.140.201 [Port] 55000 [Flags] 2 [Guid] 2300174687 [EditorId] 3699450096 [Version] 1048832 [Id] WindowsPlayer(2,DESKTOP-N57VUJT) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] MMORPG" 
+
+Player connection [92516]  * "[IP] 172.22.112.1 [Port] 55000 [Flags] 2 [Guid] 2300174687 [EditorId] 3699450096 [Version] 1048832 [Id] WindowsPlayer(2,DESKTOP-N57VUJT) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] MMORPG" 
+
+Player connection [92516] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.0.23f1c1 (d40c2aeae294)
+[Subsystems] Discovering subsystems at path E:/UnityProject/MMORPG/MMORPG/Builds/DEV-009/BossBattle_Data/UnitySubsystems
+kGfxThreadingModeSplitJobs is not supported on Direct3D 11. Reverting to kGfxThreadingModeClientWorkerJobs instead.
+GfxDevice: creating device client; kGfxThreadingModeClientWorkerJobs
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 4070 Ti SUPER (ID=0x2689)
+    Vendor:   NVIDIA
+    VRAM:     16063 MB
+    Driver:   32.0.15.6081
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.094 seconds
+- Finished resetting the current domain, in  0.001 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+<RI> Initializing input.
+New input system (experimental) initialized
+Using Windows.Gaming.Input
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.441500 ms
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Config.GameConfigService:Load () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Config/GameConfig.cs:434)
+MMORPG.Game.Core.GameManager:Awake () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs:51)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Config/GameConfig.cs Line: 434)
+
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossSpawner:SpawnBoss (UnityEngine.Transform,UnityEngine.Vector3,MMORPG.Game.Player.PlayerController2D) (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Bosses/Potato/PotatoBossSpawner.cs:69)
+MMORPG.Game.Core.GameManager:InitializeBoss () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs:134)
+MMORPG.Game.Core.GameManager:Start () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs:72)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Bosses/Potato/PotatoBossSpawner.cs Line: 69)
+
+Boss 关卡初始化完成，战斗开始。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Core.GameManager:Start () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs:91)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs Line: 91)
+
+遭遇第 1 形态 土豆 开始。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Core.EncounterDirector:LateUpdate () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/EncounterDirector.cs:102)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/EncounterDirector.cs Line: 102)
+
+Boss 关卡已暂停。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Core.GameManager:SetPaused (bool) (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs:117)
+MMORPG.Game.Core.BattlePresentationValidation/<Start>d__4:MoveNext () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/BattlePresentationValidation.cs:51)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs Line: 117)
+
+Boss 关卡已继续。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Core.GameManager:SetPaused (bool) (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs:117)
+MMORPG.Game.Core.BattlePresentationValidation/<Start>d__4:MoveNext () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/BattlePresentationValidation.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs Line: 117)
+
+玩家受到 999 点伤害，剩余生命 0/3。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Player.PlayerController2D:ReceiveHit (MMORPG.Game.Combat.HitContext) (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Player/PlayerController2D.cs:610)
+MMORPG.Game.Core.BattlePresentationValidation/<Start>d__4:MoveNext () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/BattlePresentationValidation.cs:54)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Player/PlayerController2D.cs Line: 610)
+
+玩家生命归零，战斗失败流程已触发。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Player.PlayerController2D:ReceiveHit (MMORPG.Game.Combat.HitContext) (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Player/PlayerController2D.cs:631)
+MMORPG.Game.Core.BattlePresentationValidation/<Start>d__4:MoveNext () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/BattlePresentationValidation.cs:54)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Player/PlayerController2D.cs Line: 631)
+
+花园剧场失败票券已显示。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.UI.BossBattleHud:ShowResult (bool) (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/UI/BossBattleHud.cs:116)
+MMORPG.Game.UI.BossBattleHud:ShowDefeat () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/UI/BossBattleHud.cs:94)
+MMORPG.Game.UI.BossBattleHud/<DefeatDelay>d__47:MoveNext () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/UI/BossBattleHud.cs:103)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/UI/BossBattleHud.cs Line: 116)
+
+正在重新加载 Boss 关卡。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Core.GameManager:RestartBattle () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs:210)
+MMORPG.Game.UI.GardenResultView:Submit (System.Action) (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/UI/Results/GardenResultView.cs:38)
+MMORPG.Game.UI.GardenResultView/<>c__DisplayClass6_0:<Initialize>b__0 () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/UI/Results/GardenResultView.cs:17)
+UnityEngine.Events.InvokableCall:Invoke () (at C:/build/output/unity/unity/Runtime/Export/UnityEvent/UnityEvent.cs:178)
+UnityEngine.Events.UnityEvent:Invoke () (at C:/build/output/unity/unity/artifacts/generated/UnityEvent/UnityEvent_0.cs:57)
+MMORPG.Game.Core.BattlePresentationValidation/<Start>d__4:MoveNext () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/BattlePresentationValidation.cs:56)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs Line: 210)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.364600 ms
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Config.GameConfigService:Load () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Config/GameConfig.cs:434)
+MMORPG.Game.Core.GameManager:Awake () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs:51)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Config/GameConfig.cs Line: 434)
+
+Unloading 605 unused Assets / (16.1 MB). Loaded Objects now: 2608.
+Memory consumption went from 106.0 MB to 89.8 MB.
+Total: 0.940600 ms (FindLiveObjects: 0.070300 ms CreateObjectMapping: 0.028600 ms MarkObjects: 0.655500 ms  DeleteObjects: 0.180800 ms)
+
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossSpawner:SpawnBoss (UnityEngine.Transform,UnityEngine.Vector3,MMORPG.Game.Player.PlayerController2D) (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Bosses/Potato/PotatoBossSpawner.cs:69)
+MMORPG.Game.Core.GameManager:InitializeBoss () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs:134)
+MMORPG.Game.Core.GameManager:Start () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs:72)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Bosses/Potato/PotatoBossSpawner.cs Line: 69)
+
+Boss 关卡初始化完成，战斗开始。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Core.GameManager:Start () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs:91)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs Line: 91)
+
+遭遇第 1 形态 土豆 开始。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Core.EncounterDirector:LateUpdate () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/EncounterDirector.cs:102)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/EncounterDirector.cs Line: 102)
+
+土豆 Boss 受到 999 点伤害，剩余生命 0/100。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:ReceiveHit (MMORPG.Game.Combat.HitContext) (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:146)
+MMORPG.Game.Bosses.Potato.PotatoBossController:TakeDamage (int) (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:130)
+MMORPG.Game.Core.BattlePresentationValidation/<Start>d__4:MoveNext () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/BattlePresentationValidation.cs:63)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 146)
+
+土豆 Boss 已被击败，胜利流程已触发。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Bosses.Potato.PotatoBossController:MarkDead () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:181)
+MMORPG.Game.Bosses.Potato.PotatoBossController:ReceiveHit (MMORPG.Game.Combat.HitContext) (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:150)
+MMORPG.Game.Bosses.Potato.PotatoBossController:TakeDamage (int) (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs:130)
+MMORPG.Game.Core.BattlePresentationValidation/<Start>d__4:MoveNext () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/BattlePresentationValidation.cs:63)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Bosses/Potato/PotatoBossController.cs Line: 181)
+
+遭遇第 2 形态 洋葱 开始。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Core.EncounterDirector:LateUpdate () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/EncounterDirector.cs:102)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/EncounterDirector.cs Line: 102)
+
+遭遇第 3 形态 胡萝卜 开始。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Core.EncounterDirector:LateUpdate () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/EncounterDirector.cs:102)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/EncounterDirector.cs Line: 102)
+
+花园剧场胜利界面已显示。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.UI.BossBattleHud:ShowResult (bool) (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/UI/BossBattleHud.cs:116)
+MMORPG.Game.UI.BossBattleHud:ShowVictory () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/UI/BossBattleHud.cs:93)
+MMORPG.Game.Core.GameManager:OnEncounterFinished (bool) (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/GameManager.cs:226)
+MMORPG.Game.Core.EncounterDirector:Finish (bool) (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/EncounterDirector.cs:109)
+MMORPG.Game.Core.EncounterDirector:LateUpdate () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/EncounterDirector.cs:73)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/UI/BossBattleHud.cs Line: 116)
+
+硬件：Intel(R) Core(TM) i7-14700KF；显卡：NVIDIA GeForce RTX 4070 Ti SUPER；分辨率：1920x1080
+此记录使用合成键盘输入、关闭 Boss AI 并直接推进结算以覆盖画面，不代表正常挑战通关或物理键盘至屏幕延迟。
+标题、设置、战斗、暂停、失败、重试、三形态、胜利画面流程执行完毕。
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+MMORPG.Game.Core.BattlePresentationValidation/<Start>d__4:MoveNext () (at E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/BattlePresentationValidation.cs:70)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: E:/UnityProject/MMORPG/MMORPG/Assets/Scripts/Game/Core/BattlePresentationValidation.cs Line: 70)
+
+[Physics::Module] Cleanup current backned.
+[Physics::Module] Id: 0xf2b8ea05
+PlayerConnection::Cleanup##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1789370762660,"processId":111308,"allocatedMemory":69049,"memoryLabels":[{"Default":136},{"Manager":16749},{"GfxDevice":72},{"Serialization":416},{"JobScheduler":32768},{"String":335},{"HashMap":3584},{"PoolAlloc":192},{"WebRequest":9329},{"VR":1784},{"NativeArray":3468},{"Subsystems":96},{"CoreBusinessMetrics":120}]}

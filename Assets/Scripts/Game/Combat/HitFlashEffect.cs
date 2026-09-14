@@ -12,6 +12,8 @@ namespace MMORPG.Game.Combat
         private float interval;
         private Color flashColor;
         private bool flashing;
+        private MaterialPropertyBlock properties;
+        private static readonly int FlashAmount = Shader.PropertyToID("_FlashAmount");
 
         public static void Play(GameObject target, float effectDuration = 0.14f, int flashCount = 3, Color? color = null)
         {
@@ -41,9 +43,16 @@ namespace MMORPG.Game.Combat
                 return;
             }
 
-            timer += Time.unscaledDeltaTime;
+            timer += Time.deltaTime;
             bool visible = interval <= 0f || Mathf.FloorToInt(timer / interval) % 2 == 0;
-            ApplyColor(visible ? flashColor : baseColors[0]);
+            if (visible)
+            {
+                ApplyColor(flashColor);
+            }
+            else
+            {
+                RestoreColors();
+            }
 
             if (timer < duration)
             {
@@ -79,8 +88,11 @@ namespace MMORPG.Game.Combat
 
             renderers = GetComponentsInChildren<SpriteRenderer>(true);
             baseColors = new Color[renderers.Length];
+            properties = new MaterialPropertyBlock();
+            var catalog = Resources.Load<MMORPG.Game.Core.PrototypeSpriteCatalog>("Config/PrototypeSpriteCatalog");
             for (int index = 0; index < renderers.Length; index++)
             {
+                if (catalog != null && catalog.flashMaterial != null) renderers[index].sharedMaterial = catalog.flashMaterial;
                 baseColors[index] = renderers[index].color;
             }
         }
@@ -89,7 +101,9 @@ namespace MMORPG.Game.Combat
         {
             for (int index = 0; index < renderers.Length; index++)
             {
-                renderers[index].color = color;
+                renderers[index].GetPropertyBlock(properties);
+                properties.SetFloat(FlashAmount, 1f);
+                renderers[index].SetPropertyBlock(properties);
             }
         }
 
@@ -97,8 +111,15 @@ namespace MMORPG.Game.Combat
         {
             for (int index = 0; index < renderers.Length; index++)
             {
-                renderers[index].color = baseColors[index];
+                renderers[index].GetPropertyBlock(properties);
+                properties.SetFloat(FlashAmount, 0f);
+                renderers[index].SetPropertyBlock(properties);
             }
+        }
+        private void OnDisable()
+        {
+            flashing = false;
+            if (renderers != null) RestoreColors();
         }
     }
 }

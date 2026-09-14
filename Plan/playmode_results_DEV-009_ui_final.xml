@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-14 07:20:14Z" end-time="2026-09-14 07:20:32Z" duration="17.7641762">
+  <test-suite type="TestSuite" id="1051" name="MMORPG" fullname="MMORPG" runstate="Runnable" testcasecount="40" result="Passed" start-time="2026-09-14 07:20:14Z" end-time="2026-09-14 07:20:32Z" duration="17.764176" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1044" name="MMORPG.Tests.PlayMode.dll" fullname="E:/UnityProject/MMORPG/MMORPG/Library/ScriptAssemblies/MMORPG.Tests.PlayMode.dll" runstate="Runnable" testcasecount="40" result="Passed" start-time="2026-09-14 07:20:14Z" end-time="2026-09-14 07:20:32Z" duration="17.759016" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="117628" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1045" name="MMORPG" fullname="MMORPG" runstate="Runnable" testcasecount="40" result="Passed" start-time="2026-09-14 07:20:14Z" end-time="2026-09-14 07:20:32Z" duration="17.758137" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1046" name="Tests" fullname="MMORPG.Tests" runstate="Runnable" testcasecount="40" result="Passed" start-time="2026-09-14 07:20:14Z" end-time="2026-09-14 07:20:32Z" duration="17.757457" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1047" name="PlayMode" fullname="MMORPG.Tests.PlayMode" runstate="Runnable" testcasecount="40" result="Passed" start-time="2026-09-14 07:20:14Z" end-time="2026-09-14 07:20:32Z" duration="17.756443" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1008" name="GardenEncounterTests" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-09-14 07:20:14Z" end-time="2026-09-14 07:20:32Z" duration="17.754077" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1012" name="FastSettingsEntryRestoresOpaquePauseAndResultClearsEnergyTrail" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.FastSettingsEntryRestoresOpaquePauseAndResultClearsEnergyTrail" methodname="FastSettingsEntryRestoresOpaquePauseAndResultClearsEnergyTrail" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="818371347" result="Passed" start-time="2026-09-14 07:20:14Z" end-time="2026-09-14 07:20:16Z" duration="2.198723" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+Boss 关卡已暂停。
+Boss 关卡已继续。
+花园剧场胜利界面已显示。
+]]></output>
+              </test-case>
+              <test-case id="1031" name="SettingsKeepKeyboardFocusInsideModalAndPauseCanReturnToTitle" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.SettingsKeepKeyboardFocusInsideModalAndPauseCanReturnToTitle" methodname="SettingsKeepKeyboardFocusInsideModalAndPauseCanReturnToTitle" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="1844470065" result="Passed" start-time="2026-09-14 07:20:16Z" end-time="2026-09-14 07:20:18Z" duration="2.285114" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+土豆 Boss 受到 999 点伤害，剩余生命 0/100。
+土豆 Boss 已被击败，胜利流程已触发。
+Boss 关卡已暂停。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+]]></output>
+              </test-case>
+              <test-case id="1013" name="TitlePreventsAttacksAndThreeFormsOnlyWinAtEnd" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.TitlePreventsAttacksAndThreeFormsOnlyWinAtEnd" methodname="TitlePreventsAttacksAndThreeFormsOnlyWinAtEnd" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="1203437720" result="Passed" start-time="2026-09-14 07:20:18Z" end-time="2026-09-14 07:20:24Z" duration="5.172201" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+土豆 Boss 受到 999 点伤害，剩余生命 0/100。
+土豆 Boss 已被击败，胜利流程已触发。
+遭遇第 2 形态 洋葱 开始。
+遭遇第 3 形态 胡萝卜 开始。
+花园剧场胜利界面已显示。
+]]></output>
+              </test-case>
+              <test-case id="1011" name="UiHealthEnergyAndDefeatBindingsSurviveRetry" fullname="MMORPG.Tests.PlayMode.GardenEncounterTests.UiHealthEnergyAndDefeatBindingsSurviveRetry" methodname="UiHealthEnergyAndDefeatBindingsSurviveRetry" classname="MMORPG.Tests.PlayMode.GardenEncounterTests" runstate="Runnable" seed="1842529676" result="Passed" start-time="2026-09-14 07:20:24Z" end-time="2026-09-14 07:20:32Z" duration="8.081456" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+遭遇第 1 形态 土豆 开始。
+玩家受到 1 点伤害，剩余生命 2/3。
+Boss 关卡已暂停。
+Boss 关卡已继续。
+玩家受到 999 点伤害，剩余生命 0/3。
+玩家生命归零，战斗失败流程已触发。
+花园剧场失败票券已显示。
+正在重新加载 Boss 关卡。
+全局配置加载完成：最大能量 3 格，Boss 生命 100。
+横向对峙布局初始化：玩家位于左侧，土豆 Boss 位于右侧，Boss 实际位置 X=3.86，与玩家保持水平出生线。
+Boss 关卡初始化完成，战斗开始。
+Saving results to: C:/Users/admin/AppData/LocalLow/DefaultCompany/MMORPG\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

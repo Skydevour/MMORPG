@@ -1,80 +1,104 @@
+using System.Collections.Generic;
+using MMORPG.Framework.Pooling;
+using MMORPG.Game.Combat;
 using MMORPG.Game.Config;
+using MMORPG.Game.Core;
+using MMORPG.Game.Bosses.Potato;
 using UnityEngine;
 
 namespace MMORPG.Game.VFX
 {
-    public sealed class SuperAttackEffect : MonoBehaviour
+    public sealed class SuperAttackEffect : MonoBehaviour, IPoolable
     {
-        private float timer;
-        private float duration;
+        private static ComponentObjectPool<SuperAttackEffect> pool;
+        private static Transform poolRoot;
+        private DirectionalDamageVolume damageVolume;
+        private LineRenderer beam;
+        private LineRenderer core;
+        private float remaining;
+        private int direction;
+        private SpecialConfig config;
+        private float windup;
+        private bool confirmedHit, released;
+        private static readonly HashSet<SuperAttackEffect> active = new HashSet<SuperAttackEffect>();
+        public static void ClearAll()
+        {
+            foreach (var effect in new List<SuperAttackEffect>(active)) if (effect != null) pool.Release(effect);
+            active.Clear();
+            MMORPG.Game.Audio.BattleAudio.StopLoop("super_loop");
+        }
 
         public static void Spawn(Vector3 position, int facingDirection)
         {
-            GameObject effectObject = new GameObject("PlayerSuperAttackBurst");
-            effectObject.transform.position = position;
-            ParticleSystem particleSystem = effectObject.AddComponent<ParticleSystem>();
-            particleSystem.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-            float effectDuration = GameConfigService.Current.special.duration;
-            Configure(particleSystem, effectDuration);
-            ParticleSystemRenderer renderer = effectObject.GetComponent<ParticleSystemRenderer>();
-            renderer.sharedMaterial = CreateMaterial();
-            renderer.sortingOrder = 88;
-
-            SuperAttackEffect effect = effectObject.AddComponent<SuperAttackEffect>();
-            effect.duration = effectDuration;
-            particleSystem.Play();
-
-            for (int index = 0; index < 30; index++)
+            if (poolRoot == null)
             {
-                float horizontal = facingDirection * Random.Range(0.5f, 2.2f);
-                float vertical = Random.Range(-0.35f, 0.65f);
-                ParticleSystem.EmitParams emit = new ParticleSystem.EmitParams
-                {
-                    position = new Vector3(Random.Range(-0.08f, 0.08f), Random.Range(-0.08f, 0.08f), 0f),
-                    velocity = new Vector3(horizontal, vertical, 0f),
-                    startLifetime = Random.Range(0.38f, 0.78f),
-                    startSize = Random.Range(0.12f, 0.32f),
-                    startColor = Color.Lerp(Color.white, new Color(1f, 0.8f, 0.45f), Random.Range(0f, 0.35f))
-                };
-                particleSystem.Emit(emit, 1);
+                poolRoot = new GameObject("SuperAttackPool").transform;
+                pool = new ComponentObjectPool<SuperAttackEffect>(Create, poolRoot, 2);
             }
+            var effect = pool.Get(position, Quaternion.identity, poolRoot);
+            effect.direction = facingDirection;
+            effect.config = GameConfigService.Current.special;
+            effect.remaining = effect.config.duration;
+            effect.windup = GameConfigService.Current.feedback.superWindup; effect.confirmedHit = effect.released = false; active.Add(effect);
+            effect.damageVolume.Begin(facingDirection, new Vector2(effect.config.range, effect.config.height), effect.config.damage);
+            effect.ConfigureLine(effect.beam, effect.config.height, new Color(0.25f, 0.9f, 1f));
+            effect.ConfigureLine(effect.core, effect.config.height * 0.55f, Color.white);
+            effect.beam.enabled = effect.core.enabled = false;
+            MMORPG.Game.Audio.BattleAudio.Play("charge", position);
+            ScreenShakeEffect.Shake(0.15f, 0.08f);
+        }
+
+        private static SuperAttackEffect Create()
+        {
+            GameObject go = new GameObject("PlayerSuperBeam");
+            go.SetActive(false);
+            var effect = go.AddComponent<SuperAttackEffect>();
+            effect.damageVolume = go.AddComponent<DirectionalDamageVolume>();
+            effect.beam = go.AddComponent<LineRenderer>();
+            var child = new GameObject("Core");
+            child.transform.SetParent(go.transform, false);
+            effect.core = child.AddComponent<LineRenderer>();
+            return effect;
+        }
+
+        private void ConfigureLine(LineRenderer line, float width, Color color)
+        {
+            line.sharedMaterial = Resources.Load<PrototypeSpriteCatalog>("Config/PrototypeSpriteCatalog").flashMaterial;
+            line.useWorldSpace = false;
+            line.positionCount = 2;
+            line.SetPosition(0, Vector3.zero);
+            line.SetPosition(1, Vector3.right * direction * config.range);
+            line.startWidth = line.endWidth = width;
+            line.startColor = line.endColor = color;
+            line.numCapVertices = 6;
+            line.sortingOrder = line == core ? 87 : 86;
         }
 
         private void Update()
         {
-            timer += Time.deltaTime;
-            if (timer >= duration)
+            if (Time.timeScale <= 0f) return;
+            remaining -= Time.deltaTime;
+            if (remaining <= 0f) { active.Remove(this); pool.Release(this); return; }
+            windup -= Time.deltaTime;
+            if (windup > 0f) return;
+            if (!released)
             {
-                Destroy(gameObject);
+                released = true; beam.enabled = core.enabled = true;
+                MMORPG.Game.Audio.BattleAudio.Play("release", transform.position);
+                MMORPG.Game.Audio.BattleAudio.Play("super_loop", transform.position);
+            }
+            if (damageVolume.ResolveHits() && !confirmedHit)
+            {
+                confirmedHit = true;
+                MMORPG.Framework.Timing.BattleClock.Stop(GameConfigService.Current.feedback.superStop);
             }
         }
-
-        private static void Configure(ParticleSystem particleSystem, float effectDuration)
+        public void OnSpawnedFromPool() => damageVolume.Clear();
+        public void OnDespawnedToPool()
         {
-            ParticleSystem.MainModule main = particleSystem.main;
-            main.duration = effectDuration;
-            main.loop = false;
-            main.playOnAwake = false;
-            main.simulationSpace = ParticleSystemSimulationSpace.Local;
-            main.gravityModifier = 0f;
-            main.maxParticles = 40;
-
-            ParticleSystem.EmissionModule emission = particleSystem.emission;
-            emission.enabled = false;
-
-            ParticleSystem.ColorOverLifetimeModule color = particleSystem.colorOverLifetime;
-            color.enabled = true;
-            Gradient gradient = new Gradient();
-            gradient.SetKeys(
-                new[] { new GradientColorKey(Color.white, 0f), new GradientColorKey(new Color(1f, 0.75f, 0.36f), 0.62f), new GradientColorKey(Color.white, 1f) },
-                new[] { new GradientAlphaKey(0f, 0f), new GradientAlphaKey(1f, 0.12f), new GradientAlphaKey(0f, 1f) });
-            color.color = new ParticleSystem.MinMaxGradient(gradient);
-        }
-
-        private static Material CreateMaterial()
-        {
-            Shader shader = Shader.Find("Universal Render Pipeline/Particles/Unlit") ?? Shader.Find("Particles/Standard Unlit") ?? Shader.Find("Sprites/Default");
-            return shader == null ? null : new Material(shader) { hideFlags = HideFlags.DontSave };
+            damageVolume.Clear();
+            MMORPG.Game.Audio.BattleAudio.StopLoop("super_loop");
+            if (released) MMORPG.Game.Audio.BattleAudio.Play("super_end", transform.position);
         }
     }
 }

@@ -1,274 +1,124 @@
 using System;
 using System.Collections;
+using MMORPG.Game.Bosses;
 using MMORPG.Game.Bosses.Potato;
+using MMORPG.Game.Combat;
+using MMORPG.Game.Core;
 using MMORPG.Game.Player;
 using UnityEngine;
 using UnityEngine.UI;
-
 namespace MMORPG.Game.UI
 {
+    // Compatibility facade: gameplay owns outcome and pause; individual screens only present them.
     public sealed class BossBattleHud : MonoBehaviour
     {
-        private static readonly Color BossHealthColor = new Color(0.95f, 0.24f, 0.18f, 1f);
-        private static readonly Color PlayerHealthColor = new Color(0.3f, 0.9f, 0.42f, 1f);
-
-        private Canvas canvas;
-        private HealthBarView bossHealthBar;
-        private HealthBarView playerHealthBar;
-        private GameObject resultPanel;
-        private GameObject pausePanel;
-        private Text resultText;
-        private Text playerHealthText;
-        private Button retryButton;
-        private Action retryAction;
+        private GardenUiScreen hud, pause;
+        private HealthBarView health;
         private PlayerController2D player;
-        private PotatoBossController boss;
-        private bool resultShown;
-        private bool defeatDelayRunning;
-
+        private PotatoBossController legacyBoss;
+        private EncounterDirector encounter;
+        private Action retryAction;
+        private bool resultShown, defeatPending;
+        private int resultForm;
+        private float resultProgress;
+        private string summary, details;
+        public event Action TitleRequested;
+        public event Action ResumeRequested;
         public bool IsVictoryShown { get; private set; }
-
         public bool IsDefeatShown { get; private set; }
-
         public bool IsPaused { get; private set; }
-
-        public float BossHealthNormalized => bossHealthBar == null ? 0f : bossHealthBar.NormalizedAmount;
-
-        public float PlayerHealthNormalized => playerHealthBar == null ? 0f : playerHealthBar.NormalizedAmount;
-
-        public static BossBattleHud Create(PlayerController2D player, PotatoBossController boss, Action onRetry)
+        public float BossHealthNormalized => health == null ? 0f : health.NormalizedAmount;
+        public float PlayerHealthNormalized => player == null ? 0f : (float)player.CurrentHealth / Mathf.Max(1, player.MaxHealth);
+        public CanvasGroup PauseGroup => pause.group;
+        public void BindEncounter(EncounterDirector value) => encounter = value;
+        public void FocusResume() => pause.Get<Button>("resume").Select();
+        public static BossBattleHud Create(PlayerController2D player, PotatoBossController boss, Action retry)
         {
-            GameObject canvasObject = new GameObject("BossBattleHudCanvas");
-            Canvas canvas = canvasObject.AddComponent<Canvas>();
-            Camera targetCamera = Camera.main;
-            canvas.renderMode = targetCamera == null ? RenderMode.ScreenSpaceOverlay : RenderMode.ScreenSpaceCamera;
-            canvas.worldCamera = targetCamera;
-            canvas.planeDistance = 1f;
-            canvas.sortingOrder = 110;
-
-            CanvasScaler scaler = canvasObject.AddComponent<CanvasScaler>();
-            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-            scaler.referenceResolution = new Vector2(1280f, 720f);
-            scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
-            scaler.matchWidthOrHeight = 0.5f;
-            canvasObject.AddComponent<GraphicRaycaster>();
-
-            BossBattleHud hud = canvasObject.AddComponent<BossBattleHud>();
-            hud.canvas = canvas;
-            hud.retryAction = onRetry;
-            hud.Build(player, boss);
-            return hud;
+            var root = GardenUiRoot.Create("BossBattleHudCanvas", 110);
+            var value = root.gameObject.AddComponent<BossBattleHud>();
+            value.player = player; value.legacyBoss = boss; value.retryAction = retry;
+            var catalog = GardenUiCatalog.Load();
+            var container = new GameObject("BattleHudRoot", typeof(RectTransform)).GetComponent<RectTransform>();
+            container.SetParent(root, false); container.anchorMin = Vector2.zero; container.anchorMax = Vector2.one; container.offsetMin = container.offsetMax = Vector2.zero;
+            value.hud = GardenUiScreen.Spawn(catalog.hud, container);
+            value.health = value.hud.Get<HealthBarView>("health");
+            value.hud.Get<PlayerHealthCardView>("cards").Bind(player);
+            PlayerEnergyMeter.AttachTo(value.hud.transform);
+            value.BindBoss(boss, 0);
+            value.pause = GardenUiScreen.Spawn(catalog.pause, container);
+            value.pause.Get<Button>("resume").onClick.AddListener(() => value.ResumeRequested?.Invoke());
+            value.pause.Get<Button>("retry").onClick.AddListener(() => retry?.Invoke());
+            value.pause.Get<Button>("settings").onClick.AddListener(() => BattleTitleView.Create(FindFirstObjectByType<GameManager>(), true));
+            value.pause.Get<Button>("title").onClick.AddListener(() => value.TitleRequested?.Invoke());
+            value.pause.gameObject.SetActive(false);
+            if (!MMORPG.Game.Config.GameConfigService.Current.encounter.enabled) boss.Died += value.ShowVictory;
+            return value;
         }
-
-        public void ShowVictory()
+        public void BindBoss(IBossActor actor, int index)
         {
-            if (resultShown)
+            health.Bind(actor); hud.Get<Text>("name").text = actor.DisplayName;
+            hud.Get<Text>("phase").text = $"{index + 1} / 3";
+            for (int i = 0; i < 3; i++)
             {
-                return;
+                hud.Get<Image>("stage" + i).color = GardenUiCatalog.Color(i <= index ? GardenUiCatalog.Rules.focus : GardenUiCatalog.Rules.paper);
+                hud.Get<Text>("stageLabel" + i).text = i < index ? "✓" : (i + 1).ToString();
             }
-
-            resultShown = true;
-            IsVictoryShown = true;
-            IsDefeatShown = false;
-            resultText.text = "YOU WIN";
-            resultText.color = new Color(1f, 0.86f, 0.3f, 1f);
-            resultPanel.SetActive(true);
-            Debug.Log("Boss\u5173\u5361\u80dc\u5229\u754c\u9762\u5df2\u663e\u793a\u3002");
         }
-
-        public void ShowDefeat()
+        public void SetPaused(bool value)
         {
-            if (resultShown)
+            if (resultShown || IsPaused == value) return;
+            IsPaused = value;
+            if (value)
             {
-                return;
+                pause.gameObject.SetActive(true); pause.group.alpha = 0f; pause.SetInteractive(true);
+                Motion(pause).Fade(pause.group, 1f, GardenUiCatalog.Rules.menuEnter); FocusResume();
             }
-
-            resultShown = true;
-            IsVictoryShown = false;
-            IsDefeatShown = true;
-            resultText.text = "YOU LOSE";
-            resultText.color = new Color(1f, 0.36f, 0.34f, 1f);
-            resultPanel.SetActive(true);
-            Debug.Log("Boss\u5173\u5361\u5931\u8d25\u754c\u9762\u5df2\u663e\u793a\u3002");
+            else
+            {
+                pause.SetInteractive(false);
+                Motion(pause).Fade(pause.group, 0f, GardenUiCatalog.Rules.menuExit, () => pause.gameObject.SetActive(false));
+            }
         }
-
+        public void SetEncounterResult(int form, float progress)
+        {
+            resultForm = form; resultProgress = Mathf.Clamp01(progress);
+            CaptureStats();
+        }
+        private void CaptureStats()
+        {
+            var stats = BattleStats.Active;
+            summary = stats == null ? "" : $"用时 {stats.Duration:0.0} 秒    受伤 {stats.HitsTaken} 次    粉弹收集 {stats.PinkCollected}";
+            details = stats == null ? "暂无记录" : stats.BuildSummaryText();
+        }
+        public void ShowVictory() => ShowResult(true);
+        public void ShowDefeat() => ShowResult(false);
         public void ShowDefeatAfterDelay(float delay)
         {
-            if (resultShown || defeatDelayRunning)
-            {
-                return;
-            }
-
-            StartCoroutine(ShowDefeatAfterDelayRoutine(delay));
+            if (resultShown || defeatPending) return;
+            defeatPending = true; StartCoroutine(DefeatDelay(delay));
         }
-
-        public void SetPaused(bool paused)
+        private IEnumerator DefeatDelay(float delay)
         {
-            if (resultShown || IsPaused == paused)
-            {
-                return;
-            }
-
-            IsPaused = paused;
-            pausePanel.SetActive(paused);
-        }
-
-        private void Build(PlayerController2D player, PotatoBossController boss)
-        {
-            this.player = player;
-            this.boss = boss;
-
-            GameObject root = new GameObject("BattleHudRoot");
-            root.transform.SetParent(canvas.transform, false);
-
-            CreateText(root.transform, "BossTitle", "POTATO BOSS", new Vector2(0.5f, 1f), new Vector2(0f, -18f), new Vector2(640f, 30f), 22, Color.white);
-            bossHealthBar = HealthBarView.Create(root.transform, "BossHealthBar", new Vector2(0f, -48f), new Vector2(640f, 28f), BossHealthColor, boss);
-
-            playerHealthText = CreateText(
-                root.transform,
-                "PlayerHealthText",
-                "HP. " + (player == null ? 0 : player.CurrentHealth),
-                new Vector2(0f, 0f),
-                new Vector2(24f, 48f),
-                new Vector2(128f, 34f),
-                24,
-                Color.white);
-            playerHealthText.alignment = TextAnchor.MiddleLeft;
-
-            playerHealthBar = HealthBarView.Create(
-                root.transform,
-                "PlayerHealthBar",
-                new Vector2(0f, 0f),
-                new Vector2(24f, 16f),
-                new Vector2(118f, 8f),
-                PlayerHealthColor,
-                player);
-
-            Text phaseText = CreateText(root.transform, "BossPhase", "PHASE 1", new Vector2(1f, 1f), new Vector2(-32f, -22f), new Vector2(150f, 30f), 20, new Color(1f, 0.86f, 0.48f, 1f));
-            phaseText.alignment = TextAnchor.MiddleRight;
-
-            CreateResultPanel(root.transform);
-            CreatePausePanel(root.transform);
-
-            if (this.boss != null)
-            {
-                this.boss.Died += ShowVictory;
-            }
-
-            if (this.player != null)
-            {
-                this.player.HealthChanged += RefreshPlayerHealthText;
-                RefreshPlayerHealthText(this.player.CurrentHealth, this.player.MaxHealth);
-            }
-        }
-
-        private void OnDestroy()
-        {
-            if (player != null)
-            {
-                player.HealthChanged -= RefreshPlayerHealthText;
-            }
-
-            if (boss != null)
-            {
-                boss.Died -= ShowVictory;
-            }
-        }
-
-        private void RefreshPlayerHealthText(int current, int maximum)
-        {
-            if (playerHealthText != null)
-            {
-                playerHealthText.text = $"HP. {current}";
-            }
-        }
-
-        private IEnumerator ShowDefeatAfterDelayRoutine(float delay)
-        {
-            defeatDelayRunning = true;
             yield return new WaitForSecondsRealtime(Mathf.Max(0f, delay));
-            defeatDelayRunning = false;
-            ShowDefeat();
+            defeatPending = false; ShowDefeat();
         }
-
-        private void CreateResultPanel(Transform parent)
+        private void ShowResult(bool won)
         {
-            resultPanel = CreatePanel(parent, "ResultPanel", new Vector2(0f, 0f), new Vector2(460f, 250f), new Color(0.035f, 0.025f, 0.045f, 0.94f));
-            resultText = CreateText(resultPanel.transform, "ResultText", "BATTLE END", new Vector2(0.5f, 1f), new Vector2(0f, -28f), new Vector2(400f, 76f), 48, Color.white);
-
-            retryButton = CreateButton(resultPanel.transform, "RetryButton", "RETRY", new Vector2(0.5f, 0f), new Vector2(0f, 28f), new Vector2(180f, 52f));
-            retryButton.onClick.AddListener(() => retryAction?.Invoke());
-            resultPanel.SetActive(false);
+            if (resultShown) return;
+            resultShown = true; IsVictoryShown = won; IsDefeatShown = !won; IsPaused = false;
+            pause.gameObject.SetActive(false);
+            if (summary == null) CaptureStats();
+            EnergyTrailView.ClearAll();
+            if (encounter == null) { resultForm = won ? 2 : 0; resultProgress = won ? 1f : 0f; }
+            hud.SetInteractive(false); Motion(hud).Fade(hud.group, 0f, GardenUiCatalog.Rules.hudExit);
+            var screen = GardenUiScreen.Spawn(won ? GardenUiCatalog.Load().victory : GardenUiCatalog.Load().defeat, transform);
+            screen.gameObject.AddComponent<GardenResultView>().Initialize(screen, won, resultForm, resultProgress, won ? summary : "", details, retryAction, () => TitleRequested?.Invoke());
+            Debug.Log(won ? "花园剧场胜利界面已显示。" : "花园剧场失败票券已显示。");
         }
-
-        private void CreatePausePanel(Transform parent)
+        private static GardenUiMotion Motion(GardenUiScreen screen)
         {
-            pausePanel = CreatePanel(parent, "PausePanel", new Vector2(0f, 0f), new Vector2(380f, 190f), new Color(0.025f, 0.035f, 0.055f, 0.94f));
-            CreateText(pausePanel.transform, "PauseText", "PAUSED", new Vector2(0.5f, 1f), new Vector2(0f, -30f), new Vector2(340f, 70f), 42, Color.white);
-            Button button = CreateButton(pausePanel.transform, "ResumeButton", "RESUME", new Vector2(0.5f, 0f), new Vector2(0f, 30f), new Vector2(160f, 48f));
-            button.onClick.AddListener(() => SetPaused(false));
-            pausePanel.SetActive(false);
+            var motion = screen.GetComponent<GardenUiMotion>(); return motion != null ? motion : screen.gameObject.AddComponent<GardenUiMotion>();
         }
-
-        private static GameObject CreatePanel(Transform parent, string objectName, Vector2 position, Vector2 size, Color color)
-        {
-            GameObject panel = new GameObject(objectName);
-            panel.transform.SetParent(parent, false);
-            RectTransform rect = panel.AddComponent<RectTransform>();
-            rect.anchorMin = new Vector2(0.5f, 0.5f);
-            rect.anchorMax = new Vector2(0.5f, 0.5f);
-            rect.pivot = new Vector2(0.5f, 0.5f);
-            rect.anchoredPosition = position;
-            rect.sizeDelta = size;
-            Image image = panel.AddComponent<Image>();
-            image.color = color;
-            return panel;
-        }
-
-        private static Text CreateText(Transform parent, string objectName, string content, Vector2 anchor, Vector2 position, Vector2 size, int fontSize, Color color)
-        {
-            GameObject textObject = new GameObject(objectName);
-            textObject.transform.SetParent(parent, false);
-            RectTransform rect = textObject.AddComponent<RectTransform>();
-            rect.anchorMin = anchor;
-            rect.anchorMax = anchor;
-            rect.pivot = new Vector2(0.5f, 0.5f);
-            rect.anchoredPosition = position;
-            rect.sizeDelta = size;
-
-            Text text = textObject.AddComponent<Text>();
-            text.text = content;
-            text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-            text.fontSize = fontSize;
-            text.color = color;
-            text.alignment = TextAnchor.MiddleCenter;
-            text.horizontalOverflow = HorizontalWrapMode.Overflow;
-            text.verticalOverflow = VerticalWrapMode.Overflow;
-            return text;
-        }
-
-        private static Button CreateButton(Transform parent, string objectName, string label, Vector2 anchor, Vector2 position, Vector2 size)
-        {
-            GameObject buttonObject = new GameObject(objectName);
-            buttonObject.transform.SetParent(parent, false);
-            RectTransform rect = buttonObject.AddComponent<RectTransform>();
-            rect.anchorMin = anchor;
-            rect.anchorMax = anchor;
-            rect.pivot = new Vector2(0.5f, 0.5f);
-            rect.anchoredPosition = position;
-            rect.sizeDelta = size;
-
-            Image image = buttonObject.AddComponent<Image>();
-            image.color = new Color(0.18f, 0.42f, 0.54f, 1f);
-            Button button = buttonObject.AddComponent<Button>();
-            button.targetGraphic = image;
-            ColorBlock colors = button.colors;
-            colors.highlightedColor = new Color(0.26f, 0.58f, 0.7f, 1f);
-            colors.pressedColor = new Color(0.12f, 0.3f, 0.4f, 1f);
-            button.colors = colors;
-
-            CreateText(buttonObject.transform, "Label", label, new Vector2(0.5f, 0.5f), Vector2.zero, size, 22, Color.white);
-            return button;
-        }
+        private void OnDestroy() { if (legacyBoss != null) legacyBoss.Died -= ShowVictory; StopAllCoroutines(); }
     }
 }

@@ -1,80 +1,593 @@
 {
-  "level": {
-    "width": 16.0,
-    "height": 9.0,
-    "stageFloorY": -2.5,
-    "minStageX": -7.55,
-    "maxStageX": 7.55,
-    "playerSpawnX": -6.2,
-    "stageColliderThickness": 0.8,
-    "foregroundCropHeight": 0.24,
-    "foregroundSortingOrder": 48
-  },
-  "player": {
-    "maxHealth": 3,
-    "maxEnergy": 3,
-    "moveSpeed": 5.5,
-    "jumpVelocity": 10.5,
-    "secondJumpVelocity": 9.2,
-    "maxAirJumps": 1,
-    "dashSpeed": 13.0,
-    "dashDuration": 0.18,
-    "dashCooldown": 0.35,
-    "dodgeBurstYOffset": 0.18,
-    "shotCooldown": 0.16,
-    "muzzleOffsetX": 0.86,
-    "muzzleOffsetY": 0.28,
-    "airFlipDuration": 0.42,
-    "groundCastDistance": 0.06,
-    "damageInvincibilityDuration": 0.75,
-    "hurtFlashDuration": 0.16,
-    "coyoteTime": 0.1,
-    "jumpBufferTime": 0.12,
-    "groundAcceleration": 45.0,
-    "groundDeceleration": 55.0,
-    "airControl": 1.0,
-    "jumpCutMultiplier": 0.45,
-    "deathActionDuration": 0.38,
-    "ghostRiseDuration": 1.2,
-    "ghostRiseSpeed": 1.05,
-    "deathResultDelay": 2.0,
-    "colliderOffsetX": -0.45,
-    "colliderOffsetY": -0.04,
-    "colliderSizeX": 0.72,
-    "colliderSizeY": 1.28,
-    "visualCenterY": 0.68,
-    "superKey": "K"
-  },
-  "boss": {
-    "maxHealth": 100,
-    "scale": 4.5,
-    "groundEmbedDepth": 0.42,
-    "spawnX": 5.35,
-    "attackCooldownMin": 0.8,
-    "attackCooldownMax": 1.2,
-    "attackDuration": 0.6,
-    "attackAnimationFramesPerSecond": 10.0,
-    "attackShotInterval": 0.18,
-    "attackShotCount": 3,
-    "projectileSpawnOffsetX": 2.4,
-    "projectileSpawnOffsetYTop": 3.8,
-    "projectileSpawnOffsetYMiddle": 2.3,
-    "projectileSpawnOffsetYBottom": 0.8
-  },
-  "projectile": {
-    "normalSpeed": 8.0,
-    "pinkSpeed": 7.2,
-    "lifetime": 6.0,
-    "normalDamage": 1,
-    "pinkEnergyValue": 1,
-    "pinkChance": 0.35,
-    "playerBulletSpeed": 11.0,
-    "playerBulletLifetime": 1.4,
-    "pinkPickupEffectDuration": 0.45
-  },
-  "special": {
-    "damage": 30,
-    "duration": 0.85,
-    "effectYOffset": 0.85
-  }
+    "level": {
+        "backgroundOverscan": 0.03999999910593033,
+        "width": 16.0,
+        "height": 9.0,
+        "stageFloorY": -2.5,
+        "minStageX": -5.699999809265137,
+        "maxStageX": 6.099999904632568,
+        "playerSpawnX": -4.699999809265137,
+        "stageColliderThickness": 0.800000011920929,
+        "foregroundCropHeight": 0.23999999463558198,
+        "foregroundSortingOrder": 48
+    },
+    "animation": {
+        "hero": {
+            "takeoff": 0.07500000298023224,
+            "rise": 0.11999999731779099,
+            "apex": 0.05000000074505806,
+            "fall": 0.11999999731779099,
+            "land": 0.07999999821186066,
+            "uprightDuration": 0.05999999865889549,
+            "apexVelocity": 0.3499999940395355
+        }
+    },
+    "camera": {
+        "viewHeight": 7.599999904632568,
+        "centerX": 0.20000000298023225,
+        "centerY": -0.6000000238418579,
+        "safetyPixels": 32.0,
+        "rainTopInset": 0.10000000149011612
+    },
+    "player": {
+        "idleCycleDuration": 0.8500000238418579,
+        "runCycleDuration": 0.6499999761581421,
+        "shootCycleDuration": 0.5,
+        "maxHealth": 3,
+        "maxEnergy": 3,
+        "moveSpeed": 5.5,
+        "jumpVelocity": 10.5,
+        "secondJumpVelocity": 9.199999809265137,
+        "maxAirJumps": 1,
+        "dashSpeed": 13.0,
+        "dashDuration": 0.18000000715255738,
+        "dashCooldown": 0.3499999940395355,
+        "dodgeBurstYOffset": 0.18000000715255738,
+        "shotCooldown": 0.1599999964237213,
+        "muzzleOffsetX": 0.5,
+        "muzzleOffsetY": 0.6499999761581421,
+        "airFlipDuration": 0.41999998688697817,
+        "groundCastDistance": 0.05999999865889549,
+        "damageInvincibilityDuration": 3.0,
+        "hurtFlashDuration": 0.1599999964237213,
+        "hurtFlashCount": 5,
+        "hitShakeDuration": 0.11999999731779099,
+        "hitShakeStrength": 0.10000000149011612,
+        "coyoteTime": 0.10000000149011612,
+        "jumpBufferTime": 0.11999999731779099,
+        "groundAcceleration": 45.0,
+        "groundDeceleration": 55.0,
+        "airControl": 1.0,
+        "jumpCutMultiplier": 0.44999998807907107,
+        "jumpCutBlendDuration": 0.05999999865889549,
+        "deathActionDuration": 0.3799999952316284,
+        "ghostRiseDuration": 1.2000000476837159,
+        "ghostRiseSpeed": 1.0499999523162842,
+        "deathResultDelay": 2.0,
+        "colliderOffsetX": 0.0,
+        "colliderOffsetY": 0.6399999856948853,
+        "colliderSizeX": 0.7200000286102295,
+        "colliderSizeY": 1.2799999713897706,
+        "visualCenterY": 0.6399999856948853,
+        "superKey": "K"
+    },
+    "boss": {
+        "attackAnticipation": 0.30000001192092898,
+        "attackRecovery": 0.25,
+        "maxHealth": 100,
+        "scale": 2.200000047683716,
+        "groundEmbedDepth": 0.11999999731779099,
+        "spawnX": 4.699999809265137,
+        "attackCooldownMin": 0.800000011920929,
+        "attackCooldownMax": 1.2000000476837159,
+        "attackDuration": 0.6000000238418579,
+        "attackAnimationFramesPerSecond": 10.0,
+        "attackShotInterval": 0.18000000715255738,
+        "attackShotCount": 3,
+        "projectileSpawnOffsetX": 0.8999999761581421,
+        "projectileSpawnOffsetYTop": 2.0,
+        "projectileSpawnOffsetYMiddle": 1.25,
+        "projectileSpawnOffsetYBottom": 0.550000011920929,
+        "phaseTransitionDuration": 0.6000000238418579,
+        "phase1": {
+            "attackCooldownMin": 1.0,
+            "attackCooldownMax": 1.399999976158142,
+            "attackShotInterval": 0.18000000715255738,
+            "attackShotCount": 3,
+            "pinkChance": 0.3499999940395355,
+            "lobChance": 0.44999998807907107,
+            "rootChance": 0.550000011920929,
+            "insectChance": 0.6000000238418579,
+            "insectCount": 3
+        },
+        "phase2": {
+            "attackCooldownMin": 0.8999999761581421,
+            "attackCooldownMax": 1.2000000476837159,
+            "attackShotInterval": 0.15000000596046449,
+            "attackShotCount": 4,
+            "pinkChance": 0.44999998807907107,
+            "lobChance": 0.44999998807907107,
+            "rootChance": 0.550000011920929,
+            "insectChance": 0.6000000238418579,
+            "insectCount": 3
+        },
+        "phase3": {
+            "attackCooldownMin": 0.800000011920929,
+            "attackCooldownMax": 1.100000023841858,
+            "attackShotInterval": 0.14000000059604646,
+            "attackShotCount": 5,
+            "pinkChance": 0.5,
+            "lobChance": 0.44999998807907107,
+            "rootChance": 0.550000011920929,
+            "insectChance": 0.6000000238418579,
+            "insectCount": 3
+        },
+        "rootHazardCount": 2,
+        "rootHazardSpeed": 4.199999809265137,
+        "rootHazardLifetime": 2.200000047683716,
+        "rootTellDuration": 0.3499999940395355,
+        "seedLobSpeed": 5.0,
+        "seedArcHeight": 2.5999999046325685,
+        "seedObstacleLifetime": 3.5,
+        "insectCount": 3,
+        "insectSpeed": 3.4000000953674318,
+        "insectLifetime": 5.0
+    },
+    "projectile": {
+        "normalRadius": 0.20000000298023225,
+        "pinkRadius": 0.23999999463558198,
+        "rainScaleX": 0.699999988079071,
+        "rainScaleY": 1.399999976158142,
+        "normalSpeed": 8.0,
+        "pinkSpeed": 7.199999809265137,
+        "lifetime": 6.0,
+        "normalDamage": 1,
+        "pinkEnergyValue": 1,
+        "pinkChance": 0.3499999940395355,
+        "playerBulletSpeed": 11.0,
+        "playerBulletLifetime": 1.399999976158142,
+        "pinkPickupEffectDuration": 0.44999998807907107
+    },
+    "special": {
+        "range": 14.0,
+        "height": 1.100000023841858,
+        "damage": 30,
+        "duration": 0.8500000238418579,
+        "effectYOffset": 0.8500000238418579
+    },
+    "vfx": {
+        "hitDriftSpeed": 1.399999976158142,
+        "smokeDuration": 0.5199999809265137,
+        "smokeDriftSpeed": 0.800000011920929,
+        "smokeRiseSpeed": 0.3499999940395355,
+        "smokeSize": 0.6000000238418579,
+        "smokeCount": 9,
+        "smokeCenterYOffset": 0.25,
+        "hitDuration": 0.2199999988079071,
+        "hitSize": 0.11999999731779099,
+        "hitCount": 6,
+        "deathDuration": 0.6499999761581421,
+        "deathSize": 0.44999998807907107,
+        "deathCount": 24
+    },
+    "encounter": {
+        "enabled": true,
+        "introDuration": 1.2000000476837159,
+        "transitionDuration": 1.2999999523162842,
+        "exitDuration": 0.44999998807907107,
+        "safetyDuration": 0.6000000238418579,
+        "bossSeparation": 0.10000000149011612,
+        "forms": [
+            {
+                "id": "potato",
+                "displayName": "土豆",
+                "maxHealth": 100,
+                "spawnX": 4.0,
+                "embedDepth": 0.11999999731779099,
+                "visibleHeight": 4.199999809265137
+            },
+            {
+                "id": "onion",
+                "displayName": "洋葱",
+                "maxHealth": 120,
+                "spawnX": 4.0,
+                "embedDepth": 0.11999999731779099,
+                "visibleHeight": 4.400000095367432
+            },
+            {
+                "id": "carrot",
+                "displayName": "胡萝卜",
+                "maxHealth": 150,
+                "spawnX": 4.0,
+                "embedDepth": 0.11999999731779099,
+                "visibleHeight": 4.599999904632568
+            }
+        ],
+        "potatoTell": 0.3499999940395355,
+        "potatoInterval": 0.18000000715255738,
+        "potatoRecovery": 0.44999998807907107,
+        "potatoSpeed": 8.0,
+        "potatoCooldownMin": 0.6499999761581421,
+        "potatoCooldownMax": 0.949999988079071,
+        "potatoHeights": [
+            1.75,
+            0.949999988079071,
+            0.3499999940395355
+        ],
+        "onionTell": 0.6499999761581421,
+        "rainInterval": 0.41999998688697817,
+        "rainWarning": 0.550000011920929,
+        "rainSpeed": 6.5,
+        "onionRecovery": 0.8500000238418579,
+        "rainGroups": 4,
+        "rainColumns": 8,
+        "beamTell": 0.550000011920929,
+        "beamLock": 0.20000000298023225,
+        "beamActive": 0.18000000715255738,
+        "beamWidth": 0.44999998807907107,
+        "carrotRecovery": 0.75,
+        "seekerSpeed": 3.799999952316284,
+        "seekerTurnRate": 100.0,
+        "seekerLifetime": 4.0,
+        "seekerStraightTime": 0.25,
+        "seekerInterval": 0.44999998807907107
+    },
+    "feedback": {
+        "parryStop": 0.04500000178813934,
+        "parryBounce": 7.5,
+        "parryProtection": 0.18000000715255738,
+        "parryPose": 0.10000000149011612,
+        "hurtStop": 0.054999999701976779,
+        "superStop": 0.07000000029802323,
+        "deathStop": 0.09000000357627869,
+        "superWindup": 0.11999999731779099,
+        "energyTravelDuration": 0.30000001192092898
+    },
+    "audio": {
+        "maxVoices": 24,
+        "master": 1.0,
+        "music": 0.3160000145435333,
+        "effects": 0.5,
+        "musicCrossfadeDuration": 0.5,
+        "shotDuckDuration": 0.18000000715255738,
+        "shotDuckGain": 0.6309999823570252,
+        "events": [
+            {
+                "eventId": "shot",
+                "priority": 10,
+                "maxVoices": 4,
+                "gain": 0.3499999940395355,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "jump",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "double_jump",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "dash_start",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "dash_end",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "hurt",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "death",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "parry_success",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "pickup",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "energy_full",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "charge",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "release",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "super_end",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "emerge",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "inhale",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "spit",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "boss_hit",
+                "priority": 10,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "boss_defeat",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "sob_tell",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "tear_fall",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "tear_splash",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "wipe",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "psychic_charge",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "lock",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "beam",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "seeker",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "stun",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "ui_focus",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "ui_confirm",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "ui_cancel",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "ui_start",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "ui_defeat",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "ui_victory",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            },
+            {
+                "eventId": "super_loop",
+                "priority": 80,
+                "maxVoices": 3,
+                "gain": 0.6499999761581421,
+                "minInterval": 0.05999999865889549
+            }
+        ]
+    },
+    "presentation": {
+        "ui": {
+            "ink": "#202525",
+            "paper": "#F5F4EA",
+            "green": "#34785B",
+            "red": "#BA443E",
+            "focus": "#F3D36A",
+            "energy": "#E96BAD",
+            "menuFont": 28,
+            "bodyFont": 24,
+            "auxiliaryFont": 20,
+            "bossName": {
+                "serializedVersion": "2",
+                "x": 420.0,
+                "y": 24.0,
+                "width": 440.0,
+                "height": 32.0
+            },
+            "bossBar": {
+                "serializedVersion": "2",
+                "x": 380.0,
+                "y": 64.0,
+                "width": 520.0,
+                "height": 20.0
+            },
+            "healthCards": {
+                "serializedVersion": "2",
+                "x": 32.0,
+                "y": 616.0,
+                "width": 148.0,
+                "height": 64.0
+            },
+            "energyCards": {
+                "serializedVersion": "2",
+                "x": 208.0,
+                "y": 632.0,
+                "width": 124.0,
+                "height": 48.0
+            },
+            "title": {
+                "serializedVersion": "2",
+                "x": 96.0,
+                "y": 144.0,
+                "width": 480.0,
+                "height": 140.0
+            },
+            "cast": {
+                "serializedVersion": "2",
+                "x": 720.0,
+                "y": 160.0,
+                "width": 460.0,
+                "height": 400.0
+            },
+            "programme": {
+                "serializedVersion": "2",
+                "x": 400.0,
+                "y": 112.0,
+                "width": 480.0,
+                "height": 496.0
+            },
+            "defeatTicket": {
+                "serializedVersion": "2",
+                "x": 280.0,
+                "y": 154.0,
+                "width": 720.0,
+                "height": 390.0
+            },
+            "healthFlip": 0.18000000715255738,
+            "energyPulse": 0.23999999463558198,
+            "energyPulseScale": 1.0800000429153443,
+            "healthTrailDelay": 0.11999999731779099,
+            "healthTrailDuration": 0.25,
+            "bossFill": 0.30000001192092898,
+            "titleEnter": 0.3499999940395355,
+            "titleExit": 0.25,
+            "menuEnter": 0.1599999964237213,
+            "menuExit": 0.11999999731779099,
+            "defeatEnter": 0.2199999988079071,
+            "victoryEnter": 0.2800000011920929,
+            "hudExit": 0.15000000596046449,
+            "stampInterval": 0.07999999821186066,
+            "focusDuration": 0.10000000149011612,
+            "pressDuration": 0.05999999865889549,
+            "releaseDuration": 0.10000000149011612,
+            "shadeAlpha": 0.41999998688697817
+        },
+        "title": "菜园恶战",
+        "start": "开始挑战",
+        "settings": "设置",
+        "quit": "退出",
+        "victory": "YOU WIN",
+        "defeat": "YOU LOSE",
+        "retry": "RETRY",
+        "returnToTitle": "TITLE",
+        "resultFadeDuration": 0.30000001192092898,
+        "bossHealthFillDuration": 0.30000001192092898,
+        "bossHealthTrailSpeed": 2.4000000953674318
+    }
 }

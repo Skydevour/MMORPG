@@ -27,10 +27,18 @@ namespace MMORPG.EditorTools.Import
 
             if (assetPath.Contains("/Hero/Frames/"))
             {
+                TextureImporterSettings settings = new TextureImporterSettings();
+                importer.ReadTextureSettings(settings);
+                settings.spriteAlignment = (int)UnityEngine.SpriteAlignment.Custom;
+                importer.SetTextureSettings(settings);
                 importer.spritePivot = HeroFramePivot;
             }
             else if (assetPath.Contains("/Bosses/Potato/Frames/"))
             {
+                TextureImporterSettings settings = new TextureImporterSettings();
+                importer.ReadTextureSettings(settings);
+                settings.spriteAlignment = (int)UnityEngine.SpriteAlignment.Custom;
+                importer.SetTextureSettings(settings);
                 importer.spritePivot = PotatoBossFramePivot;
             }
         }

@@ -74,6 +74,7 @@
     <None Include="Library\PackageCache\com.unity.mathematics\package.json" />
     <None Include="Library\PackageCache\com.unity.burst\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.visualscripting\package.json" />
+    <None Include="Assets\Res\VFX\Common\SpriteFlash.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy\package.json" />
     <None Include="Library\PackageCache\com.unity.ugui\PackageConversionData.json" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle\package.json" />

@@ -4,6 +4,7 @@
     "references": [
         "MMORPG.Runtime",
         "UnityEngine.TestRunner"
+        ,"Unity.InputSystem"
     ],
     "includePlatforms": [],
 
